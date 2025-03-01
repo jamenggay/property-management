@@ -39,7 +39,7 @@ private CardLayout cardLayout;
         loadTransactionsData();
         
       /**
-       * Hides (visible = false) the FilterMenus @author Lim
+       * Hides (visible = false) the FilterMenus @editor Lim
        */  
         propertiesFilterMenu.setVisible(false); 
         tenantsFilterMenu.setVisible(false);
@@ -54,6 +54,21 @@ private CardLayout cardLayout;
         transactionIDFilterPanel.setVisible(false);
         maintenanceFilterMenu.setVisible(false);
         maintenancePropertyIDFilterPanel.setVisible(false);
+        transactionDateFilterPanel.setVisible(false);
+        PropertyTypeFilterPane.setVisible(false);
+        RequestTypeFilterPane.setVisible(false);
+        PriorityTypeFilterPane.setVisible(false);
+        TransactionTypeFilterPane.setVisible(false);
+        PaymentTypeFilterPane.setVisible(false);
+        
+       /**
+        * New Panel for Join Query @editor Lim
+        */        
+        propertiesJoinPanel.setVisible(false);
+        tenantsJoinPanel.setVisible(false);
+        leasesJoinPanel.setVisible(false);
+        transactionsJoinPanel.setVisible(false);
+        maintenanceJoinPanel.setVisible(false);
         
         propertiesMenuPanel.setBackground(new Color(0, 0, 0, 102)); 
         tenantsMenuPanel.setBackground(new Color(0, 0, 0, 102)); 
@@ -133,6 +148,18 @@ private CardLayout cardLayout;
         lblProperties = new javax.swing.JLabel();
         CardPanel = new javax.swing.JPanel();
         propertiesPage = new javax.swing.JPanel();
+        PropertyTypeFilterPane = new javax.swing.JPanel();
+        propertyTypeFilterTopBar = new javax.swing.JPanel();
+        propertyTypeFilter_X_Btn = new javax.swing.JButton();
+        jLabel20 = new javax.swing.JLabel();
+        submitPropertyTypeBtn = new javax.swing.JButton();
+        propertyTypeComboBox = new javax.swing.JComboBox<>();
+        PropertyIDFilterPane = new javax.swing.JPanel();
+        propertyIDFilterTopBar = new javax.swing.JPanel();
+        propertyIDFilter_X_Btn = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         propertiesFilterMenu = new javax.swing.JPanel();
         propertiessortTopBar = new javax.swing.JPanel();
         propertiesFilter_X_Btn = new javax.swing.JButton();
@@ -150,18 +177,8 @@ private CardLayout cardLayout;
         propertiesFilterByPanel = new javax.swing.JPanel();
         VacantPropertiesFilter = new javax.swing.JLabel();
         OccupiedPropertiesFilter = new javax.swing.JLabel();
-        MunicipalitiesFilter = new javax.swing.JLabel();
-        ProvincesFilter = new javax.swing.JLabel();
-        ApartmentsFilter = new javax.swing.JLabel();
-        CondosFilter = new javax.swing.JLabel();
-        HousesFilter = new javax.swing.JLabel();
+        PropertyTypeFilter = new javax.swing.JLabel();
         PropertyIDFilter = new javax.swing.JLabel();
-        PropertyIDFilterPane = new javax.swing.JPanel();
-        propertyIDFilterTopBar = new javax.swing.JPanel();
-        propertyIDFilter_X_Btn = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         propertiesDeletePanel = new javax.swing.JPanel();
         propertiesdeleteTopBar = new javax.swing.JPanel();
         propertiesDelete_X_Btn = new javax.swing.JButton();
@@ -201,6 +218,21 @@ private CardLayout cardLayout;
         availabilityDropdown = new javax.swing.JComboBox<>();
         addDataBtn = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox<>();
+        propertiesJoinPanel = new javax.swing.JPanel();
+        propertiesJoinTopBar = new javax.swing.JPanel();
+        propertiesJoin_X_Btn = new javax.swing.JButton();
+        instruction1 = new javax.swing.JLabel();
+        propertyIDJoinLabel = new javax.swing.JLabel();
+        tenantIDJoinLabel = new javax.swing.JLabel();
+        leaseStartJoinLabel = new javax.swing.JLabel();
+        leaseEndJoinLabel = new javax.swing.JLabel();
+        leaseStatusLabel = new javax.swing.JLabel();
+        propertyIDJoinField = new javax.swing.JTextField();
+        tenantIDJoinField = new javax.swing.JTextField();
+        leaseStatusDropdown = new javax.swing.JComboBox<>();
+        propertiesSearchJoinButton = new javax.swing.JButton();
+        leaseStartJoinField = new com.toedter.calendar.JDateChooser();
+        leaseEndJoinField = new com.toedter.calendar.JDateChooser();
         jScrollPane3 = new javax.swing.JScrollPane();
         propertiesTable = new javax.swing.JTable();
         JTableHeader header = propertiesTable.getTableHeader();
@@ -220,10 +252,24 @@ private CardLayout cardLayout;
         propertiesAddBtn = new javax.swing.JButton();
         propertiesUpdateBtn = new javax.swing.JButton();
         propertiesDeleteBtn = new javax.swing.JButton();
+        propertiesJoinBtn = new javax.swing.JButton();
         propertiesFilter = new javax.swing.JLabel();
         propertiesTitleText = new javax.swing.JLabel();
         propertiesBG = new javax.swing.JLabel();
         tenantsPage = new javax.swing.JPanel();
+        tenantsJoinPanel = new javax.swing.JPanel();
+        tenantsJoinTopBar = new javax.swing.JPanel();
+        tenantsJoin_X_Btn = new javax.swing.JButton();
+        instruction2 = new javax.swing.JLabel();
+        ttenantIDJoinLabel = new javax.swing.JLabel();
+        tenantLeaseStartJoinLabel = new javax.swing.JLabel();
+        tenantLeaseEndJoinLabel1 = new javax.swing.JLabel();
+        tenantPaymentLabel = new javax.swing.JLabel();
+        tenantIDJoinField1 = new javax.swing.JTextField();
+        tenantPaymentStatusDropdown = new javax.swing.JComboBox<>();
+        tenantSearchJoinButton = new javax.swing.JButton();
+        tenantLeaseStartJoinField = new com.toedter.calendar.JDateChooser();
+        tenantLeaseEndJoinField = new com.toedter.calendar.JDateChooser();
         tenantContactNoFilterPanel = new javax.swing.JPanel();
         tenantContactNoFilterTopBar = new javax.swing.JPanel();
         tenantContactNoFilter_X_Btn = new javax.swing.JButton();
@@ -317,10 +363,34 @@ private CardLayout cardLayout;
         tenantsAddBtn = new javax.swing.JButton();
         tenantsUpdateBtn = new javax.swing.JButton();
         tenantsDeleteBtn = new javax.swing.JButton();
+        tenantsJoinBtn = new javax.swing.JButton();
         tenantsFilter = new javax.swing.JLabel();
         tenantsTitleText = new javax.swing.JLabel();
         tenantsBG = new javax.swing.JLabel();
+        tenantContactNoFilterPanel1 = new javax.swing.JPanel();
+        tenantContactNoFilterTopBar1 = new javax.swing.JPanel();
+        tenantContactNoFilter_X_Btn1 = new javax.swing.JButton();
+        tenantContactNoTxtfield1 = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        submitTenantContactNoBtn2 = new javax.swing.JButton();
         leasesPage = new javax.swing.JPanel();
+        leasesJoinPanel = new javax.swing.JPanel();
+        leaseJoinTopBar = new javax.swing.JPanel();
+        tenantsJoin_X_Btn1 = new javax.swing.JButton();
+        instruction3 = new javax.swing.JLabel();
+        ttenantIDJoinLabel1 = new javax.swing.JLabel();
+        tenantPaymentLabel1 = new javax.swing.JLabel();
+        leaseIDJoinField = new javax.swing.JTextField();
+        leaseTenantPaymentStatusDropdown = new javax.swing.JComboBox<>();
+        tenantSearchJoinButton1 = new javax.swing.JButton();
+        leaseTenantIDJoinField = new javax.swing.JTextField();
+        leaseTenantIDJoinLabel = new javax.swing.JLabel();
+        leaseStartChooser = new com.toedter.calendar.JDateChooser();
+        leaseTenantIDJoinLabel1 = new javax.swing.JLabel();
+        leaseTenantIDJoinLabel2 = new javax.swing.JLabel();
+        leaseEndChooser = new com.toedter.calendar.JDateChooser();
+        tenantPaymentLabel2 = new javax.swing.JLabel();
+        leaseMaintenanceStatusDropdown = new javax.swing.JComboBox<>();
         leaseIDFilterPanel = new javax.swing.JPanel();
         leaseIDFilterTopBar = new javax.swing.JPanel();
         leaseIDFilter_X_Btn = new javax.swing.JButton();
@@ -406,10 +476,29 @@ private CardLayout cardLayout;
         leasesAddBtn = new javax.swing.JButton();
         leasesUpdateBtn = new javax.swing.JButton();
         leasesDeleteBtn = new javax.swing.JButton();
+        leasesJoinBtn = new javax.swing.JButton();
         leasesFilter = new javax.swing.JLabel();
         maintenanceTitleText1 = new javax.swing.JLabel();
         leasesBG = new javax.swing.JLabel();
         transactionsPage = new javax.swing.JPanel();
+        TransactionTypeFilterPane = new javax.swing.JPanel();
+        transactionTypeFilterTopBar = new javax.swing.JPanel();
+        transactionTypeFilter_X_Btn = new javax.swing.JButton();
+        jLabel25 = new javax.swing.JLabel();
+        submitPaymentTypeBtn1 = new javax.swing.JButton();
+        transactionTypeComboBox = new javax.swing.JComboBox<>();
+        PaymentTypeFilterPane = new javax.swing.JPanel();
+        paymentTypeFilterTopBar = new javax.swing.JPanel();
+        paymentTypeFilter_X_Btn = new javax.swing.JButton();
+        jLabel23 = new javax.swing.JLabel();
+        submitPaymentTypeBtn = new javax.swing.JButton();
+        paymentTypeComboBox = new javax.swing.JComboBox<>();
+        transactionDateFilterPanel = new javax.swing.JPanel();
+        transactionDateFilterTopBar = new javax.swing.JPanel();
+        transactionDateFilter_X_Btn = new javax.swing.JButton();
+        jLabel19 = new javax.swing.JLabel();
+        submitTransactionIDBtn1 = new javax.swing.JButton();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         transactionIDFilterPanel = new javax.swing.JPanel();
         transactionIDFilterTopBar = new javax.swing.JPanel();
         transactionIDFilter_X_Btn = new javax.swing.JButton();
@@ -433,12 +522,8 @@ private CardLayout cardLayout;
         transactionFilterByPanel = new javax.swing.JPanel();
         TenantTransactionFilter = new javax.swing.JLabel();
         TransactionDateFilter = new javax.swing.JLabel();
-        CashPaymentFilter = new javax.swing.JLabel();
-        BankTransferFilter = new javax.swing.JLabel();
-        OnlinePaymentsFilter = new javax.swing.JLabel();
-        PendingTransactionFilter = new javax.swing.JLabel();
-        CompleteTransactionFilter = new javax.swing.JLabel();
-        OverdueTransactionFilter = new javax.swing.JLabel();
+        PaymentTypeFilter = new javax.swing.JLabel();
+        TransactionTypeFilter = new javax.swing.JLabel();
         transactionsAddPanel = new javax.swing.JPanel();
         transactionsAddTopBar = new javax.swing.JPanel();
         transacAdd_X_Btn = new javax.swing.JButton();
@@ -504,10 +589,42 @@ private CardLayout cardLayout;
         transacAddBtn = new javax.swing.JButton();
         transacUpdateBtn = new javax.swing.JButton();
         transacDeleteBtn = new javax.swing.JButton();
+        transacJoinBtn = new javax.swing.JButton();
         transactionsFilter = new javax.swing.JLabel();
         transactionsTitleText = new javax.swing.JLabel();
         transactionsBG = new javax.swing.JLabel();
+        transactionsJoinPanel = new javax.swing.JPanel();
+        transactionsJoinTopBar = new javax.swing.JPanel();
+        transactionsJoin_X_Btn = new javax.swing.JButton();
+        instruction4 = new javax.swing.JLabel();
+        ttenantIDJoinLabel2 = new javax.swing.JLabel();
+        transactionsPaymentLabel = new javax.swing.JLabel();
+        mainteannceTransactionIDJoinField = new javax.swing.JTextField();
+        transactionsPaymentStatusDropdown = new javax.swing.JComboBox<>();
+        maintenanceSearchJoinButton = new javax.swing.JButton();
+        maintenanceTenantIDJoinLabel = new javax.swing.JLabel();
+        maintenanceTenantIDJoinField = new javax.swing.JTextField();
+        maintenanceTenantIDJoinLabel1 = new javax.swing.JLabel();
+        maintenanceTenantIDJoinField1 = new javax.swing.JTextField();
+        maintenanceTenantIDJoinLabel2 = new javax.swing.JLabel();
+        maintenanceTenantIDJoinField2 = new javax.swing.JTextField();
+        maintenanceDateStartJoinDateChooser = new com.toedter.calendar.JDateChooser();
+        maintenanceDateStartJoinLabel = new javax.swing.JLabel();
+        maintenanceDateEndJoinLabel = new javax.swing.JLabel();
+        maintenanceDateEndJoinDateChooser = new com.toedter.calendar.JDateChooser();
         maintenancePage = new javax.swing.JPanel();
+        PriorityTypeFilterPane = new javax.swing.JPanel();
+        priorityTypeFilterTopBar = new javax.swing.JPanel();
+        proirityTypeFilter_X_Btn = new javax.swing.JButton();
+        jLabel22 = new javax.swing.JLabel();
+        submitPriorityTypeBtn = new javax.swing.JButton();
+        priorityTypeComboBox = new javax.swing.JComboBox<>();
+        RequestTypeFilterPane = new javax.swing.JPanel();
+        requestTypeFilterTopBar = new javax.swing.JPanel();
+        requestTypeFilter_X_Btn = new javax.swing.JButton();
+        jLabel21 = new javax.swing.JLabel();
+        submitRequestTypeBtn = new javax.swing.JButton();
+        requestTypeComboBox = new javax.swing.JComboBox<>();
         maintenancePropertyIDFilterPanel = new javax.swing.JPanel();
         maintenancePropertyIDFilterTopBar = new javax.swing.JPanel();
         maintenancePropertyIDFilter_X_Btn = new javax.swing.JButton();
@@ -529,12 +646,8 @@ private CardLayout cardLayout;
         maintenancefilterBar = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         maintenanceFilterByPanel = new javax.swing.JPanel();
-        PendingRequestFilter = new javax.swing.JLabel();
-        inProgressRequestFilter = new javax.swing.JLabel();
-        ResolvedRequestFilter = new javax.swing.JLabel();
-        LowPriorityFilter = new javax.swing.JLabel();
-        MediumPriorityFilter = new javax.swing.JLabel();
-        HighPriorityFilter = new javax.swing.JLabel();
+        RequestFilter = new javax.swing.JLabel();
+        PriorityFilter = new javax.swing.JLabel();
         PropertyIDMaintenanceFilter = new javax.swing.JLabel();
         maintenanceAddPanel = new javax.swing.JPanel();
         maintenanceAddTopBar = new javax.swing.JPanel();
@@ -590,9 +703,23 @@ private CardLayout cardLayout;
         maintenaceAddBtn = new javax.swing.JButton();
         maintenanceUpdateBtn = new javax.swing.JButton();
         maintenaceDeleteBtn = new javax.swing.JButton();
+        maintenaceJoinBtn = new javax.swing.JButton();
         maintenanceFilter = new javax.swing.JLabel();
         maintenanceTitleText = new javax.swing.JLabel();
         maintenanceBG = new javax.swing.JLabel();
+        maintenanceJoinPanel = new javax.swing.JPanel();
+        maintenanceJoinTopBar = new javax.swing.JPanel();
+        maintenanceJoin_X_Btn = new javax.swing.JButton();
+        instruction5 = new javax.swing.JLabel();
+        ttenantIDJoinLabel3 = new javax.swing.JLabel();
+        requestStatusLabel = new javax.swing.JLabel();
+        mainteannceTransactionIDJoinField1 = new javax.swing.JTextField();
+        maintenanceRequestStatusDropdown = new javax.swing.JComboBox<>();
+        maintenanceSearchJoinButton1 = new javax.swing.JButton();
+        maintenanceTenantIDJoinLabel3 = new javax.swing.JLabel();
+        maintenanceTenantIDJoinField3 = new javax.swing.JTextField();
+        maintenanceTenantIDJoinLabel4 = new javax.swing.JLabel();
+        maintenancePropertyIDJoinField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(160, 160, 160));
@@ -719,6 +846,114 @@ private CardLayout cardLayout;
         propertiesPage.setBackground(new java.awt.Color(224, 220, 220));
         propertiesPage.setPreferredSize(new java.awt.Dimension(1920, 1080));
         propertiesPage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        PropertyTypeFilterPane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        propertyTypeFilterTopBar.setBackground(new java.awt.Color(212, 175, 55));
+
+        propertyTypeFilter_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
+        propertyTypeFilter_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        propertyTypeFilter_X_Btn.setBorder(null);
+        propertyTypeFilter_X_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                propertyTypeFilter_X_BtnMouseClicked(evt);
+            }
+        });
+        propertyTypeFilter_X_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                propertyTypeFilter_X_BtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout propertyTypeFilterTopBarLayout = new javax.swing.GroupLayout(propertyTypeFilterTopBar);
+        propertyTypeFilterTopBar.setLayout(propertyTypeFilterTopBarLayout);
+        propertyTypeFilterTopBarLayout.setHorizontalGroup(
+            propertyTypeFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, propertyTypeFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap(208, Short.MAX_VALUE)
+                .addComponent(propertyTypeFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        propertyTypeFilterTopBarLayout.setVerticalGroup(
+            propertyTypeFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(propertyTypeFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(propertyTypeFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        PropertyTypeFilterPane.add(propertyTypeFilterTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 240, -1));
+
+        jLabel20.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel20.setText("Property Type");
+        PropertyTypeFilterPane.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
+
+        submitPropertyTypeBtn.setText("Enter");
+        submitPropertyTypeBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitPropertyTypeBtnActionPerformed(evt);
+            }
+        });
+        PropertyTypeFilterPane.add(submitPropertyTypeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 90, -1));
+
+        propertyTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Apartment", "Condominuim", "Townhouse", "Retail Space", "Studio Unit" }));
+        PropertyTypeFilterPane.add(propertyTypeComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 120, -1));
+
+        propertiesPage.add(PropertyTypeFilterPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 420, 250, 140));
+
+        PropertyIDFilterPane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        propertyIDFilterTopBar.setBackground(new java.awt.Color(212, 175, 55));
+
+        propertyIDFilter_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
+        propertyIDFilter_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        propertyIDFilter_X_Btn.setBorder(null);
+        propertyIDFilter_X_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                propertyIDFilter_X_BtnMouseClicked(evt);
+            }
+        });
+        propertyIDFilter_X_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                propertyIDFilter_X_BtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout propertyIDFilterTopBarLayout = new javax.swing.GroupLayout(propertyIDFilterTopBar);
+        propertyIDFilterTopBar.setLayout(propertyIDFilterTopBarLayout);
+        propertyIDFilterTopBarLayout.setHorizontalGroup(
+            propertyIDFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, propertyIDFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap(128, Short.MAX_VALUE)
+                .addComponent(propertyIDFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        propertyIDFilterTopBarLayout.setVerticalGroup(
+            propertyIDFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(propertyIDFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(propertyIDFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        PropertyIDFilterPane.add(propertyIDFilterTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 160, -1));
+
+        jTextField1.setText("ID");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        PropertyIDFilterPane.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 60, 40));
+
+        jLabel4.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel4.setText("Property ID");
+        PropertyIDFilterPane.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+
+        jButton1.setText("Enter");
+        PropertyIDFilterPane.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 120, 90, -1));
+
+        propertiesPage.add(PropertyIDFilterPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 420, 170, 170));
 
         propertiesFilterMenu.setMaximumSize(new java.awt.Dimension(200, 490));
         propertiesFilterMenu.setMinimumSize(new java.awt.Dimension(200, 490));
@@ -894,43 +1129,11 @@ private CardLayout cardLayout;
             }
         });
 
-        MunicipalitiesFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        MunicipalitiesFilter.setText("Municipalities");
-        MunicipalitiesFilter.addMouseListener(new java.awt.event.MouseAdapter() {
+        PropertyTypeFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        PropertyTypeFilter.setText("Property Type");
+        PropertyTypeFilter.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                MunicipalitiesFilterMouseClicked(evt);
-            }
-        });
-
-        ProvincesFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        ProvincesFilter.setText("Provinces");
-        ProvincesFilter.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ProvincesFilterMouseClicked(evt);
-            }
-        });
-
-        ApartmentsFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        ApartmentsFilter.setText("Apartments");
-        ApartmentsFilter.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ApartmentsFilterMouseClicked(evt);
-            }
-        });
-
-        CondosFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        CondosFilter.setText("Condos");
-        CondosFilter.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CondosFilterMouseClicked(evt);
-            }
-        });
-
-        HousesFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        HousesFilter.setText("Houses");
-        HousesFilter.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                HousesFilterMouseClicked(evt);
+                PropertyTypeFilterMouseClicked(evt);
             }
         });
 
@@ -951,11 +1154,7 @@ private CardLayout cardLayout;
                 .addGroup(propertiesFilterByPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(VacantPropertiesFilter)
                     .addComponent(OccupiedPropertiesFilter)
-                    .addComponent(MunicipalitiesFilter)
-                    .addComponent(ProvincesFilter)
-                    .addComponent(ApartmentsFilter)
-                    .addComponent(CondosFilter)
-                    .addComponent(HousesFilter)
+                    .addComponent(PropertyTypeFilter)
                     .addComponent(PropertyIDFilter))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
@@ -967,77 +1166,15 @@ private CardLayout cardLayout;
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(OccupiedPropertiesFilter)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(MunicipalitiesFilter)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ProvincesFilter)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ApartmentsFilter)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CondosFilter)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(HousesFilter)
+                .addComponent(PropertyTypeFilter)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PropertyIDFilter)
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
-        propertiesFilterMenu.add(propertiesFilterByPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 180, 210));
+        propertiesFilterMenu.add(propertiesFilterByPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 180, 110));
 
-        propertiesPage.add(propertiesFilterMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 150, 200, 490));
-
-        PropertyIDFilterPane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        propertyIDFilterTopBar.setBackground(new java.awt.Color(212, 175, 55));
-
-        propertyIDFilter_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
-        propertyIDFilter_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
-        propertyIDFilter_X_Btn.setBorder(null);
-        propertyIDFilter_X_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                propertyIDFilter_X_BtnMouseClicked(evt);
-            }
-        });
-        propertyIDFilter_X_Btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                propertyIDFilter_X_BtnActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout propertyIDFilterTopBarLayout = new javax.swing.GroupLayout(propertyIDFilterTopBar);
-        propertyIDFilterTopBar.setLayout(propertyIDFilterTopBarLayout);
-        propertyIDFilterTopBarLayout.setHorizontalGroup(
-            propertyIDFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, propertyIDFilterTopBarLayout.createSequentialGroup()
-                .addContainerGap(128, Short.MAX_VALUE)
-                .addComponent(propertyIDFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        propertyIDFilterTopBarLayout.setVerticalGroup(
-            propertyIDFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(propertyIDFilterTopBarLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(propertyIDFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        PropertyIDFilterPane.add(propertyIDFilterTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 160, -1));
-
-        jTextField1.setText("ID");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        PropertyIDFilterPane.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 60, 40));
-
-        jLabel4.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel4.setText("Property ID");
-        PropertyIDFilterPane.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
-
-        jButton1.setText("Enter");
-        PropertyIDFilterPane.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 120, 90, -1));
-
-        propertiesPage.add(PropertyIDFilterPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 470, 170, 170));
+        propertiesPage.add(propertiesFilterMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 150, 200, 390));
 
         propertiesDeletePanel.setBackground(new java.awt.Color(51, 51, 51));
         propertiesDeletePanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -1436,6 +1573,147 @@ private CardLayout cardLayout;
 
         propertiesPage.add(propertiesAddPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1410, 200, 490, 590));
 
+        propertiesJoinPanel.setBackground(new java.awt.Color(51, 51, 51));
+        propertiesJoinPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        propertiesJoinTopBar.setBackground(new java.awt.Color(212, 175, 55));
+
+        propertiesJoin_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
+        propertiesJoin_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        propertiesJoin_X_Btn.setBorder(null);
+        propertiesJoin_X_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                propertiesJoin_X_BtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout propertiesJoinTopBarLayout = new javax.swing.GroupLayout(propertiesJoinTopBar);
+        propertiesJoinTopBar.setLayout(propertiesJoinTopBarLayout);
+        propertiesJoinTopBarLayout.setHorizontalGroup(
+            propertiesJoinTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, propertiesJoinTopBarLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(propertiesJoin_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        propertiesJoinTopBarLayout.setVerticalGroup(
+            propertiesJoinTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(propertiesJoinTopBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(propertiesJoin_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        instruction1.setFont(new java.awt.Font("Arial Narrow", 2, 14)); // NOI18N
+        instruction1.setForeground(new java.awt.Color(255, 102, 102));
+        instruction1.setText("*Fill in the form");
+
+        propertyIDJoinLabel.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        propertyIDJoinLabel.setForeground(new java.awt.Color(255, 255, 255));
+        propertyIDJoinLabel.setText("Property ID");
+
+        tenantIDJoinLabel.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        tenantIDJoinLabel.setForeground(new java.awt.Color(255, 255, 255));
+        tenantIDJoinLabel.setText("Tenant ID");
+
+        leaseStartJoinLabel.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        leaseStartJoinLabel.setForeground(new java.awt.Color(255, 255, 255));
+        leaseStartJoinLabel.setText("Lease Start");
+
+        leaseEndJoinLabel.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        leaseEndJoinLabel.setForeground(new java.awt.Color(255, 255, 255));
+        leaseEndJoinLabel.setText("Lease End");
+
+        leaseStatusLabel.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        leaseStatusLabel.setForeground(new java.awt.Color(255, 255, 255));
+        leaseStatusLabel.setText("Status");
+
+        tenantIDJoinField.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tenantIDJoinField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tenantIDJoinFieldActionPerformed(evt);
+            }
+        });
+
+        leaseStatusDropdown.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        leaseStatusDropdown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Active", "Expired", "Terminated" }));
+
+        propertiesSearchJoinButton.setBackground(new java.awt.Color(212, 175, 55));
+        propertiesSearchJoinButton.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        propertiesSearchJoinButton.setText("SEARCH");
+        propertiesSearchJoinButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                propertiesSearchJoinButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout propertiesJoinPanelLayout = new javax.swing.GroupLayout(propertiesJoinPanel);
+        propertiesJoinPanel.setLayout(propertiesJoinPanelLayout);
+        propertiesJoinPanelLayout.setHorizontalGroup(
+            propertiesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(propertiesJoinTopBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(propertiesJoinPanelLayout.createSequentialGroup()
+                .addGroup(propertiesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(propertiesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(propertiesSearchJoinButton, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(propertiesJoinPanelLayout.createSequentialGroup()
+                            .addGroup(propertiesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(propertiesJoinPanelLayout.createSequentialGroup()
+                                    .addGap(35, 35, 35)
+                                    .addComponent(propertyIDJoinLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, propertiesJoinPanelLayout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addGroup(propertiesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(tenantIDJoinLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(leaseStartJoinLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(leaseEndJoinLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(leaseStatusLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGap(18, 18, 18)
+                            .addGroup(propertiesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(leaseStatusDropdown, 0, 270, Short.MAX_VALUE)
+                                .addComponent(propertyIDJoinField)
+                                .addComponent(tenantIDJoinField)
+                                .addComponent(leaseStartJoinField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(leaseEndJoinField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(propertiesJoinPanelLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(instruction1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(45, Short.MAX_VALUE))
+        );
+        propertiesJoinPanelLayout.setVerticalGroup(
+            propertiesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(propertiesJoinPanelLayout.createSequentialGroup()
+                .addComponent(propertiesJoinTopBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16)
+                .addComponent(instruction1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(propertiesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(propertiesJoinPanelLayout.createSequentialGroup()
+                        .addGroup(propertiesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(propertyIDJoinField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(propertyIDJoinLabel))
+                        .addGap(21, 21, 21)
+                        .addGroup(propertiesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(tenantIDJoinLabel)
+                            .addComponent(tenantIDJoinField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(23, 23, 23)
+                        .addComponent(leaseStartJoinLabel))
+                    .addComponent(leaseStartJoinField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(propertiesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(leaseEndJoinLabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(leaseEndJoinField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(propertiesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(leaseStatusLabel)
+                    .addComponent(leaseStatusDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 178, Short.MAX_VALUE)
+                .addComponent(propertiesSearchJoinButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38))
+        );
+
+        propertiesPage.add(propertiesJoinPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1410, 200, 490, 590));
+
         propertiesTable.setBackground(new java.awt.Color(51, 51, 51));
         propertiesTable.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         propertiesTable.setForeground(new java.awt.Color(255, 255, 255));
@@ -1488,28 +1766,42 @@ private CardLayout cardLayout;
             }
         });
 
+        propertiesJoinBtn.setBackground(new java.awt.Color(218, 165, 32));
+        propertiesJoinBtn.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        propertiesJoinBtn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/Remove.png"));
+        propertiesJoinBtn.setText("JOIN");
+        propertiesJoinBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(167, 133, 42), 2));
+        propertiesJoinBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                propertiesJoinBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout propertiesMenuPanelLayout = new javax.swing.GroupLayout(propertiesMenuPanel);
         propertiesMenuPanel.setLayout(propertiesMenuPanelLayout);
         propertiesMenuPanelLayout.setHorizontalGroup(
             propertiesMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(propertiesMenuPanelLayout.createSequentialGroup()
-                .addGap(95, 95, 95)
+                .addGap(94, 94, 94)
                 .addGroup(propertiesMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(propertiesAddBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(propertiesUpdateBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(propertiesDeleteBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
-                .addContainerGap(95, Short.MAX_VALUE))
+                    .addComponent(propertiesDeleteBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(propertiesJoinBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
         propertiesMenuPanelLayout.setVerticalGroup(
             propertiesMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(propertiesMenuPanelLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
+                .addGap(28, 28, 28)
                 .addComponent(propertiesAddBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(propertiesUpdateBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(propertiesDeleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addComponent(propertiesJoinBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32))
         );
 
         propertiesPage.add(propertiesMenuPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1470, 280, -1, -1));
@@ -1533,6 +1825,135 @@ private CardLayout cardLayout;
 
         tenantsPage.setBackground(new java.awt.Color(224, 220, 220));
         tenantsPage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tenantsJoinPanel.setBackground(new java.awt.Color(51, 51, 51));
+        tenantsJoinPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        tenantsJoinTopBar.setBackground(new java.awt.Color(212, 175, 55));
+
+        tenantsJoin_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
+        tenantsJoin_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        tenantsJoin_X_Btn.setBorder(null);
+        tenantsJoin_X_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tenantsJoin_X_BtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout tenantsJoinTopBarLayout = new javax.swing.GroupLayout(tenantsJoinTopBar);
+        tenantsJoinTopBar.setLayout(tenantsJoinTopBarLayout);
+        tenantsJoinTopBarLayout.setHorizontalGroup(
+            tenantsJoinTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tenantsJoinTopBarLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(tenantsJoin_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        tenantsJoinTopBarLayout.setVerticalGroup(
+            tenantsJoinTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tenantsJoinTopBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(tenantsJoin_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        instruction2.setFont(new java.awt.Font("Arial Narrow", 2, 14)); // NOI18N
+        instruction2.setForeground(new java.awt.Color(255, 102, 102));
+        instruction2.setText("*Fill in the form");
+
+        ttenantIDJoinLabel.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        ttenantIDJoinLabel.setForeground(new java.awt.Color(255, 255, 255));
+        ttenantIDJoinLabel.setText("Tenant ID");
+
+        tenantLeaseStartJoinLabel.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        tenantLeaseStartJoinLabel.setForeground(new java.awt.Color(255, 255, 255));
+        tenantLeaseStartJoinLabel.setText("Lease Start");
+
+        tenantLeaseEndJoinLabel1.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        tenantLeaseEndJoinLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        tenantLeaseEndJoinLabel1.setText("Lease End");
+
+        tenantPaymentLabel.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        tenantPaymentLabel.setForeground(new java.awt.Color(255, 255, 255));
+        tenantPaymentLabel.setText("Status");
+
+        tenantIDJoinField1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tenantIDJoinField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tenantIDJoinField1ActionPerformed(evt);
+            }
+        });
+
+        tenantPaymentStatusDropdown.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tenantPaymentStatusDropdown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Paid", "Pending", "Failed" }));
+
+        tenantSearchJoinButton.setBackground(new java.awt.Color(212, 175, 55));
+        tenantSearchJoinButton.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        tenantSearchJoinButton.setText("SEARCH");
+        tenantSearchJoinButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tenantSearchJoinButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout tenantsJoinPanelLayout = new javax.swing.GroupLayout(tenantsJoinPanel);
+        tenantsJoinPanel.setLayout(tenantsJoinPanelLayout);
+        tenantsJoinPanelLayout.setHorizontalGroup(
+            tenantsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(tenantsJoinTopBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(tenantsJoinPanelLayout.createSequentialGroup()
+                .addGroup(tenantsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(tenantsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tenantsJoinPanelLayout.createSequentialGroup()
+                            .addGap(35, 35, 35)
+                            .addGroup(tenantsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(ttenantIDJoinLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(tenantLeaseStartJoinLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(tenantLeaseEndJoinLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(tenantPaymentLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(18, 18, 18)
+                            .addGroup(tenantsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(tenantPaymentStatusDropdown, 0, 270, Short.MAX_VALUE)
+                                .addComponent(tenantIDJoinField1)
+                                .addComponent(tenantLeaseStartJoinField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(tenantLeaseEndJoinField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tenantsJoinPanelLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(tenantSearchJoinButton, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(tenantsJoinPanelLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(instruction2, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(45, Short.MAX_VALUE))
+        );
+        tenantsJoinPanelLayout.setVerticalGroup(
+            tenantsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tenantsJoinPanelLayout.createSequentialGroup()
+                .addComponent(tenantsJoinTopBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16)
+                .addComponent(instruction2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(tenantsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(tenantsJoinPanelLayout.createSequentialGroup()
+                        .addGroup(tenantsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(ttenantIDJoinLabel)
+                            .addComponent(tenantIDJoinField1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(23, 23, 23)
+                        .addComponent(tenantLeaseStartJoinLabel))
+                    .addComponent(tenantLeaseStartJoinField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(tenantsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tenantLeaseEndJoinLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(tenantLeaseEndJoinField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(tenantsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tenantPaymentLabel)
+                    .addComponent(tenantPaymentStatusDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 229, Short.MAX_VALUE)
+                .addComponent(tenantSearchJoinButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38))
+        );
+
+        tenantsPage.add(tenantsJoinPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1410, 200, 490, 590));
 
         tenantContactNoFilterPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -2357,6 +2778,17 @@ private CardLayout cardLayout;
             }
         });
 
+        tenantsJoinBtn.setBackground(new java.awt.Color(218, 165, 32));
+        tenantsJoinBtn.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        tenantsJoinBtn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/Remove.png"));
+        tenantsJoinBtn.setText("JOIN");
+        tenantsJoinBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(167, 133, 42), 2));
+        tenantsJoinBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tenantsJoinBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout tenantsMenuPanelLayout = new javax.swing.GroupLayout(tenantsMenuPanel);
         tenantsMenuPanel.setLayout(tenantsMenuPanelLayout);
         tenantsMenuPanelLayout.setHorizontalGroup(
@@ -2366,19 +2798,22 @@ private CardLayout cardLayout;
                 .addGroup(tenantsMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(tenantsAddBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(tenantsUpdateBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(tenantsDeleteBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
+                    .addComponent(tenantsDeleteBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tenantsJoinBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(95, Short.MAX_VALUE))
         );
         tenantsMenuPanelLayout.setVerticalGroup(
             tenantsMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tenantsMenuPanelLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
+                .addGap(28, 28, 28)
                 .addComponent(tenantsAddBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(tenantsUpdateBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(tenantsDeleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addComponent(tenantsJoinBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32))
         );
 
         tenantsPage.add(tenantsMenuPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1470, 280, -1, -1));
@@ -2398,6 +2833,60 @@ private CardLayout cardLayout;
         tenantsBG.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/Tenants-ng.png"));
         tenantsPage.add(tenantsBG, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 1910, 1010));
 
+        tenantContactNoFilterPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tenantContactNoFilterTopBar1.setBackground(new java.awt.Color(212, 175, 55));
+
+        tenantContactNoFilter_X_Btn1.setBackground(new java.awt.Color(51, 51, 51));
+        tenantContactNoFilter_X_Btn1.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        tenantContactNoFilter_X_Btn1.setBorder(null);
+        tenantContactNoFilter_X_Btn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tenantContactNoFilter_X_Btn1MouseClicked(evt);
+            }
+        });
+        tenantContactNoFilter_X_Btn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tenantContactNoFilter_X_Btn1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout tenantContactNoFilterTopBar1Layout = new javax.swing.GroupLayout(tenantContactNoFilterTopBar1);
+        tenantContactNoFilterTopBar1.setLayout(tenantContactNoFilterTopBar1Layout);
+        tenantContactNoFilterTopBar1Layout.setHorizontalGroup(
+            tenantContactNoFilterTopBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tenantContactNoFilterTopBar1Layout.createSequentialGroup()
+                .addContainerGap(188, Short.MAX_VALUE)
+                .addComponent(tenantContactNoFilter_X_Btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        tenantContactNoFilterTopBar1Layout.setVerticalGroup(
+            tenantContactNoFilterTopBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tenantContactNoFilterTopBar1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(tenantContactNoFilter_X_Btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        tenantContactNoFilterPanel1.add(tenantContactNoFilterTopBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 220, -1));
+
+        tenantContactNoTxtfield1.setText("Contact Num");
+        tenantContactNoTxtfield1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tenantContactNoTxtfield1ActionPerformed(evt);
+            }
+        });
+        tenantContactNoFilterPanel1.add(tenantContactNoTxtfield1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 180, -1));
+
+        jLabel17.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel17.setText("Contact Number");
+        tenantContactNoFilterPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
+
+        submitTenantContactNoBtn2.setText("Enter");
+        tenantContactNoFilterPanel1.add(submitTenantContactNoBtn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, -1, -1));
+
+        tenantsPage.add(tenantContactNoFilterPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 380, 230, 160));
+
         CardPanel.add(tenantsPage, "card3");
 
         leasesPage.setBackground(new java.awt.Color(224, 220, 220));
@@ -2407,6 +2896,168 @@ private CardLayout cardLayout;
         leasesPage.setPreferredSize(new java.awt.Dimension(1920, 1080));
         leasesPage.setRequestFocusEnabled(false);
         leasesPage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        leasesJoinPanel.setBackground(new java.awt.Color(51, 51, 51));
+        leasesJoinPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        leaseJoinTopBar.setBackground(new java.awt.Color(212, 175, 55));
+
+        tenantsJoin_X_Btn1.setBackground(new java.awt.Color(51, 51, 51));
+        tenantsJoin_X_Btn1.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        tenantsJoin_X_Btn1.setBorder(null);
+        tenantsJoin_X_Btn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tenantsJoin_X_Btn1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout leaseJoinTopBarLayout = new javax.swing.GroupLayout(leaseJoinTopBar);
+        leaseJoinTopBar.setLayout(leaseJoinTopBarLayout);
+        leaseJoinTopBarLayout.setHorizontalGroup(
+            leaseJoinTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, leaseJoinTopBarLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(tenantsJoin_X_Btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        leaseJoinTopBarLayout.setVerticalGroup(
+            leaseJoinTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(leaseJoinTopBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(tenantsJoin_X_Btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        instruction3.setFont(new java.awt.Font("Arial Narrow", 2, 14)); // NOI18N
+        instruction3.setForeground(new java.awt.Color(255, 102, 102));
+        instruction3.setText("*Fill in the form");
+
+        ttenantIDJoinLabel1.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        ttenantIDJoinLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        ttenantIDJoinLabel1.setText("Lease ID");
+
+        tenantPaymentLabel1.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        tenantPaymentLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        tenantPaymentLabel1.setText("Payment Status");
+
+        leaseIDJoinField.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        leaseIDJoinField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                leaseIDJoinFieldActionPerformed(evt);
+            }
+        });
+
+        leaseTenantPaymentStatusDropdown.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        leaseTenantPaymentStatusDropdown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Paid", "Pending", "Failed" }));
+
+        tenantSearchJoinButton1.setBackground(new java.awt.Color(212, 175, 55));
+        tenantSearchJoinButton1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        tenantSearchJoinButton1.setText("SEARCH");
+        tenantSearchJoinButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tenantSearchJoinButton1ActionPerformed(evt);
+            }
+        });
+
+        leaseTenantIDJoinField.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        leaseTenantIDJoinField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                leaseTenantIDJoinFieldActionPerformed(evt);
+            }
+        });
+
+        leaseTenantIDJoinLabel.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        leaseTenantIDJoinLabel.setForeground(new java.awt.Color(255, 255, 255));
+        leaseTenantIDJoinLabel.setText("Tenant ID");
+
+        leaseTenantIDJoinLabel1.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        leaseTenantIDJoinLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        leaseTenantIDJoinLabel1.setText("Lease Start");
+
+        leaseTenantIDJoinLabel2.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        leaseTenantIDJoinLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        leaseTenantIDJoinLabel2.setText("Lease End");
+
+        tenantPaymentLabel2.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        tenantPaymentLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        tenantPaymentLabel2.setText("Maintenance Status");
+
+        leaseMaintenanceStatusDropdown.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        leaseMaintenanceStatusDropdown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pending", "In Progress", "Completed" }));
+
+        javax.swing.GroupLayout leasesJoinPanelLayout = new javax.swing.GroupLayout(leasesJoinPanel);
+        leasesJoinPanel.setLayout(leasesJoinPanelLayout);
+        leasesJoinPanelLayout.setHorizontalGroup(
+            leasesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(leaseJoinTopBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(leasesJoinPanelLayout.createSequentialGroup()
+                .addGroup(leasesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, leasesJoinPanelLayout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addGroup(leasesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, leasesJoinPanelLayout.createSequentialGroup()
+                                .addComponent(tenantPaymentLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(leaseMaintenanceStatusDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(leasesJoinPanelLayout.createSequentialGroup()
+                                .addComponent(leaseTenantIDJoinLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(leaseEndChooser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(leasesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(tenantSearchJoinButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, leasesJoinPanelLayout.createSequentialGroup()
+                                    .addGroup(leasesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(ttenantIDJoinLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(tenantPaymentLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(leaseTenantIDJoinLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(leaseTenantIDJoinLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(leasesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(leaseStartChooser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(leaseTenantPaymentStatusDropdown, 0, 270, Short.MAX_VALUE)
+                                        .addComponent(leaseIDJoinField)
+                                        .addComponent(leaseTenantIDJoinField))))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, leasesJoinPanelLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(instruction3, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(10, 45, Short.MAX_VALUE))
+        );
+        leasesJoinPanelLayout.setVerticalGroup(
+            leasesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(leasesJoinPanelLayout.createSequentialGroup()
+                .addComponent(leaseJoinTopBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16)
+                .addComponent(instruction3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(leasesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ttenantIDJoinLabel1)
+                    .addComponent(leaseIDJoinField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(leasesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(leaseTenantIDJoinLabel)
+                    .addComponent(leaseTenantIDJoinField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(leasesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(leaseStartChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(leaseTenantIDJoinLabel1))
+                .addGap(18, 18, 18)
+                .addGroup(leasesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(leaseEndChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(leaseTenantIDJoinLabel2))
+                .addGap(12, 12, 12)
+                .addGroup(leasesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tenantPaymentLabel1)
+                    .addComponent(leaseTenantPaymentStatusDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(leasesJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tenantPaymentLabel2)
+                    .addComponent(leaseMaintenanceStatusDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 176, Short.MAX_VALUE)
+                .addComponent(tenantSearchJoinButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38))
+        );
+
+        leasesPage.add(leasesJoinPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1410, 200, 490, 590));
 
         leaseIDFilterPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -3133,28 +3784,43 @@ private CardLayout cardLayout;
             }
         });
 
+        leasesJoinBtn.setBackground(new java.awt.Color(218, 165, 32));
+        leasesJoinBtn.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        leasesJoinBtn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/Remove.png"));
+        leasesJoinBtn.setText("JOIN");
+        leasesJoinBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(167, 133, 42), 2));
+        leasesJoinBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                leasesJoinBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout leasesMenuPanelLayout = new javax.swing.GroupLayout(leasesMenuPanel);
         leasesMenuPanel.setLayout(leasesMenuPanelLayout);
         leasesMenuPanelLayout.setHorizontalGroup(
             leasesMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(leasesMenuPanelLayout.createSequentialGroup()
                 .addGap(95, 95, 95)
-                .addGroup(leasesMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(leasesAddBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(leasesUpdateBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(leasesDeleteBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
+                .addGroup(leasesMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(leasesJoinBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(leasesMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(leasesAddBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(leasesUpdateBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(leasesDeleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(95, Short.MAX_VALUE))
         );
         leasesMenuPanelLayout.setVerticalGroup(
             leasesMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(leasesMenuPanelLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
+                .addGap(30, 30, 30)
                 .addComponent(leasesAddBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(leasesUpdateBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(leasesDeleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addComponent(leasesJoinBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
         );
 
         leasesPage.add(leasesMenuPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1470, 280, -1, -1));
@@ -3178,6 +3844,161 @@ private CardLayout cardLayout;
 
         transactionsPage.setBackground(new java.awt.Color(224, 220, 220));
         transactionsPage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        TransactionTypeFilterPane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        transactionTypeFilterTopBar.setBackground(new java.awt.Color(212, 175, 55));
+
+        transactionTypeFilter_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
+        transactionTypeFilter_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        transactionTypeFilter_X_Btn.setBorder(null);
+        transactionTypeFilter_X_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                transactionTypeFilter_X_BtnMouseClicked(evt);
+            }
+        });
+        transactionTypeFilter_X_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transactionTypeFilter_X_BtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout transactionTypeFilterTopBarLayout = new javax.swing.GroupLayout(transactionTypeFilterTopBar);
+        transactionTypeFilterTopBar.setLayout(transactionTypeFilterTopBarLayout);
+        transactionTypeFilterTopBarLayout.setHorizontalGroup(
+            transactionTypeFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, transactionTypeFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap(238, Short.MAX_VALUE)
+                .addComponent(transactionTypeFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        transactionTypeFilterTopBarLayout.setVerticalGroup(
+            transactionTypeFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(transactionTypeFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(transactionTypeFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        TransactionTypeFilterPane.add(transactionTypeFilterTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 270, -1));
+
+        jLabel25.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel25.setText("Transaction Type");
+        TransactionTypeFilterPane.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 130, -1));
+
+        submitPaymentTypeBtn1.setText("Enter");
+        submitPaymentTypeBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitPaymentTypeBtn1ActionPerformed(evt);
+            }
+        });
+        TransactionTypeFilterPane.add(submitPaymentTypeBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 90, -1));
+
+        transactionTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pending", "Complete", "Overdue" }));
+        TransactionTypeFilterPane.add(transactionTypeComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 100, -1));
+
+        transactionsPage.add(TransactionTypeFilterPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 380, 280, 140));
+
+        PaymentTypeFilterPane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        paymentTypeFilterTopBar.setBackground(new java.awt.Color(212, 175, 55));
+
+        paymentTypeFilter_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
+        paymentTypeFilter_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        paymentTypeFilter_X_Btn.setBorder(null);
+        paymentTypeFilter_X_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                paymentTypeFilter_X_BtnMouseClicked(evt);
+            }
+        });
+        paymentTypeFilter_X_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                paymentTypeFilter_X_BtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout paymentTypeFilterTopBarLayout = new javax.swing.GroupLayout(paymentTypeFilterTopBar);
+        paymentTypeFilterTopBar.setLayout(paymentTypeFilterTopBarLayout);
+        paymentTypeFilterTopBarLayout.setHorizontalGroup(
+            paymentTypeFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, paymentTypeFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap(198, Short.MAX_VALUE)
+                .addComponent(paymentTypeFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        paymentTypeFilterTopBarLayout.setVerticalGroup(
+            paymentTypeFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(paymentTypeFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(paymentTypeFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        PaymentTypeFilterPane.add(paymentTypeFilterTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 230, -1));
+
+        jLabel23.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel23.setText("Payment Type");
+        PaymentTypeFilterPane.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
+
+        submitPaymentTypeBtn.setText("Enter");
+        submitPaymentTypeBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitPaymentTypeBtnActionPerformed(evt);
+            }
+        });
+        PaymentTypeFilterPane.add(submitPaymentTypeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 90, -1));
+
+        paymentTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cash Payment", "Bank Transfer", "Online Payment" }));
+        PaymentTypeFilterPane.add(paymentTypeComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 120, -1));
+
+        transactionsPage.add(PaymentTypeFilterPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 380, 240, 140));
+
+        transactionDateFilterPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        transactionDateFilterTopBar.setBackground(new java.awt.Color(212, 175, 55));
+
+        transactionDateFilter_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
+        transactionDateFilter_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        transactionDateFilter_X_Btn.setBorder(null);
+        transactionDateFilter_X_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                transactionDateFilter_X_BtnMouseClicked(evt);
+            }
+        });
+        transactionDateFilter_X_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transactionDateFilter_X_BtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout transactionDateFilterTopBarLayout = new javax.swing.GroupLayout(transactionDateFilterTopBar);
+        transactionDateFilterTopBar.setLayout(transactionDateFilterTopBarLayout);
+        transactionDateFilterTopBarLayout.setHorizontalGroup(
+            transactionDateFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, transactionDateFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap(228, Short.MAX_VALUE)
+                .addComponent(transactionDateFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        transactionDateFilterTopBarLayout.setVerticalGroup(
+            transactionDateFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(transactionDateFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(transactionDateFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        transactionDateFilterPanel.add(transactionDateFilterTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 260, -1));
+
+        jLabel19.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel19.setText("Transaction Date");
+        transactionDateFilterPanel.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
+
+        submitTransactionIDBtn1.setText("Enter");
+        transactionDateFilterPanel.add(submitTransactionIDBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 90, -1));
+        transactionDateFilterPanel.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 130, -1));
+
+        transactionsPage.add(transactionDateFilterPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 380, 280, 140));
 
         transactionIDFilterPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -3407,33 +4228,21 @@ private CardLayout cardLayout;
             }
         });
 
-        CashPaymentFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        CashPaymentFilter.setText("Cash Payments");
-        CashPaymentFilter.addMouseListener(new java.awt.event.MouseAdapter() {
+        PaymentTypeFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        PaymentTypeFilter.setText("Payment Type");
+        PaymentTypeFilter.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CashPaymentFilterMouseClicked(evt);
+                PaymentTypeFilterMouseClicked(evt);
             }
         });
 
-        BankTransferFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        BankTransferFilter.setText("Bank Transfers");
-        BankTransferFilter.addMouseListener(new java.awt.event.MouseAdapter() {
+        TransactionTypeFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        TransactionTypeFilter.setText("Transactions Type");
+        TransactionTypeFilter.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BankTransferFilterMouseClicked(evt);
+                TransactionTypeFilterMouseClicked(evt);
             }
         });
-
-        OnlinePaymentsFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        OnlinePaymentsFilter.setText("Online Payments");
-
-        PendingTransactionFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        PendingTransactionFilter.setText("Pending Transactions");
-
-        CompleteTransactionFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        CompleteTransactionFilter.setText("Complete Transactions");
-
-        OverdueTransactionFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        OverdueTransactionFilter.setText("Overdue Transactions");
 
         javax.swing.GroupLayout transactionFilterByPanelLayout = new javax.swing.GroupLayout(transactionFilterByPanel);
         transactionFilterByPanel.setLayout(transactionFilterByPanelLayout);
@@ -3444,13 +4253,9 @@ private CardLayout cardLayout;
                 .addGroup(transactionFilterByPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(TenantTransactionFilter)
                     .addComponent(TransactionDateFilter)
-                    .addComponent(CashPaymentFilter)
-                    .addComponent(BankTransferFilter)
-                    .addComponent(OnlinePaymentsFilter)
-                    .addComponent(PendingTransactionFilter)
-                    .addComponent(CompleteTransactionFilter)
-                    .addComponent(OverdueTransactionFilter))
-                .addContainerGap(13, Short.MAX_VALUE))
+                    .addComponent(PaymentTypeFilter)
+                    .addComponent(TransactionTypeFilter))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         transactionFilterByPanelLayout.setVerticalGroup(
             transactionFilterByPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3460,23 +4265,15 @@ private CardLayout cardLayout;
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(TransactionDateFilter)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CashPaymentFilter)
+                .addComponent(PaymentTypeFilter)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BankTransferFilter)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(OnlinePaymentsFilter)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PendingTransactionFilter)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CompleteTransactionFilter)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(OverdueTransactionFilter)
+                .addComponent(TransactionTypeFilter)
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
-        transactionFilterMenu.add(transactionFilterByPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 180, 210));
+        transactionFilterMenu.add(transactionFilterByPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 180, 110));
 
-        transactionsPage.add(transactionFilterMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 150, 200, 490));
+        transactionsPage.add(transactionFilterMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 150, 200, 390));
 
         transactionsAddPanel.setBackground(new java.awt.Color(51, 51, 51));
         transactionsAddPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -3951,6 +4748,17 @@ private CardLayout cardLayout;
             }
         });
 
+        transacJoinBtn.setBackground(new java.awt.Color(218, 165, 32));
+        transacJoinBtn.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        transacJoinBtn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/Remove.png"));
+        transacJoinBtn.setText("JOIN");
+        transacJoinBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(167, 133, 42), 2));
+        transacJoinBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transacJoinBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout transactionsMenuPanelLayout = new javax.swing.GroupLayout(transactionsMenuPanel);
         transactionsMenuPanel.setLayout(transactionsMenuPanelLayout);
         transactionsMenuPanelLayout.setHorizontalGroup(
@@ -3960,19 +4768,22 @@ private CardLayout cardLayout;
                 .addGroup(transactionsMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(transacAddBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(transacUpdateBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(transacDeleteBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
+                    .addComponent(transacDeleteBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
+                    .addComponent(transacJoinBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
                 .addContainerGap(95, Short.MAX_VALUE))
         );
         transactionsMenuPanelLayout.setVerticalGroup(
             transactionsMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(transactionsMenuPanelLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
+                .addGap(25, 25, 25)
                 .addComponent(transacAddBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(transacUpdateBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(transacDeleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addComponent(transacJoinBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37))
         );
 
         transactionsPage.add(transactionsMenuPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1470, 280, -1, -1));
@@ -3992,10 +4803,306 @@ private CardLayout cardLayout;
         transactionsBG.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/Transactions-bg.png"));
         transactionsPage.add(transactionsBG, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 1010));
 
+        transactionsJoinPanel.setBackground(new java.awt.Color(51, 51, 51));
+        transactionsJoinPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        transactionsJoinTopBar.setBackground(new java.awt.Color(212, 175, 55));
+
+        transactionsJoin_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
+        transactionsJoin_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        transactionsJoin_X_Btn.setBorder(null);
+        transactionsJoin_X_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transactionsJoin_X_BtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout transactionsJoinTopBarLayout = new javax.swing.GroupLayout(transactionsJoinTopBar);
+        transactionsJoinTopBar.setLayout(transactionsJoinTopBarLayout);
+        transactionsJoinTopBarLayout.setHorizontalGroup(
+            transactionsJoinTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, transactionsJoinTopBarLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(transactionsJoin_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        transactionsJoinTopBarLayout.setVerticalGroup(
+            transactionsJoinTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(transactionsJoinTopBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(transactionsJoin_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        instruction4.setFont(new java.awt.Font("Arial Narrow", 2, 14)); // NOI18N
+        instruction4.setForeground(new java.awt.Color(255, 102, 102));
+        instruction4.setText("*Fill in the form");
+
+        ttenantIDJoinLabel2.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        ttenantIDJoinLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        ttenantIDJoinLabel2.setText("Transaction ID");
+
+        transactionsPaymentLabel.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        transactionsPaymentLabel.setForeground(new java.awt.Color(255, 255, 255));
+        transactionsPaymentLabel.setText("Payment Status");
+
+        mainteannceTransactionIDJoinField.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        mainteannceTransactionIDJoinField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mainteannceTransactionIDJoinFieldActionPerformed(evt);
+            }
+        });
+
+        transactionsPaymentStatusDropdown.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        transactionsPaymentStatusDropdown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Paid", "Pending", "Failed" }));
+
+        maintenanceSearchJoinButton.setBackground(new java.awt.Color(212, 175, 55));
+        maintenanceSearchJoinButton.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        maintenanceSearchJoinButton.setText("SEARCH");
+        maintenanceSearchJoinButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                maintenanceSearchJoinButtonActionPerformed(evt);
+            }
+        });
+
+        maintenanceTenantIDJoinLabel.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        maintenanceTenantIDJoinLabel.setForeground(new java.awt.Color(255, 255, 255));
+        maintenanceTenantIDJoinLabel.setText("Tenant ID");
+
+        maintenanceTenantIDJoinField.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        maintenanceTenantIDJoinField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                maintenanceTenantIDJoinFieldActionPerformed(evt);
+            }
+        });
+
+        maintenanceTenantIDJoinLabel1.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        maintenanceTenantIDJoinLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        maintenanceTenantIDJoinLabel1.setText("Property ID");
+
+        maintenanceTenantIDJoinField1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        maintenanceTenantIDJoinField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                maintenanceTenantIDJoinField1ActionPerformed(evt);
+            }
+        });
+
+        maintenanceTenantIDJoinLabel2.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        maintenanceTenantIDJoinLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        maintenanceTenantIDJoinLabel2.setText("Lease ID");
+
+        maintenanceTenantIDJoinField2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        maintenanceTenantIDJoinField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                maintenanceTenantIDJoinField2ActionPerformed(evt);
+            }
+        });
+
+        maintenanceDateStartJoinLabel.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        maintenanceDateStartJoinLabel.setForeground(new java.awt.Color(255, 255, 255));
+        maintenanceDateStartJoinLabel.setText("Date Start");
+
+        maintenanceDateEndJoinLabel.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        maintenanceDateEndJoinLabel.setForeground(new java.awt.Color(255, 255, 255));
+        maintenanceDateEndJoinLabel.setText("Date End");
+
+        javax.swing.GroupLayout transactionsJoinPanelLayout = new javax.swing.GroupLayout(transactionsJoinPanel);
+        transactionsJoinPanel.setLayout(transactionsJoinPanelLayout);
+        transactionsJoinPanelLayout.setHorizontalGroup(
+            transactionsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(transactionsJoinTopBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(transactionsJoinPanelLayout.createSequentialGroup()
+                .addGroup(transactionsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, transactionsJoinPanelLayout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addGroup(transactionsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(maintenanceSearchJoinButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, transactionsJoinPanelLayout.createSequentialGroup()
+                                .addComponent(ttenantIDJoinLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(mainteannceTransactionIDJoinField, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(transactionsJoinPanelLayout.createSequentialGroup()
+                                .addComponent(maintenanceTenantIDJoinLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(maintenanceTenantIDJoinField))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, transactionsJoinPanelLayout.createSequentialGroup()
+                                .addComponent(maintenanceTenantIDJoinLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(maintenanceTenantIDJoinField1))
+                            .addGroup(transactionsJoinPanelLayout.createSequentialGroup()
+                                .addGroup(transactionsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(maintenanceTenantIDJoinLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(maintenanceDateStartJoinLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(transactionsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(maintenanceDateStartJoinDateChooser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(maintenanceTenantIDJoinField2)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, transactionsJoinPanelLayout.createSequentialGroup()
+                                .addComponent(transactionsPaymentLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(transactionsPaymentStatusDropdown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, transactionsJoinPanelLayout.createSequentialGroup()
+                                .addComponent(maintenanceDateEndJoinLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(maintenanceDateEndJoinDateChooser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, transactionsJoinPanelLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(instruction4, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(10, 45, Short.MAX_VALUE))
+        );
+        transactionsJoinPanelLayout.setVerticalGroup(
+            transactionsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(transactionsJoinPanelLayout.createSequentialGroup()
+                .addComponent(transactionsJoinTopBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16)
+                .addComponent(instruction4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(transactionsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ttenantIDJoinLabel2)
+                    .addComponent(mainteannceTransactionIDJoinField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(transactionsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(maintenanceTenantIDJoinLabel)
+                    .addComponent(maintenanceTenantIDJoinField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(transactionsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(maintenanceTenantIDJoinLabel1)
+                    .addComponent(maintenanceTenantIDJoinField1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(transactionsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(maintenanceTenantIDJoinLabel2)
+                    .addComponent(maintenanceTenantIDJoinField2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(transactionsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(maintenanceDateStartJoinDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(maintenanceDateStartJoinLabel))
+                .addGap(11, 11, 11)
+                .addGroup(transactionsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(maintenanceDateEndJoinLabel)
+                    .addComponent(maintenanceDateEndJoinDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(transactionsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(transactionsPaymentLabel)
+                    .addComponent(transactionsPaymentStatusDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
+                .addComponent(maintenanceSearchJoinButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38))
+        );
+
+        transactionsPage.add(transactionsJoinPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1410, 200, 490, 590));
+
         CardPanel.add(transactionsPage, "card5");
 
         maintenancePage.setBackground(new java.awt.Color(224, 220, 220));
         maintenancePage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        PriorityTypeFilterPane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        priorityTypeFilterTopBar.setBackground(new java.awt.Color(212, 175, 55));
+
+        proirityTypeFilter_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
+        proirityTypeFilter_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        proirityTypeFilter_X_Btn.setBorder(null);
+        proirityTypeFilter_X_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                proirityTypeFilter_X_BtnMouseClicked(evt);
+            }
+        });
+        proirityTypeFilter_X_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                proirityTypeFilter_X_BtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout priorityTypeFilterTopBarLayout = new javax.swing.GroupLayout(priorityTypeFilterTopBar);
+        priorityTypeFilterTopBar.setLayout(priorityTypeFilterTopBarLayout);
+        priorityTypeFilterTopBarLayout.setHorizontalGroup(
+            priorityTypeFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, priorityTypeFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap(208, Short.MAX_VALUE)
+                .addComponent(proirityTypeFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        priorityTypeFilterTopBarLayout.setVerticalGroup(
+            priorityTypeFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(priorityTypeFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(proirityTypeFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        PriorityTypeFilterPane.add(priorityTypeFilterTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 240, -1));
+
+        jLabel22.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel22.setText("Priority Type");
+        PriorityTypeFilterPane.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
+
+        submitPriorityTypeBtn.setText("Enter");
+        submitPriorityTypeBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitPriorityTypeBtnActionPerformed(evt);
+            }
+        });
+        PriorityTypeFilterPane.add(submitPriorityTypeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 90, -1));
+
+        priorityTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Low", "Medium", "High" }));
+        PriorityTypeFilterPane.add(priorityTypeComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 120, -1));
+
+        maintenancePage.add(PriorityTypeFilterPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 380, 250, 140));
+
+        RequestTypeFilterPane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        requestTypeFilterTopBar.setBackground(new java.awt.Color(212, 175, 55));
+
+        requestTypeFilter_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
+        requestTypeFilter_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        requestTypeFilter_X_Btn.setBorder(null);
+        requestTypeFilter_X_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                requestTypeFilter_X_BtnMouseClicked(evt);
+            }
+        });
+        requestTypeFilter_X_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                requestTypeFilter_X_BtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout requestTypeFilterTopBarLayout = new javax.swing.GroupLayout(requestTypeFilterTopBar);
+        requestTypeFilterTopBar.setLayout(requestTypeFilterTopBarLayout);
+        requestTypeFilterTopBarLayout.setHorizontalGroup(
+            requestTypeFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, requestTypeFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap(208, Short.MAX_VALUE)
+                .addComponent(requestTypeFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        requestTypeFilterTopBarLayout.setVerticalGroup(
+            requestTypeFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(requestTypeFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(requestTypeFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        RequestTypeFilterPane.add(requestTypeFilterTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 240, -1));
+
+        jLabel21.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel21.setText("Request Status");
+        RequestTypeFilterPane.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
+
+        submitRequestTypeBtn.setText("Enter");
+        submitRequestTypeBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitRequestTypeBtnActionPerformed(evt);
+            }
+        });
+        RequestTypeFilterPane.add(submitRequestTypeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 90, -1));
+
+        requestTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pending", "In Progress", "Resloved" }));
+        RequestTypeFilterPane.add(requestTypeComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 120, -1));
+
+        maintenancePage.add(RequestTypeFilterPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 380, 250, 140));
 
         maintenancePropertyIDFilterPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -4209,43 +5316,21 @@ private CardLayout cardLayout;
 
         maintenanceFilterMenu.add(maintenancefilterBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 180, -1));
 
-        PendingRequestFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        PendingRequestFilter.setText("Pending Request");
-        PendingRequestFilter.addMouseListener(new java.awt.event.MouseAdapter() {
+        RequestFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        RequestFilter.setText("Request Status Type");
+        RequestFilter.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                PendingRequestFilterMouseClicked(evt);
+                RequestFilterMouseClicked(evt);
             }
         });
 
-        inProgressRequestFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        inProgressRequestFilter.setText("In Progress Request");
-        inProgressRequestFilter.addMouseListener(new java.awt.event.MouseAdapter() {
+        PriorityFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        PriorityFilter.setText("Priority Type");
+        PriorityFilter.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                inProgressRequestFilterMouseClicked(evt);
+                PriorityFilterMouseClicked(evt);
             }
         });
-
-        ResolvedRequestFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        ResolvedRequestFilter.setText("Resolved Request");
-        ResolvedRequestFilter.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ResolvedRequestFilterMouseClicked(evt);
-            }
-        });
-
-        LowPriorityFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        LowPriorityFilter.setText("Low Priority");
-        LowPriorityFilter.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                LowPriorityFilterMouseClicked(evt);
-            }
-        });
-
-        MediumPriorityFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        MediumPriorityFilter.setText("Medium Priority");
-
-        HighPriorityFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        HighPriorityFilter.setText("High Priority");
 
         PropertyIDMaintenanceFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         PropertyIDMaintenanceFilter.setText("Property ID");
@@ -4262,38 +5347,26 @@ private CardLayout cardLayout;
             .addGroup(maintenanceFilterByPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(maintenanceFilterByPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(PendingRequestFilter)
-                    .addComponent(inProgressRequestFilter)
-                    .addComponent(ResolvedRequestFilter)
-                    .addComponent(LowPriorityFilter)
-                    .addComponent(MediumPriorityFilter)
-                    .addComponent(HighPriorityFilter)
+                    .addComponent(RequestFilter)
+                    .addComponent(PriorityFilter)
                     .addComponent(PropertyIDMaintenanceFilter))
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         maintenanceFilterByPanelLayout.setVerticalGroup(
             maintenanceFilterByPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(maintenanceFilterByPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(PendingRequestFilter, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(RequestFilter, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(inProgressRequestFilter)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ResolvedRequestFilter)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(LowPriorityFilter)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(MediumPriorityFilter)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(HighPriorityFilter)
+                .addComponent(PriorityFilter)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PropertyIDMaintenanceFilter)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        maintenanceFilterMenu.add(maintenanceFilterByPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 180, 180));
+        maintenanceFilterMenu.add(maintenanceFilterByPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 180, 80));
 
-        maintenancePage.add(maintenanceFilterMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 150, 200, 460));
+        maintenancePage.add(maintenanceFilterMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 150, 200, 360));
 
         maintenanceAddPanel.setBackground(new java.awt.Color(51, 51, 51));
         maintenanceAddPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -4708,28 +5781,43 @@ private CardLayout cardLayout;
             }
         });
 
+        maintenaceJoinBtn.setBackground(new java.awt.Color(218, 165, 32));
+        maintenaceJoinBtn.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        maintenaceJoinBtn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/Remove.png"));
+        maintenaceJoinBtn.setText("JOIN");
+        maintenaceJoinBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(167, 133, 42), 2));
+        maintenaceJoinBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                maintenaceJoinBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout maintenanceMenuPanelLayout = new javax.swing.GroupLayout(maintenanceMenuPanel);
         maintenanceMenuPanel.setLayout(maintenanceMenuPanelLayout);
         maintenanceMenuPanelLayout.setHorizontalGroup(
             maintenanceMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(maintenanceMenuPanelLayout.createSequentialGroup()
-                .addGap(95, 95, 95)
-                .addGroup(maintenanceMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(maintenaceAddBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(maintenanceUpdateBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(maintenaceDeleteBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
-                .addContainerGap(104, Short.MAX_VALUE))
+                .addGap(100, 100, 100)
+                .addGroup(maintenanceMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(maintenaceJoinBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(maintenanceMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(maintenaceAddBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(maintenanceUpdateBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(maintenaceDeleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(99, Short.MAX_VALUE))
         );
         maintenanceMenuPanelLayout.setVerticalGroup(
             maintenanceMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(maintenanceMenuPanelLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
+                .addGap(29, 29, 29)
                 .addComponent(maintenaceAddBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(maintenanceUpdateBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(maintenaceDeleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addComponent(maintenaceJoinBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29))
         );
 
         maintenancePage.add(maintenanceMenuPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1470, 280, -1, -1));
@@ -4749,6 +5837,151 @@ private CardLayout cardLayout;
         maintenanceBG.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/MeintenanceReq-bg .png"));
         maintenancePage.add(maintenanceBG, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 1920, 1010));
 
+        maintenanceJoinPanel.setBackground(new java.awt.Color(51, 51, 51));
+        maintenanceJoinPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        maintenanceJoinTopBar.setBackground(new java.awt.Color(212, 175, 55));
+
+        maintenanceJoin_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
+        maintenanceJoin_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        maintenanceJoin_X_Btn.setBorder(null);
+        maintenanceJoin_X_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                maintenanceJoin_X_BtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout maintenanceJoinTopBarLayout = new javax.swing.GroupLayout(maintenanceJoinTopBar);
+        maintenanceJoinTopBar.setLayout(maintenanceJoinTopBarLayout);
+        maintenanceJoinTopBarLayout.setHorizontalGroup(
+            maintenanceJoinTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, maintenanceJoinTopBarLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(maintenanceJoin_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        maintenanceJoinTopBarLayout.setVerticalGroup(
+            maintenanceJoinTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(maintenanceJoinTopBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(maintenanceJoin_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        instruction5.setFont(new java.awt.Font("Arial Narrow", 2, 14)); // NOI18N
+        instruction5.setForeground(new java.awt.Color(255, 102, 102));
+        instruction5.setText("*Fill in the form");
+
+        ttenantIDJoinLabel3.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        ttenantIDJoinLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        ttenantIDJoinLabel3.setText("Maintenance Request ID");
+
+        requestStatusLabel.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        requestStatusLabel.setForeground(new java.awt.Color(255, 255, 255));
+        requestStatusLabel.setText("Request Status");
+
+        mainteannceTransactionIDJoinField1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        mainteannceTransactionIDJoinField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mainteannceTransactionIDJoinField1ActionPerformed(evt);
+            }
+        });
+
+        maintenanceRequestStatusDropdown.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        maintenanceRequestStatusDropdown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pending", "In Progress", "Completed" }));
+
+        maintenanceSearchJoinButton1.setBackground(new java.awt.Color(212, 175, 55));
+        maintenanceSearchJoinButton1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        maintenanceSearchJoinButton1.setText("SEARCH");
+        maintenanceSearchJoinButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                maintenanceSearchJoinButton1ActionPerformed(evt);
+            }
+        });
+
+        maintenanceTenantIDJoinLabel3.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        maintenanceTenantIDJoinLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        maintenanceTenantIDJoinLabel3.setText("Tenant ID");
+
+        maintenanceTenantIDJoinField3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        maintenanceTenantIDJoinField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                maintenanceTenantIDJoinField3ActionPerformed(evt);
+            }
+        });
+
+        maintenanceTenantIDJoinLabel4.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        maintenanceTenantIDJoinLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        maintenanceTenantIDJoinLabel4.setText("Property ID");
+
+        maintenancePropertyIDJoinField.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        maintenancePropertyIDJoinField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                maintenancePropertyIDJoinFieldActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout maintenanceJoinPanelLayout = new javax.swing.GroupLayout(maintenanceJoinPanel);
+        maintenanceJoinPanel.setLayout(maintenanceJoinPanelLayout);
+        maintenanceJoinPanelLayout.setHorizontalGroup(
+            maintenanceJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(maintenanceJoinTopBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(maintenanceJoinPanelLayout.createSequentialGroup()
+                .addGroup(maintenanceJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, maintenanceJoinPanelLayout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addGroup(maintenanceJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(maintenanceSearchJoinButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, maintenanceJoinPanelLayout.createSequentialGroup()
+                                .addComponent(ttenantIDJoinLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(mainteannceTransactionIDJoinField1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(maintenanceJoinPanelLayout.createSequentialGroup()
+                                .addComponent(maintenanceTenantIDJoinLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(maintenanceTenantIDJoinField3))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, maintenanceJoinPanelLayout.createSequentialGroup()
+                                .addComponent(maintenanceTenantIDJoinLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(maintenancePropertyIDJoinField))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, maintenanceJoinPanelLayout.createSequentialGroup()
+                                .addComponent(requestStatusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(maintenanceRequestStatusDropdown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, maintenanceJoinPanelLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(instruction5, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(10, 45, Short.MAX_VALUE))
+        );
+        maintenanceJoinPanelLayout.setVerticalGroup(
+            maintenanceJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(maintenanceJoinPanelLayout.createSequentialGroup()
+                .addComponent(maintenanceJoinTopBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16)
+                .addComponent(instruction5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(maintenanceJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ttenantIDJoinLabel3)
+                    .addComponent(mainteannceTransactionIDJoinField1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(maintenanceJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(maintenanceTenantIDJoinLabel3)
+                    .addComponent(maintenanceTenantIDJoinField3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(maintenanceJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(maintenanceTenantIDJoinLabel4)
+                    .addComponent(maintenancePropertyIDJoinField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(maintenanceJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(requestStatusLabel)
+                    .addComponent(maintenanceRequestStatusDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 258, Short.MAX_VALUE)
+                .addComponent(maintenanceSearchJoinButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38))
+        );
+
+        maintenancePage.add(maintenanceJoinPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1410, 200, 490, 590));
+
         CardPanel.add(maintenancePage, "card6");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -4756,7 +5989,7 @@ private CardLayout cardLayout;
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(CardPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(navPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 2860, Short.MAX_VALUE)
+            .addComponent(navPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -5152,35 +6385,10 @@ private CardLayout cardLayout;
         propertiesFilterMenu.setVisible(false);
     }//GEN-LAST:event_OccupiedPropertiesFilterMouseClicked
 
-    private void MunicipalitiesFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MunicipalitiesFilterMouseClicked
-        // TODO add your handling code here:
-        
-        propertiesFilterMenu.setVisible(false);
-    }//GEN-LAST:event_MunicipalitiesFilterMouseClicked
-
-    private void ProvincesFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProvincesFilterMouseClicked
-        // TODO add your handling code here:
-        
-        propertiesFilterMenu.setVisible(false);
-    }//GEN-LAST:event_ProvincesFilterMouseClicked
-
-    private void ApartmentsFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ApartmentsFilterMouseClicked
-        // TODO add your handling code here:
-        
-        propertiesFilterMenu.setVisible(false);
-    }//GEN-LAST:event_ApartmentsFilterMouseClicked
-
-    private void CondosFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CondosFilterMouseClicked
-        // TODO add your handling code here:
-        
-        propertiesFilterMenu.setVisible(false);
-    }//GEN-LAST:event_CondosFilterMouseClicked
-
-    private void HousesFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HousesFilterMouseClicked
-        // TODO add your handling code here:
-        
-        propertiesFilterMenu.setVisible(false);
-    }//GEN-LAST:event_HousesFilterMouseClicked
+    private void PropertyTypeFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PropertyTypeFilterMouseClicked
+        // TODO add your handling code here:        
+        PropertyTypeFilterPane.setVisible(true);
+    }//GEN-LAST:event_PropertyTypeFilterMouseClicked
 
     private void PropertyIDFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PropertyIDFilterMouseClicked
         // TODO add your handling code here:
@@ -5410,15 +6618,13 @@ private CardLayout cardLayout;
 
     private void TransactionDateFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TransactionDateFilterMouseClicked
         // TODO add your handling code here:
+        transactionDateFilterPanel.setVisible(true);
     }//GEN-LAST:event_TransactionDateFilterMouseClicked
 
-    private void CashPaymentFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CashPaymentFilterMouseClicked
+    private void PaymentTypeFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PaymentTypeFilterMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_CashPaymentFilterMouseClicked
-
-    private void BankTransferFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BankTransferFilterMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BankTransferFilterMouseClicked
+        PaymentTypeFilterPane.setVisible(true);
+    }//GEN-LAST:event_PaymentTypeFilterMouseClicked
 
     private void transactionIDFilter_X_BtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_transactionIDFilter_X_BtnMouseClicked
         // TODO add your handling code here:
@@ -5471,21 +6677,15 @@ private CardLayout cardLayout;
         // TODO add your handling code here:
     }//GEN-LAST:event_SortByLowesttoHighestTransaction1MouseClicked
 
-    private void PendingRequestFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PendingRequestFilterMouseClicked
+    private void RequestFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RequestFilterMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_PendingRequestFilterMouseClicked
+        RequestTypeFilterPane.setVisible(true);
+    }//GEN-LAST:event_RequestFilterMouseClicked
 
-    private void inProgressRequestFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_inProgressRequestFilterMouseClicked
+    private void PriorityFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PriorityFilterMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_inProgressRequestFilterMouseClicked
-
-    private void ResolvedRequestFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ResolvedRequestFilterMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ResolvedRequestFilterMouseClicked
-
-    private void LowPriorityFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LowPriorityFilterMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_LowPriorityFilterMouseClicked
+        PriorityTypeFilterPane.setVisible(true);
+    }//GEN-LAST:event_PriorityFilterMouseClicked
 
     private void maintenancePropertyIDFilter_X_BtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_maintenancePropertyIDFilter_X_BtnMouseClicked
         // TODO add your handling code here:
@@ -5510,6 +6710,222 @@ private CardLayout cardLayout;
         maintenanceFilterMenu.setVisible(true);
     }//GEN-LAST:event_maintenanceFilterMouseClicked
 
+    private void tenantContactNoFilter_X_Btn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tenantContactNoFilter_X_Btn1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tenantContactNoFilter_X_Btn1MouseClicked
+
+    private void tenantContactNoFilter_X_Btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tenantContactNoFilter_X_Btn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tenantContactNoFilter_X_Btn1ActionPerformed
+
+    private void tenantContactNoTxtfield1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tenantContactNoTxtfield1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tenantContactNoTxtfield1ActionPerformed
+
+    private void transactionDateFilter_X_BtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_transactionDateFilter_X_BtnMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_transactionDateFilter_X_BtnMouseClicked
+
+    private void transactionDateFilter_X_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transactionDateFilter_X_BtnActionPerformed
+        // TODO add your handling code here:
+        transactionDateFilterPanel.setVisible(false);
+    }//GEN-LAST:event_transactionDateFilter_X_BtnActionPerformed
+
+    private void propertyTypeFilter_X_BtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_propertyTypeFilter_X_BtnMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_propertyTypeFilter_X_BtnMouseClicked
+
+    private void propertyTypeFilter_X_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_propertyTypeFilter_X_BtnActionPerformed
+        // TODO add your handling code here:
+        PropertyTypeFilterPane.setVisible(false);
+    }//GEN-LAST:event_propertyTypeFilter_X_BtnActionPerformed
+
+    private void submitPropertyTypeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitPropertyTypeBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_submitPropertyTypeBtnActionPerformed
+
+    private void requestTypeFilter_X_BtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_requestTypeFilter_X_BtnMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_requestTypeFilter_X_BtnMouseClicked
+
+    private void requestTypeFilter_X_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_requestTypeFilter_X_BtnActionPerformed
+        // TODO add your handling code here:
+        RequestTypeFilterPane.setVisible(false);
+    }//GEN-LAST:event_requestTypeFilter_X_BtnActionPerformed
+
+    private void submitRequestTypeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitRequestTypeBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_submitRequestTypeBtnActionPerformed
+
+    private void proirityTypeFilter_X_BtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_proirityTypeFilter_X_BtnMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_proirityTypeFilter_X_BtnMouseClicked
+
+    private void proirityTypeFilter_X_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proirityTypeFilter_X_BtnActionPerformed
+        // TODO add your handling code here:
+        PriorityTypeFilterPane.setVisible(false);
+    }//GEN-LAST:event_proirityTypeFilter_X_BtnActionPerformed
+
+    private void submitPriorityTypeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitPriorityTypeBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_submitPriorityTypeBtnActionPerformed
+
+    private void paymentTypeFilter_X_BtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_paymentTypeFilter_X_BtnMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_paymentTypeFilter_X_BtnMouseClicked
+
+    private void paymentTypeFilter_X_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paymentTypeFilter_X_BtnActionPerformed
+        // TODO add your handling code here:
+        PaymentTypeFilterPane.setVisible(false);
+    }//GEN-LAST:event_paymentTypeFilter_X_BtnActionPerformed
+
+    private void submitPaymentTypeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitPaymentTypeBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_submitPaymentTypeBtnActionPerformed
+
+    private void propertiesJoinBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_propertiesJoinBtnActionPerformed
+        // TODO add your handling code here:
+        propertiesMenuPanel.setVisible(false);
+        propertiesJoinPanel.setVisible(true);
+    }//GEN-LAST:event_propertiesJoinBtnActionPerformed
+
+    private void leasesJoinBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leasesJoinBtnActionPerformed
+        // TODO add your handling code here:
+        leasesMenuPanel.setVisible(false);
+        leasesJoinPanel.setVisible(true);
+    }//GEN-LAST:event_leasesJoinBtnActionPerformed
+
+    private void tenantsJoinBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tenantsJoinBtnActionPerformed
+        // TODO add your handling code here:
+        tenantsMenuPanel.setVisible(false);
+        tenantsJoinPanel.setVisible(true);
+    }//GEN-LAST:event_tenantsJoinBtnActionPerformed
+
+    private void maintenaceJoinBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maintenaceJoinBtnActionPerformed
+        // TODO add your handling code here:
+        maintenanceMenuPanel.setVisible(false);
+        maintenanceJoinPanel.setVisible(true);
+    }//GEN-LAST:event_maintenaceJoinBtnActionPerformed
+
+    private void propertiesJoin_X_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_propertiesJoin_X_BtnActionPerformed
+        // TODO add your handling code here:
+        propertiesJoinPanel.setVisible(false);
+        propertiesMenuPanel.setVisible(true);
+    }//GEN-LAST:event_propertiesJoin_X_BtnActionPerformed
+
+    private void tenantIDJoinFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tenantIDJoinFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tenantIDJoinFieldActionPerformed
+
+    private void propertiesSearchJoinButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_propertiesSearchJoinButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_propertiesSearchJoinButtonActionPerformed
+
+    private void tenantsJoin_X_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tenantsJoin_X_BtnActionPerformed
+        // TODO add your handling code here:        
+        tenantsJoinPanel.setVisible(false);
+        tenantsMenuPanel.setVisible(true);
+    }//GEN-LAST:event_tenantsJoin_X_BtnActionPerformed
+
+    private void tenantIDJoinField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tenantIDJoinField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tenantIDJoinField1ActionPerformed
+
+    private void tenantSearchJoinButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tenantSearchJoinButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tenantSearchJoinButtonActionPerformed
+
+    private void tenantsJoin_X_Btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tenantsJoin_X_Btn1ActionPerformed
+        // TODO add your handling code here:
+        leasesJoinPanel.setVisible(false);
+        leasesMenuPanel.setVisible(true);
+    }//GEN-LAST:event_tenantsJoin_X_Btn1ActionPerformed
+
+    private void leaseIDJoinFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leaseIDJoinFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_leaseIDJoinFieldActionPerformed
+
+    private void tenantSearchJoinButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tenantSearchJoinButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tenantSearchJoinButton1ActionPerformed
+
+    private void leaseTenantIDJoinFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leaseTenantIDJoinFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_leaseTenantIDJoinFieldActionPerformed
+
+    private void transactionsJoin_X_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transactionsJoin_X_BtnActionPerformed
+        // TODO add your handling code here:
+        transactionsJoinPanel.setVisible(false);
+        transactionsMenuPanel.setVisible(true);
+        
+    }//GEN-LAST:event_transactionsJoin_X_BtnActionPerformed
+
+    private void mainteannceTransactionIDJoinFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainteannceTransactionIDJoinFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mainteannceTransactionIDJoinFieldActionPerformed
+
+    private void maintenanceSearchJoinButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maintenanceSearchJoinButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_maintenanceSearchJoinButtonActionPerformed
+
+    private void maintenanceTenantIDJoinFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maintenanceTenantIDJoinFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_maintenanceTenantIDJoinFieldActionPerformed
+
+    private void maintenanceTenantIDJoinField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maintenanceTenantIDJoinField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_maintenanceTenantIDJoinField1ActionPerformed
+
+    private void maintenanceTenantIDJoinField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maintenanceTenantIDJoinField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_maintenanceTenantIDJoinField2ActionPerformed
+
+    private void transacJoinBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transacJoinBtnActionPerformed
+        // TODO add your handling code here:
+        transactionsMenuPanel.setVisible(false);
+        transactionsJoinPanel.setVisible(true);
+    }//GEN-LAST:event_transacJoinBtnActionPerformed
+
+    private void transactionTypeFilter_X_BtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_transactionTypeFilter_X_BtnMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_transactionTypeFilter_X_BtnMouseClicked
+
+    private void transactionTypeFilter_X_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transactionTypeFilter_X_BtnActionPerformed
+        // TODO add your handling code here:
+        TransactionTypeFilterPane.setVisible(false);
+    }//GEN-LAST:event_transactionTypeFilter_X_BtnActionPerformed
+
+    private void submitPaymentTypeBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitPaymentTypeBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_submitPaymentTypeBtn1ActionPerformed
+
+    private void TransactionTypeFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TransactionTypeFilterMouseClicked
+        // TODO add your handling code here:
+        TransactionTypeFilterPane.setVisible(true);
+    }//GEN-LAST:event_TransactionTypeFilterMouseClicked
+
+    private void maintenanceJoin_X_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maintenanceJoin_X_BtnActionPerformed
+        // TODO add your handling code here:
+        maintenanceJoinPanel.setVisible(false);
+        maintenanceMenuPanel.setVisible(true);
+    }//GEN-LAST:event_maintenanceJoin_X_BtnActionPerformed
+
+    private void mainteannceTransactionIDJoinField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainteannceTransactionIDJoinField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mainteannceTransactionIDJoinField1ActionPerformed
+
+    private void maintenanceSearchJoinButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maintenanceSearchJoinButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_maintenanceSearchJoinButton1ActionPerformed
+
+    private void maintenanceTenantIDJoinField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maintenanceTenantIDJoinField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_maintenanceTenantIDJoinField3ActionPerformed
+
+    private void maintenancePropertyIDJoinFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maintenancePropertyIDJoinFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_maintenancePropertyIDJoinFieldActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -5517,32 +6933,24 @@ private CardLayout cardLayout;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ActiveLeasesFilter;
-    private javax.swing.JLabel ApartmentsFilter;
-    private javax.swing.JLabel BankTransferFilter;
     private javax.swing.JPanel CardPanel;
-    private javax.swing.JLabel CashPaymentFilter;
-    private javax.swing.JLabel CompleteTransactionFilter;
-    private javax.swing.JLabel CondosFilter;
     private javax.swing.JButton DeleteRowBtn2;
     private javax.swing.JLabel ExpiredLeasesFilter;
-    private javax.swing.JLabel HighPriorityFilter;
-    private javax.swing.JLabel HousesFilter;
     private javax.swing.JLabel LeaseIDFilter;
     private javax.swing.JButton LeasesFilter_X_Btn;
-    private javax.swing.JLabel LowPriorityFilter;
-    private javax.swing.JLabel MediumPriorityFilter;
-    private javax.swing.JLabel MunicipalitiesFilter;
     private javax.swing.JLabel OccupiedPropertiesFilter;
-    private javax.swing.JLabel OnlinePaymentsFilter;
-    private javax.swing.JLabel OverdueTransactionFilter;
-    private javax.swing.JLabel PendingRequestFilter;
-    private javax.swing.JLabel PendingTransactionFilter;
+    private javax.swing.JLabel PaymentTypeFilter;
+    private javax.swing.JPanel PaymentTypeFilterPane;
+    private javax.swing.JLabel PriorityFilter;
+    private javax.swing.JPanel PriorityTypeFilterPane;
     private javax.swing.JLabel PropertiesUpdateInstruction;
     private javax.swing.JLabel PropertyIDFilter;
     private javax.swing.JPanel PropertyIDFilterPane;
     private javax.swing.JLabel PropertyIDMaintenanceFilter;
-    private javax.swing.JLabel ProvincesFilter;
-    private javax.swing.JLabel ResolvedRequestFilter;
+    private javax.swing.JLabel PropertyTypeFilter;
+    private javax.swing.JPanel PropertyTypeFilterPane;
+    private javax.swing.JLabel RequestFilter;
+    private javax.swing.JPanel RequestTypeFilterPane;
     private javax.swing.JLabel SortByAtoZLeases;
     private javax.swing.JLabel SortByAtoZProperties;
     private javax.swing.JLabel SortByAtoZTenants;
@@ -5576,6 +6984,8 @@ private CardLayout cardLayout;
     private javax.swing.JLabel TenantTransactionFilter;
     private javax.swing.JLabel TerminatedLeasesFilter;
     private javax.swing.JLabel TransactionDateFilter;
+    private javax.swing.JLabel TransactionTypeFilter;
+    private javax.swing.JPanel TransactionTypeFilterPane;
     private javax.swing.JLabel UpdateLeaseIdLabel;
     private javax.swing.JLabel UpdateTenantIdLabel;
     private javax.swing.JLabel VacantPropertiesFilter;
@@ -5607,12 +7017,17 @@ private CardLayout cardLayout;
     private javax.swing.JLabel emailTenantFilter;
     private javax.swing.JTextField houseNoField;
     private javax.swing.JLabel houseNoLabel;
-    private javax.swing.JLabel inProgressRequestFilter;
     private javax.swing.JLabel instruction;
+    private javax.swing.JLabel instruction1;
+    private javax.swing.JLabel instruction2;
+    private javax.swing.JLabel instruction3;
+    private javax.swing.JLabel instruction4;
+    private javax.swing.JLabel instruction5;
     private javax.swing.JComboBox<String> issueTypeDropdown;
     private javax.swing.JLabel issueTypeLabel;
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -5621,9 +7036,16 @@ private CardLayout cardLayout;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -5648,15 +7070,31 @@ private CardLayout cardLayout;
     private javax.swing.JLabel lblProperties;
     private javax.swing.JLabel lblTenants;
     private javax.swing.JLabel lblTransactions;
+    private com.toedter.calendar.JDateChooser leaseEndChooser;
     private com.toedter.calendar.JDateChooser leaseEndDate;
+    private com.toedter.calendar.JDateChooser leaseEndJoinField;
+    private javax.swing.JLabel leaseEndJoinLabel;
     private javax.swing.JLabel leaseEndLabel;
     private javax.swing.JPanel leaseIDFilterPanel;
     private javax.swing.JPanel leaseIDFilterTopBar;
     private javax.swing.JButton leaseIDFilter_X_Btn;
+    private javax.swing.JTextField leaseIDJoinField;
+    private javax.swing.JPanel leaseJoinTopBar;
+    private javax.swing.JComboBox<String> leaseMaintenanceStatusDropdown;
+    private com.toedter.calendar.JDateChooser leaseStartChooser;
     private com.toedter.calendar.JDateChooser leaseStartDate;
+    private com.toedter.calendar.JDateChooser leaseStartJoinField;
+    private javax.swing.JLabel leaseStartJoinLabel;
     private javax.swing.JLabel leaseStartLabel;
     private javax.swing.JLabel leaseStatus;
     private javax.swing.JComboBox<String> leaseStatusDropDown;
+    private javax.swing.JComboBox<String> leaseStatusDropdown;
+    private javax.swing.JLabel leaseStatusLabel;
+    private javax.swing.JTextField leaseTenantIDJoinField;
+    private javax.swing.JLabel leaseTenantIDJoinLabel;
+    private javax.swing.JLabel leaseTenantIDJoinLabel1;
+    private javax.swing.JLabel leaseTenantIDJoinLabel2;
+    private javax.swing.JComboBox<String> leaseTenantPaymentStatusDropdown;
     private javax.swing.JComboBox<String> leaseUpdate_ColumnDropdown;
     private javax.swing.JLabel leaseUpdate_ColumnNameLabel;
     private javax.swing.JTextField leaseUpdate_NewValueField;
@@ -5675,6 +7113,8 @@ private CardLayout cardLayout;
     private javax.swing.JLabel leasesFilter;
     private javax.swing.JPanel leasesFilterByPanel;
     private javax.swing.JPanel leasesFilterMenu;
+    private javax.swing.JButton leasesJoinBtn;
+    private javax.swing.JPanel leasesJoinPanel;
     private javax.swing.JPanel leasesMenuPanel;
     private javax.swing.JPanel leasesPage;
     private javax.swing.JPanel leasesSortByPanel;
@@ -5693,14 +7133,21 @@ private CardLayout cardLayout;
     private javax.swing.JPanel leasesfilterBar;
     private javax.swing.JPanel leasessortTopBar;
     private javax.swing.JPanel leasesupdateTopBar;
+    private javax.swing.JTextField mainteannceTransactionIDJoinField;
+    private javax.swing.JTextField mainteannceTransactionIDJoinField1;
     private javax.swing.JButton maintenaceAddBtn;
     private javax.swing.JButton maintenaceDeleteBtn;
+    private javax.swing.JButton maintenaceJoinBtn;
     private javax.swing.JPanel maintenanceAddPanel;
     private javax.swing.JButton maintenanceAddPanel_AddBtn;
     private javax.swing.JPanel maintenanceAddTopBar;
     private javax.swing.JButton maintenanceAdd_X_Btn;
     private javax.swing.JLabel maintenanceAddinstruction;
     private javax.swing.JLabel maintenanceBG;
+    private com.toedter.calendar.JDateChooser maintenanceDateEndJoinDateChooser;
+    private javax.swing.JLabel maintenanceDateEndJoinLabel;
+    private com.toedter.calendar.JDateChooser maintenanceDateStartJoinDateChooser;
+    private javax.swing.JLabel maintenanceDateStartJoinLabel;
     private javax.swing.JLabel maintenanceDeleteInstruction;
     private javax.swing.JPanel maintenanceDeletePanel;
     private javax.swing.JButton maintenanceDelete_X_Btn;
@@ -5708,13 +7155,29 @@ private CardLayout cardLayout;
     private javax.swing.JPanel maintenanceFilterByPanel;
     private javax.swing.JPanel maintenanceFilterMenu;
     private javax.swing.JButton maintenanceFilter_X_Btn;
+    private javax.swing.JPanel maintenanceJoinPanel;
+    private javax.swing.JPanel maintenanceJoinTopBar;
+    private javax.swing.JButton maintenanceJoin_X_Btn;
     private javax.swing.JPanel maintenanceMenuPanel;
     private javax.swing.JPanel maintenancePage;
     private javax.swing.JPanel maintenancePropertyIDFilterPanel;
     private javax.swing.JPanel maintenancePropertyIDFilterTopBar;
     private javax.swing.JButton maintenancePropertyIDFilter_X_Btn;
+    private javax.swing.JTextField maintenancePropertyIDJoinField;
+    private javax.swing.JComboBox<String> maintenanceRequestStatusDropdown;
+    private javax.swing.JButton maintenanceSearchJoinButton;
+    private javax.swing.JButton maintenanceSearchJoinButton1;
     private javax.swing.JPanel maintenanceSortByPanel;
     private javax.swing.JTable maintenanceTable;
+    private javax.swing.JTextField maintenanceTenantIDJoinField;
+    private javax.swing.JTextField maintenanceTenantIDJoinField1;
+    private javax.swing.JTextField maintenanceTenantIDJoinField2;
+    private javax.swing.JTextField maintenanceTenantIDJoinField3;
+    private javax.swing.JLabel maintenanceTenantIDJoinLabel;
+    private javax.swing.JLabel maintenanceTenantIDJoinLabel1;
+    private javax.swing.JLabel maintenanceTenantIDJoinLabel2;
+    private javax.swing.JLabel maintenanceTenantIDJoinLabel3;
+    private javax.swing.JLabel maintenanceTenantIDJoinLabel4;
     private javax.swing.JLabel maintenanceTitleText;
     private javax.swing.JLabel maintenanceTitleText1;
     private javax.swing.JButton maintenanceUpdateBtn;
@@ -5747,9 +7210,15 @@ private CardLayout cardLayout;
     private javax.swing.JLabel paymentMethodLabel1;
     private javax.swing.JComboBox<String> paymentStatDropdown;
     private javax.swing.JLabel paymentStatusLabel;
+    private javax.swing.JComboBox<String> paymentTypeComboBox;
+    private javax.swing.JPanel paymentTypeFilterTopBar;
+    private javax.swing.JButton paymentTypeFilter_X_Btn;
     private javax.swing.JLabel paymentmethodLabel;
     private javax.swing.JComboBox<String> piorityDropdown;
     private javax.swing.JLabel priorityLabel;
+    private javax.swing.JComboBox<String> priorityTypeComboBox;
+    private javax.swing.JPanel priorityTypeFilterTopBar;
+    private javax.swing.JButton proirityTypeFilter_X_Btn;
     private javax.swing.JComboBox<String> propUpdate_ColumnDropdown;
     private javax.swing.JButton propertiesAddBtn;
     private javax.swing.JPanel propertiesAddPanel;
@@ -5765,8 +7234,13 @@ private CardLayout cardLayout;
     private javax.swing.JPanel propertiesFilterByPanel;
     private javax.swing.JPanel propertiesFilterMenu;
     private javax.swing.JButton propertiesFilter_X_Btn;
+    private javax.swing.JButton propertiesJoinBtn;
+    private javax.swing.JPanel propertiesJoinPanel;
+    private javax.swing.JPanel propertiesJoinTopBar;
+    private javax.swing.JButton propertiesJoin_X_Btn;
     private javax.swing.JPanel propertiesMenuPanel;
     private javax.swing.JPanel propertiesPage;
+    private javax.swing.JButton propertiesSearchJoinButton;
     private javax.swing.JPanel propertiesSortByPanel;
     private javax.swing.JTable propertiesTable;
     private javax.swing.JLabel propertiesTitleText;
@@ -5779,17 +7253,26 @@ private CardLayout cardLayout;
     private javax.swing.JPanel propertiesupdateTopBar;
     private javax.swing.JPanel propertyIDFilterTopBar;
     private javax.swing.JButton propertyIDFilter_X_Btn;
+    private javax.swing.JTextField propertyIDJoinField;
+    private javax.swing.JLabel propertyIDJoinLabel;
     private javax.swing.JLabel propertyIDTenantFilter;
     private javax.swing.JTextField propertyIdField;
     private javax.swing.JLabel propertyIdLabel;
     private javax.swing.JTextField propertyNameField;
     private javax.swing.JLabel propertyNameLabel;
+    private javax.swing.JComboBox<String> propertyTypeComboBox;
+    private javax.swing.JPanel propertyTypeFilterTopBar;
+    private javax.swing.JButton propertyTypeFilter_X_Btn;
     private javax.swing.JTextField provinceField;
     private javax.swing.JLabel provinceLabel;
     private javax.swing.JTextField refNoField;
     private javax.swing.JLabel refNoLabel;
     private javax.swing.JTextField rentAmounField;
     private javax.swing.JLabel rentAmounLabel;
+    private javax.swing.JLabel requestStatusLabel;
+    private javax.swing.JComboBox<String> requestTypeComboBox;
+    private javax.swing.JPanel requestTypeFilterTopBar;
+    private javax.swing.JButton requestTypeFilter_X_Btn;
     private javax.swing.JTextField securityDepositField;
     private javax.swing.JLabel securityDepositLabel;
     private javax.swing.JLabel securityDepositLabel1;
@@ -5799,23 +7282,41 @@ private CardLayout cardLayout;
     private javax.swing.JLabel streetLabel;
     private javax.swing.JButton submitLeasePropertyIDBtn;
     private javax.swing.JButton submitMaintenancePropertyIDBtn;
+    private javax.swing.JButton submitPaymentTypeBtn;
+    private javax.swing.JButton submitPaymentTypeBtn1;
+    private javax.swing.JButton submitPriorityTypeBtn;
+    private javax.swing.JButton submitPropertyTypeBtn;
+    private javax.swing.JButton submitRequestTypeBtn;
     private javax.swing.JButton submitTenantContactNoBtn1;
+    private javax.swing.JButton submitTenantContactNoBtn2;
     private javax.swing.JButton submitTenantEmailBtn;
     private javax.swing.JButton submitTenantNameBtn;
     private javax.swing.JButton submitTenantPropertyIDBtn;
     private javax.swing.JButton submitTransactionIDBtn;
+    private javax.swing.JButton submitTransactionIDBtn1;
     private javax.swing.JPanel tenantContactNoFilterPanel;
+    private javax.swing.JPanel tenantContactNoFilterPanel1;
     private javax.swing.JPanel tenantContactNoFilterTopBar;
+    private javax.swing.JPanel tenantContactNoFilterTopBar1;
     private javax.swing.JButton tenantContactNoFilter_X_Btn;
+    private javax.swing.JButton tenantContactNoFilter_X_Btn1;
     private javax.swing.JTextField tenantContactNoTxtfield;
+    private javax.swing.JTextField tenantContactNoTxtfield1;
     private javax.swing.JPanel tenantEmailFilterPanel;
     private javax.swing.JPanel tenantEmailFilterTopBar;
     private javax.swing.JButton tenantEmailFilter_X_Btn;
     private javax.swing.JTextField tenantEmailTxtfield;
+    private javax.swing.JTextField tenantIDJoinField;
+    private javax.swing.JTextField tenantIDJoinField1;
+    private javax.swing.JLabel tenantIDJoinLabel;
     private javax.swing.JTextField tenantIDtxtField;
     private javax.swing.JTextField tenantIDtxtField1;
     private javax.swing.JTextField tenantIDtxtField2;
     private javax.swing.JTextField tenantIDtxtField3;
+    private com.toedter.calendar.JDateChooser tenantLeaseEndJoinField;
+    private javax.swing.JLabel tenantLeaseEndJoinLabel1;
+    private com.toedter.calendar.JDateChooser tenantLeaseStartJoinField;
+    private javax.swing.JLabel tenantLeaseStartJoinLabel;
     private javax.swing.JTextField tenantNameField;
     private javax.swing.JLabel tenantNameFilter;
     private javax.swing.JPanel tenantNameFilterPanel;
@@ -5823,9 +7324,15 @@ private CardLayout cardLayout;
     private javax.swing.JButton tenantNameFilter_X_Btn;
     private javax.swing.JLabel tenantNameLabel;
     private javax.swing.JTextField tenantNameTxtfield;
+    private javax.swing.JLabel tenantPaymentLabel;
+    private javax.swing.JLabel tenantPaymentLabel1;
+    private javax.swing.JLabel tenantPaymentLabel2;
+    private javax.swing.JComboBox<String> tenantPaymentStatusDropdown;
     private javax.swing.JPanel tenantPropertyIDFilterPanel;
     private javax.swing.JPanel tenantPropertyIDFilterTopBar;
     private javax.swing.JButton tenantPropertyIDFilter_X_Btn;
+    private javax.swing.JButton tenantSearchJoinButton;
+    private javax.swing.JButton tenantSearchJoinButton1;
     private javax.swing.JTextField tenant_propertyIDField;
     private javax.swing.JLabel tenant_propertyIDLabel;
     private javax.swing.JButton tenantsAddBtn;
@@ -5843,6 +7350,11 @@ private CardLayout cardLayout;
     private javax.swing.JPanel tenantsFilterByPanel1;
     private javax.swing.JPanel tenantsFilterMenu;
     private javax.swing.JButton tenantsFilter_X_Btn;
+    private javax.swing.JButton tenantsJoinBtn;
+    private javax.swing.JPanel tenantsJoinPanel;
+    private javax.swing.JPanel tenantsJoinTopBar;
+    private javax.swing.JButton tenantsJoin_X_Btn;
+    private javax.swing.JButton tenantsJoin_X_Btn1;
     private javax.swing.JPanel tenantsMenuPanel;
     private javax.swing.JPanel tenantsPage;
     private javax.swing.JPanel tenantsSortByPanel1;
@@ -5862,6 +7374,7 @@ private CardLayout cardLayout;
     private javax.swing.JButton transacAddPanel_AddBtn;
     private javax.swing.JButton transacAdd_X_Btn;
     private javax.swing.JButton transacDeleteBtn;
+    private javax.swing.JButton transacJoinBtn;
     private javax.swing.JComboBox<String> transacTypeDropdown;
     private javax.swing.JLabel transacTypeLabel;
     private javax.swing.JLabel transacTypeLabel1;
@@ -5876,6 +7389,9 @@ private CardLayout cardLayout;
     private javax.swing.JLabel transac_tenantIDLabel;
     private javax.swing.JTextField transactenantIDField;
     private com.toedter.calendar.JDateChooser transactionDate;
+    private javax.swing.JPanel transactionDateFilterPanel;
+    private javax.swing.JPanel transactionDateFilterTopBar;
+    private javax.swing.JButton transactionDateFilter_X_Btn;
     private javax.swing.JLabel transactionDateLabel;
     private javax.swing.JLabel transactionDateLabel1;
     private javax.swing.JPanel transactionDeletePanel;
@@ -5886,6 +7402,9 @@ private CardLayout cardLayout;
     private javax.swing.JPanel transactionIDFilterTopBar;
     private javax.swing.JButton transactionIDFilter_X_Btn;
     private javax.swing.JPanel transactionSortByPanel;
+    private javax.swing.JComboBox<String> transactionTypeComboBox;
+    private javax.swing.JPanel transactionTypeFilterTopBar;
+    private javax.swing.JButton transactionTypeFilter_X_Btn;
     private javax.swing.JPanel transactionfilterBar;
     private javax.swing.JPanel transactionsAddPanel;
     private javax.swing.JPanel transactionsAddTopBar;
@@ -5894,8 +7413,13 @@ private CardLayout cardLayout;
     private javax.swing.JLabel transactionsDeleteInstruction;
     private javax.swing.JButton transactionsDelete_X_Btn;
     private javax.swing.JLabel transactionsFilter;
+    private javax.swing.JPanel transactionsJoinPanel;
+    private javax.swing.JPanel transactionsJoinTopBar;
+    private javax.swing.JButton transactionsJoin_X_Btn;
     private javax.swing.JPanel transactionsMenuPanel;
     private javax.swing.JPanel transactionsPage;
+    private javax.swing.JLabel transactionsPaymentLabel;
+    private javax.swing.JComboBox<String> transactionsPaymentStatusDropdown;
     private javax.swing.JTable transactionsTable;
     private javax.swing.JLabel transactionsTitleText;
     private javax.swing.JButton transactionsUpdateCellBtn;
@@ -5909,6 +7433,10 @@ private CardLayout cardLayout;
     private javax.swing.JButton transactions_deleteRowBtn;
     private javax.swing.JPanel transactionsdeleteTopBar;
     private javax.swing.JPanel transactionsortTopBar;
+    private javax.swing.JLabel ttenantIDJoinLabel;
+    private javax.swing.JLabel ttenantIDJoinLabel1;
+    private javax.swing.JLabel ttenantIDJoinLabel2;
+    private javax.swing.JLabel ttenantIDJoinLabel3;
     private javax.swing.JLabel typeLabel;
     private javax.swing.JButton updateCellBtn;
     private javax.swing.JLabel updateColumnNameLabel;
