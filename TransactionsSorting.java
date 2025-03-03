@@ -58,11 +58,14 @@ public class TransactionSorting {
                     rs.getInt("transaction_id"),
                     rs.getInt("tenant_id"),
                     rs.getInt("property_id"),
-                    rs.getInt("maintenance_req_id"),
+                    rs.getInt("lease_id"),
+                    rs.getInt("m_request_id"),
                     rs.getString("transaction_type"),
                     rs.getDouble("amount"),
                     rs.getString("payment_method"),
-                    rs.getDate("transaction_date")
+                    rs.getDate("transaction_date"),
+                    rs.getString("payment_status"),
+                    rs.getInt("reference_number")
                 };
                 model.addRow(row);
             }
