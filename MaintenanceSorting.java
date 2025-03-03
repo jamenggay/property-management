@@ -60,8 +60,8 @@ public class MaintenanceSorting {
                     rs.getInt("property_id"),
                     rs.getString("issue_type"),
                     rs.getString("description"),
-                    rs.getString("status"),
-                    rs.getString("priority")
+                    rs.getString("priority"),
+                    rs.getString("status")
                 };
                 model.addRow(row);
             }
