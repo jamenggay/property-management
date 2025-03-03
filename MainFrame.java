@@ -6822,29 +6822,35 @@ private CardLayout cardLayout;
         transactionFilterMenu.setVisible(false);
     }//GEN-LAST:event_transactionFilter_X_BtnActionPerformed
 
-    private void SortByAtoZTransactionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SortByAtoZTransactionMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SortByAtoZTransactionMouseClicked
+    private void SortByAtoZTransaction1MouseClicked(java.awt.event.MouseEvent evt) {
+        TransactionSorting.sortTransactions(transactionsTable, "A-Z");
+        transactionFilterMenu.setVisible(false);
+    }
 
-    private void SortByZtoATransactionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SortByZtoATransactionMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SortByZtoATransactionMouseClicked
+    private void SortByZtoATransaction1MouseClicked(java.awt.event.MouseEvent evt) {
+        TransactionSorting.sortTransactions(transactionsTable, "Z-A");
+        transactionFilterMenu.setVisible(false);
+    }
 
-    private void SortByNewesttoOldestTransactionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SortByNewesttoOldestTransactionMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SortByNewesttoOldestTransactionMouseClicked
+    private void SortByNewesttoOldestTransaction1MouseClicked(java.awt.event.MouseEvent evt) {
+        TransactionSorting.sortTransactions(transactionsTable, "Newest - Oldest");
+        transactionFilterMenu.setVisible(false);
+    }
 
-    private void SortByoldesttoNewestTransactionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SortByoldesttoNewestTransactionMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SortByoldesttoNewestTransactionMouseClicked
+    private void SortByoldesttoNewestTransaction1MouseClicked(java.awt.event.MouseEvent evt) {
+        TransactionSorting.sortTransactions(transactionsTable, "Oldest - Newest");
+        transactionFilterMenu.setVisible(false);
+    }
 
-    private void SortByHighesttoLowestTransactionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SortByHighesttoLowestTransactionMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SortByHighesttoLowestTransactionMouseClicked
+    private void SortByHighesttoLowestTransaction1MouseClicked(java.awt.event.MouseEvent evt) {
+        TransactionSorting.sortTransactions(transactionsTable, "Highest - Lowest");
+        transactionFilterMenu.setVisible(false);
+    }
 
-    private void SortByLowesttoHighestTransactionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SortByLowesttoHighestTransactionMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SortByLowesttoHighestTransactionMouseClicked
+    private void SortByLowesttoHighestTransaction1MouseClicked(java.awt.event.MouseEvent evt) {
+        TransactionSorting.sortTransactions(transactionsTable, "Lowest - Highest");
+        transactionFilterMenu.setVisible(false);
+    }
 
     private void TenantTransactionFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TenantTransactionFilterMouseClicked
         // TODO add your handling code here:
