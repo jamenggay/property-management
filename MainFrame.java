@@ -4053,6 +4053,11 @@ private CardLayout cardLayout;
         transactionReferenceNoFilterPanel.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
 
         transactionReferenceNoBtn.setText("Enter");
+        transactionReferenceNoBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transactionReferenceNoBtnActionPerformed(evt);
+            }
+        });
         transactionReferenceNoFilterPanel.add(transactionReferenceNoBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 90, -1));
 
         transactionsPage.add(transactionReferenceNoFilterPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 380, 250, 160));
@@ -4207,6 +4212,11 @@ private CardLayout cardLayout;
         transactionDateFilterPanel.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
 
         submitTransactionIDBtn1.setText("Enter");
+        submitTransactionIDBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitTransactionIDBtn1ActionPerformed(evt);
+            }
+        });
         transactionDateFilterPanel.add(submitTransactionIDBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 90, -1));
         transactionDateFilterPanel.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 130, -1));
 
@@ -4316,6 +4326,11 @@ private CardLayout cardLayout;
         transactionTenantIDFilterPanel.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
 
         transactionTenantIDBtn.setText("Enter");
+        transactionTenantIDBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transactionTenantIDBtnActionPerformed(evt);
+            }
+        });
         transactionTenantIDFilterPanel.add(transactionTenantIDBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 90, -1));
 
         transactionsPage.add(transactionTenantIDFilterPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 380, 210, 160));
@@ -7044,7 +7059,15 @@ private CardLayout cardLayout;
     }//GEN-LAST:event_paymentTypeFilter_X_BtnActionPerformed
 
     private void submitPaymentTypeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitPaymentTypeBtnActionPerformed
-        // TODO add your handling code here:
+        String selectedPaymentType = (String) paymentTypeComboBox.getSelectedItem();
+        if (selectedPaymentType != null) {
+            TransactionsFilter.filterByPaymentType(transactionsTable, selectedPaymentType);
+        } else {
+            JOptionPane.showMessageDialog(this, "Please select a payment type.", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+        
+        transactionFilterMenu.setVisible(false);
+        PaymentTypeFilterPane.setVisible(false);
     }//GEN-LAST:event_submitPaymentTypeBtnActionPerformed
 
     private void propertiesJoinBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_propertiesJoinBtnActionPerformed
@@ -7130,7 +7153,15 @@ private CardLayout cardLayout;
     }//GEN-LAST:event_transactionTypeFilter_X_BtnActionPerformed
 
     private void submitTransactionStatusBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitTransactionStatusBtnActionPerformed
-        // TODO add your handling code here:
+        String selectedStatus = (String) TransactionStatusComboBox.getSelectedItem();
+        if (selectedStatus != null) {
+            TransactionsFilter.filterByTransactionStatus(transactionsTable, selectedStatus);
+        } else {
+            JOptionPane.showMessageDialog(this, "Please select a transaction status.", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+        
+        transactionFilterMenu.setVisible(false);
+        TransactionStatusFilterPane.setVisible(false);
     }//GEN-LAST:event_submitTransactionStatusBtnActionPerformed
 
     private void TransactionStatusFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TransactionStatusFilterMouseClicked
@@ -7486,6 +7517,42 @@ private CardLayout cardLayout;
         PropertyIDFilterPane.setVisible(false);
 
     }//GEN-LAST:event_submitMaintenancePropertyIDBtnActionPerformed
+
+    private void transactionTenantIDBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transactionTenantIDBtnActionPerformed
+        String tenantID = transactionTenantIDtxtField.getText();
+        if (!tenantID.isEmpty()) {
+            TransactionsFilter.filterByTenantID(transactionsTable, tenantID);
+        } else {
+            JOptionPane.showMessageDialog(this, "Please enter a Tenant ID.", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+        
+        transactionFilterMenu.setVisible(false);
+        transactionTenantIDFilterPanel.setVisible(false);
+    }//GEN-LAST:event_transactionTenantIDBtnActionPerformed
+
+    private void submitTransactionIDBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitTransactionIDBtn1ActionPerformed
+        String selectedDate = jDateChooser1.getText(); // Modify based on actual date picker component
+        if (!selectedDate.isEmpty()) {
+            TransactionsFilter.filterByTransactionDate(transactionsTable, selectedDate);
+        } else {
+            JOptionPane.showMessageDialog(this, "Please select a transaction date.", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+        
+        transactionFilterMenu.setVisible(false);
+        transactionDateFilterPanel.setVisible(false);
+    }//GEN-LAST:event_submitTransactionIDBtn1ActionPerformed
+
+    private void transactionReferenceNoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transactionReferenceNoBtnActionPerformed
+        String referenceNumber = transactionReferenceNotxtField.getText();
+        if (!referenceNumber.isEmpty()) {
+            TransactionsFilter.filterByReferenceNumber(transactionsTable, referenceNumber);
+        } else {
+            JOptionPane.showMessageDialog(this, "Please enter a Reference Number", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+        
+        transactionFilterMenu.setVisible(false);
+        transactionReferenceNoFilterPanel.setVisible(false);
+    }//GEN-LAST:event_transactionReferenceNoBtnActionPerformed
 
     /**
      * @param args the command line arguments
