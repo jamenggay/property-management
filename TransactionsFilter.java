@@ -53,6 +53,23 @@ public class TransactionFilter {
 
             while (rs.next()) {
                 Object[] row = {
-                    rs.getInt("transaction_id"), 
+                    rs.getInt("transaction_id"),
                     rs.getInt("tenant_id"),
-                    rs.getInt("property_
+                    rs.getInt("property_id"),
+                    rs.getInt("lease_id"),
+                    rs.getInt("m_request_id"),
+                    rs.getString("transaction_type"),
+                    rs.getDouble("amount"),
+                    rs.getString("payment_method"),
+                    rs.getDate("transaction_date"),
+                    rs.getString("payment_status"),
+                    rs.getInt("reference_number")
+                };
+                model.addRow(row);
+            }
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Error fetching sorted data: " + e.getMessage(), "Database Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+}
