@@ -24,19 +24,19 @@ public class TransactionFilter {
         filterTransactions(transactionsTable, sql, transactionDate);
     }
 
-    public static void filterCashPayments(JTable transactionsTable) {
-        String sql = "SELECT * FROM transactions WHERE payment_method = 'cash'";
-        filterTransactions(transactionsTable, sql);
+    public static void filterByPaymentType(JTable transactionsTable, String paymentType) {
+        String sql = "SELECT * FROM transactions WHERE payment_method = ?";
+        filterTransactions(transactionsTable, sql, paymentType);
     }
 
-    public static void filterBankTransfers(JTable transactionsTable) {
-        String sql = "SELECT * FROM transactions WHERE payment_method = 'Bank Transfer'";
-        filterTransactions(transactionsTable, sql);
+    public static void filterByTransactionStatus(JTable transactionsTable, String status) {
+        String sql = "SELECT * FROM transactions WHERE payment_status = ?";
+        filterTransactions(transactionsTable, sql, status);
     }
 
-    public static void filterOnlinePayments(JTable transactionsTable) {
-        String sql = "SELECT * FROM transactions WHERE payment_method IN ('Gcash', 'PayMaya')";
-        filterTransactions(transactionsTable, sql);
+    public static void filterByReferenceNumber(JTable transactionsTable, String referenceNumber) {
+        String sql = "SELECT * FROM transactions WHERE reference_number = ?";
+        filterTransactions(transactionsTable, sql, referenceNumber);
     }
 
     private static void filterTransactions(JTable transactionsTable, String sql, String... params) {
@@ -49,7 +49,7 @@ public class TransactionFilter {
 
             ResultSet rs = pst.executeQuery();
             DefaultTableModel model = (DefaultTableModel) transactionsTable.getModel();
-            model.setRowCount(0); 
+            model.setRowCount(0);
 
             while (rs.next()) {
                 Object[] row = {
@@ -69,7 +69,7 @@ public class TransactionFilter {
             }
 
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "Error fetching sorted data: " + e.getMessage(), "Database Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Error fetching filtered data: " + e.getMessage(), "Database Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 }
