@@ -62,8 +62,15 @@ private CardLayout cardLayout;
         PropertyTypeFilterPane.setVisible(false);
         RequestTypeFilterPane.setVisible(false);
         PriorityTypeFilterPane.setVisible(false);
-        TransactionTypeFilterPane.setVisible(false);
+        TransactionStatusFilterPane.setVisible(false);
         PaymentTypeFilterPane.setVisible(false);
+        leasePropertyIDFilterPanel.setVisible(false);
+        leaseTenantIDFilterPanel.setVisible(false);
+        transactionPropertyIDFilterPanel.setVisible(false);
+        transactionTenantIDFilterPanel.setVisible(false);
+        transactionReferenceNoFilterPanel.setVisible(false);
+        leaseTenantIDFilterPanel.setVisible(false);
+        tenantIDFilterPanel.setVisible(false);
         
        /**
         * New Panel for Join Query @editor Lim
@@ -253,11 +260,17 @@ private CardLayout cardLayout;
         propertiesTitleText = new javax.swing.JLabel();
         propertiesBG = new javax.swing.JLabel();
         tenantsPage = new javax.swing.JPanel();
+        tenantIDFilterPanel = new javax.swing.JPanel();
+        tenantIDFilterTopBar1 = new javax.swing.JPanel();
+        tenantPropertyIDFilter_X_Btn1 = new javax.swing.JButton();
+        TenantIDtxtField = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        submitTenantIDBtn = new javax.swing.JButton();
         tenantsFilterMenu = new javax.swing.JPanel();
-        tenantssortTopBar1 = new javax.swing.JPanel();
+        tenantssortTopBar = new javax.swing.JPanel();
         tenantsFilter_X_Btn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        tenantsSortByPanel1 = new javax.swing.JPanel();
+        tenantsSortByPanel = new javax.swing.JPanel();
         jSeparator2 = new javax.swing.JSeparator();
         SortByAtoZTenants = new javax.swing.JLabel();
         SortByZtoATenants = new javax.swing.JLabel();
@@ -267,11 +280,12 @@ private CardLayout cardLayout;
         SortLowesttoHighestTenants = new javax.swing.JLabel();
         tenantsfilterBar = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
-        tenantsFilterByPanel1 = new javax.swing.JPanel();
+        tenantsFilterByPanel = new javax.swing.JPanel();
         tenantNameFilter = new javax.swing.JLabel();
         contactNumberTenantFilter = new javax.swing.JLabel();
         emailTenantFilter = new javax.swing.JLabel();
         tenantIDTenantFilter = new javax.swing.JLabel();
+        tenantPropertyIDTenantFilter = new javax.swing.JLabel();
         tenantContactNoFilterPanel = new javax.swing.JPanel();
         tenantContactNoFilterTopBar = new javax.swing.JPanel();
         tenantContactNoFilter_X_Btn = new javax.swing.JButton();
@@ -287,7 +301,7 @@ private CardLayout cardLayout;
         tenantPropertyIDFilterPanel = new javax.swing.JPanel();
         tenantPropertyIDFilterTopBar = new javax.swing.JPanel();
         tenantPropertyIDFilter_X_Btn = new javax.swing.JButton();
-        tenantIDtxtField = new javax.swing.JTextField();
+        tenantPropertyIDtxtField = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         submitTenantPropertyIDBtn = new javax.swing.JButton();
         tenantNameFilterPanel = new javax.swing.JPanel();
@@ -364,6 +378,18 @@ private CardLayout cardLayout;
         leaseIDField = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         submitLeaseIDBtn = new javax.swing.JButton();
+        leasePropertyIDFilterPanel = new javax.swing.JPanel();
+        leasePropertyIDFilterTopBar = new javax.swing.JPanel();
+        leaseIDFilter_X_Btn2 = new javax.swing.JButton();
+        leasePropertyIDField = new javax.swing.JTextField();
+        jLabel29 = new javax.swing.JLabel();
+        submitLeasePropertyIDBtn = new javax.swing.JButton();
+        leaseTenantIDFilterPanel = new javax.swing.JPanel();
+        leaseTenantIDFilterTopBar = new javax.swing.JPanel();
+        leaseTenantIDFilter_X_Btn = new javax.swing.JButton();
+        leaseTenantIDField = new javax.swing.JTextField();
+        jLabel28 = new javax.swing.JLabel();
+        submitTenantLeaseIDBtn = new javax.swing.JButton();
         leasesFilterMenu = new javax.swing.JPanel();
         leasessortTopBar = new javax.swing.JPanel();
         LeasesFilter_X_Btn = new javax.swing.JButton();
@@ -383,6 +409,8 @@ private CardLayout cardLayout;
         ExpiredLeasesFilter = new javax.swing.JLabel();
         TerminatedLeasesFilter = new javax.swing.JLabel();
         LeaseIDFilter = new javax.swing.JLabel();
+        TenantIDFilter = new javax.swing.JLabel();
+        leasesPropertyIDFilter = new javax.swing.JLabel();
         leasesJoinPanel = new javax.swing.JPanel();
         leaseJoinTopBar = new javax.swing.JPanel();
         tenantsJoin_X_Btn1 = new javax.swing.JButton();
@@ -455,37 +483,6 @@ private CardLayout cardLayout;
         maintenanceTitleText1 = new javax.swing.JLabel();
         leasesBG = new javax.swing.JLabel();
         transactionsPage = new javax.swing.JPanel();
-        transactionsJoinPanel = new javax.swing.JPanel();
-        transactionsJoinTopBar = new javax.swing.JPanel();
-        transactionsJoin_X_Btn = new javax.swing.JButton();
-        instruction4 = new javax.swing.JLabel();
-        transactionPropertyIDJoinLabel = new javax.swing.JLabel();
-        transactionPropertyIDJoinField = new javax.swing.JTextField();
-        maintenanceSearchJoinButton = new javax.swing.JButton();
-        TransactionTypeFilterPane = new javax.swing.JPanel();
-        transactionTypeFilterTopBar = new javax.swing.JPanel();
-        transactionTypeFilter_X_Btn = new javax.swing.JButton();
-        jLabel25 = new javax.swing.JLabel();
-        submitPaymentTypeBtn1 = new javax.swing.JButton();
-        transactionTypeComboBox = new javax.swing.JComboBox<>();
-        PaymentTypeFilterPane = new javax.swing.JPanel();
-        paymentTypeFilterTopBar = new javax.swing.JPanel();
-        paymentTypeFilter_X_Btn = new javax.swing.JButton();
-        jLabel23 = new javax.swing.JLabel();
-        submitPaymentTypeBtn = new javax.swing.JButton();
-        paymentTypeComboBox = new javax.swing.JComboBox<>();
-        transactionDateFilterPanel = new javax.swing.JPanel();
-        transactionDateFilterTopBar = new javax.swing.JPanel();
-        transactionDateFilter_X_Btn = new javax.swing.JButton();
-        jLabel19 = new javax.swing.JLabel();
-        submitTransactionIDBtn1 = new javax.swing.JButton();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        transactionIDFilterPanel = new javax.swing.JPanel();
-        transactionIDFilterTopBar = new javax.swing.JPanel();
-        transactionIDFilter_X_Btn = new javax.swing.JButton();
-        tenantIDtxtField2 = new javax.swing.JTextField();
-        jLabel18 = new javax.swing.JLabel();
-        submitTransactionIDBtn = new javax.swing.JButton();
         transactionFilterMenu = new javax.swing.JPanel();
         transactionsortTopBar = new javax.swing.JPanel();
         transactionFilter_X_Btn = new javax.swing.JButton();
@@ -504,7 +501,57 @@ private CardLayout cardLayout;
         TenantTransactionFilter = new javax.swing.JLabel();
         TransactionDateFilter = new javax.swing.JLabel();
         PaymentTypeFilter = new javax.swing.JLabel();
-        TransactionTypeFilter = new javax.swing.JLabel();
+        TransactionStatusFilter = new javax.swing.JLabel();
+        ReferenceNumberFilter = new javax.swing.JLabel();
+        transactionReferenceNoFilterPanel = new javax.swing.JPanel();
+        transactionPropertyIDFilterTopBar1 = new javax.swing.JPanel();
+        transactionReferenceNoFilter_X_Btn = new javax.swing.JButton();
+        transactionReferenceNotxtField = new javax.swing.JTextField();
+        jLabel32 = new javax.swing.JLabel();
+        transactionReferenceNoBtn = new javax.swing.JButton();
+        TransactionStatusFilterPane = new javax.swing.JPanel();
+        TransactionStatusFilterTopBar = new javax.swing.JPanel();
+        transactionTypeFilter_X_Btn = new javax.swing.JButton();
+        jLabel25 = new javax.swing.JLabel();
+        submitTransactionStatusBtn = new javax.swing.JButton();
+        TransactionStatusComboBox = new javax.swing.JComboBox<>();
+        PaymentTypeFilterPane = new javax.swing.JPanel();
+        paymentTypeFilterTopBar = new javax.swing.JPanel();
+        paymentTypeFilter_X_Btn = new javax.swing.JButton();
+        jLabel23 = new javax.swing.JLabel();
+        submitPaymentTypeBtn = new javax.swing.JButton();
+        paymentTypeComboBox = new javax.swing.JComboBox<>();
+        transactionDateFilterPanel = new javax.swing.JPanel();
+        transactionDateFilterTopBar = new javax.swing.JPanel();
+        transactionDateFilter_X_Btn = new javax.swing.JButton();
+        jLabel19 = new javax.swing.JLabel();
+        submitTransactionIDBtn1 = new javax.swing.JButton();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        transactionPropertyIDFilterPanel = new javax.swing.JPanel();
+        transactionPropertyIDFilterTopBar = new javax.swing.JPanel();
+        transactionPropertyIDFilter_X_Btn = new javax.swing.JButton();
+        transactionPropertyIDtxtField = new javax.swing.JTextField();
+        jLabel31 = new javax.swing.JLabel();
+        transactionPropertyIDBtn = new javax.swing.JButton();
+        transactionTenantIDFilterPanel = new javax.swing.JPanel();
+        transactionTenantIDFilterTopBar = new javax.swing.JPanel();
+        transactionTenantIDFilter_X_Btn = new javax.swing.JButton();
+        transactionTenantIDtxtField = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        transactionTenantIDBtn = new javax.swing.JButton();
+        transactionIDFilterPanel = new javax.swing.JPanel();
+        transactionIDFilterTopBar = new javax.swing.JPanel();
+        transactionIDFilter_X_Btn = new javax.swing.JButton();
+        transactionDtxtField = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        submitTransactionIDBtn = new javax.swing.JButton();
+        transactionsJoinPanel = new javax.swing.JPanel();
+        transactionsJoinTopBar = new javax.swing.JPanel();
+        transactionsJoin_X_Btn = new javax.swing.JButton();
+        instruction4 = new javax.swing.JLabel();
+        transactionPropertyIDJoinLabel = new javax.swing.JLabel();
+        transactionPropertyIDJoinField = new javax.swing.JTextField();
+        maintenanceSearchJoinButton = new javax.swing.JButton();
         transactionsAddPanel = new javax.swing.JPanel();
         transactionsAddTopBar = new javax.swing.JPanel();
         transacAdd_X_Btn = new javax.swing.JButton();
@@ -582,6 +629,12 @@ private CardLayout cardLayout;
         maintenanceSearchJoinButton1 = new javax.swing.JButton();
         maintenanceTenantIDJoinLabel4 = new javax.swing.JLabel();
         maintenancePropertyIDJoinField = new javax.swing.JTextField();
+        IssueTypeFilterPane = new javax.swing.JPanel();
+        issueTypeFilterTopBar = new javax.swing.JPanel();
+        issueTypeFilter_X_Btn = new javax.swing.JButton();
+        jLabel26 = new javax.swing.JLabel();
+        submitIssueTypeBtn = new javax.swing.JButton();
+        issueTypeComboBox = new javax.swing.JComboBox<>();
         PriorityTypeFilterPane = new javax.swing.JPanel();
         priorityTypeFilterTopBar = new javax.swing.JPanel();
         proirityTypeFilter_X_Btn = new javax.swing.JButton();
@@ -594,6 +647,12 @@ private CardLayout cardLayout;
         jLabel21 = new javax.swing.JLabel();
         submitRequestTypeBtn = new javax.swing.JButton();
         requestTypeComboBox = new javax.swing.JComboBox<>();
+        maintenanceReqIDFilterPanel = new javax.swing.JPanel();
+        maintenanceReqIDFilterTopBar = new javax.swing.JPanel();
+        maintenanceReqIDFilter_X_Btn = new javax.swing.JButton();
+        mainteanceIDtxtField = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        submitMaintenanceReqIDBtn = new javax.swing.JButton();
         maintenancePropertyIDFilterPanel = new javax.swing.JPanel();
         maintenancePropertyIDFilterTopBar = new javax.swing.JPanel();
         maintenancePropertyIDFilter_X_Btn = new javax.swing.JButton();
@@ -618,6 +677,8 @@ private CardLayout cardLayout;
         RequestFilter = new javax.swing.JLabel();
         PriorityFilter = new javax.swing.JLabel();
         PropertyIDMaintenanceFilter = new javax.swing.JLabel();
+        RequestIDFilter = new javax.swing.JLabel();
+        IssueTypeFilter = new javax.swing.JLabel();
         maintenanceAddPanel = new javax.swing.JPanel();
         maintenanceAddTopBar = new javax.swing.JPanel();
         maintenanceAdd_X_Btn = new javax.swing.JButton();
@@ -1736,13 +1797,72 @@ private CardLayout cardLayout;
         tenantsPage.setBackground(new java.awt.Color(224, 220, 220));
         tenantsPage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        tenantIDFilterPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tenantIDFilterTopBar1.setBackground(new java.awt.Color(212, 175, 55));
+
+        tenantPropertyIDFilter_X_Btn1.setBackground(new java.awt.Color(51, 51, 51));
+        tenantPropertyIDFilter_X_Btn1.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        tenantPropertyIDFilter_X_Btn1.setBorder(null);
+        tenantPropertyIDFilter_X_Btn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tenantPropertyIDFilter_X_Btn1MouseClicked(evt);
+            }
+        });
+        tenantPropertyIDFilter_X_Btn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tenantPropertyIDFilter_X_Btn1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout tenantIDFilterTopBar1Layout = new javax.swing.GroupLayout(tenantIDFilterTopBar1);
+        tenantIDFilterTopBar1.setLayout(tenantIDFilterTopBar1Layout);
+        tenantIDFilterTopBar1Layout.setHorizontalGroup(
+            tenantIDFilterTopBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tenantIDFilterTopBar1Layout.createSequentialGroup()
+                .addContainerGap(128, Short.MAX_VALUE)
+                .addComponent(tenantPropertyIDFilter_X_Btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        tenantIDFilterTopBar1Layout.setVerticalGroup(
+            tenantIDFilterTopBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tenantIDFilterTopBar1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(tenantPropertyIDFilter_X_Btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        tenantIDFilterPanel.add(tenantIDFilterTopBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 160, -1));
+
+        TenantIDtxtField.setText("ID");
+        TenantIDtxtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TenantIDtxtFieldActionPerformed(evt);
+            }
+        });
+        tenantIDFilterPanel.add(TenantIDtxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 60, 40));
+
+        jLabel27.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel27.setText("Tenant ID");
+        tenantIDFilterPanel.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+
+        submitTenantIDBtn.setText("Enter");
+        submitTenantIDBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitTenantIDBtnActionPerformed(evt);
+            }
+        });
+        tenantIDFilterPanel.add(submitTenantIDBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 120, 90, -1));
+
+        tenantsPage.add(tenantIDFilterPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 380, 170, 160));
+
         tenantsFilterMenu.setMaximumSize(new java.awt.Dimension(200, 490));
         tenantsFilterMenu.setMinimumSize(new java.awt.Dimension(200, 490));
         tenantsFilterMenu.setName(""); // NOI18N
         tenantsFilterMenu.setPreferredSize(new java.awt.Dimension(200, 490));
         tenantsFilterMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tenantssortTopBar1.setBackground(new java.awt.Color(212, 175, 55));
+        tenantssortTopBar.setBackground(new java.awt.Color(212, 175, 55));
 
         tenantsFilter_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
         tenantsFilter_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
@@ -1761,28 +1881,28 @@ private CardLayout cardLayout;
         jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 16)); // NOI18N
         jLabel2.setText("- Sort By -");
 
-        javax.swing.GroupLayout tenantssortTopBar1Layout = new javax.swing.GroupLayout(tenantssortTopBar1);
-        tenantssortTopBar1.setLayout(tenantssortTopBar1Layout);
-        tenantssortTopBar1Layout.setHorizontalGroup(
-            tenantssortTopBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tenantssortTopBar1Layout.createSequentialGroup()
+        javax.swing.GroupLayout tenantssortTopBarLayout = new javax.swing.GroupLayout(tenantssortTopBar);
+        tenantssortTopBar.setLayout(tenantssortTopBarLayout);
+        tenantssortTopBarLayout.setHorizontalGroup(
+            tenantssortTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tenantssortTopBarLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
                 .addComponent(tenantsFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        tenantssortTopBar1Layout.setVerticalGroup(
-            tenantssortTopBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tenantssortTopBar1Layout.createSequentialGroup()
+        tenantssortTopBarLayout.setVerticalGroup(
+            tenantssortTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tenantssortTopBarLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(tenantssortTopBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(tenantssortTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(tenantsFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        tenantsFilterMenu.add(tenantssortTopBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 188, -1));
+        tenantsFilterMenu.add(tenantssortTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 188, -1));
 
         SortByAtoZTenants.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         SortByAtoZTenants.setText("A-Z");
@@ -1832,14 +1952,14 @@ private CardLayout cardLayout;
             }
         });
 
-        javax.swing.GroupLayout tenantsSortByPanel1Layout = new javax.swing.GroupLayout(tenantsSortByPanel1);
-        tenantsSortByPanel1.setLayout(tenantsSortByPanel1Layout);
-        tenantsSortByPanel1Layout.setHorizontalGroup(
-            tenantsSortByPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout tenantsSortByPanelLayout = new javax.swing.GroupLayout(tenantsSortByPanel);
+        tenantsSortByPanel.setLayout(tenantsSortByPanelLayout);
+        tenantsSortByPanelLayout.setHorizontalGroup(
+            tenantsSortByPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING)
-            .addGroup(tenantsSortByPanel1Layout.createSequentialGroup()
+            .addGroup(tenantsSortByPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(tenantsSortByPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(tenantsSortByPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(SortByZtoATenants)
                     .addComponent(SortByAtoZTenants)
                     .addComponent(SortNewsttoOldestTenants)
@@ -1848,9 +1968,9 @@ private CardLayout cardLayout;
                     .addComponent(SortLowesttoHighestTenants))
                 .addContainerGap(68, Short.MAX_VALUE))
         );
-        tenantsSortByPanel1Layout.setVerticalGroup(
-            tenantsSortByPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tenantsSortByPanel1Layout.createSequentialGroup()
+        tenantsSortByPanelLayout.setVerticalGroup(
+            tenantsSortByPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tenantsSortByPanelLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(SortByAtoZTenants)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1868,7 +1988,7 @@ private CardLayout cardLayout;
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        tenantsFilterMenu.add(tenantsSortByPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 44, 190, 190));
+        tenantsFilterMenu.add(tenantsSortByPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 44, 190, 190));
 
         tenantsfilterBar.setBackground(new java.awt.Color(212, 175, 55));
 
@@ -1926,22 +2046,31 @@ private CardLayout cardLayout;
             }
         });
 
-        javax.swing.GroupLayout tenantsFilterByPanel1Layout = new javax.swing.GroupLayout(tenantsFilterByPanel1);
-        tenantsFilterByPanel1.setLayout(tenantsFilterByPanel1Layout);
-        tenantsFilterByPanel1Layout.setHorizontalGroup(
-            tenantsFilterByPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tenantsFilterByPanel1Layout.createSequentialGroup()
+        tenantPropertyIDTenantFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        tenantPropertyIDTenantFilter.setText("Property ID");
+        tenantPropertyIDTenantFilter.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tenantPropertyIDTenantFilterMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout tenantsFilterByPanelLayout = new javax.swing.GroupLayout(tenantsFilterByPanel);
+        tenantsFilterByPanel.setLayout(tenantsFilterByPanelLayout);
+        tenantsFilterByPanelLayout.setHorizontalGroup(
+            tenantsFilterByPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tenantsFilterByPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(tenantsFilterByPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(tenantsFilterByPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(tenantNameFilter)
                     .addComponent(contactNumberTenantFilter)
                     .addComponent(emailTenantFilter)
-                    .addComponent(tenantIDTenantFilter))
+                    .addComponent(tenantIDTenantFilter)
+                    .addComponent(tenantPropertyIDTenantFilter))
                 .addContainerGap(61, Short.MAX_VALUE))
         );
-        tenantsFilterByPanel1Layout.setVerticalGroup(
-            tenantsFilterByPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tenantsFilterByPanel1Layout.createSequentialGroup()
+        tenantsFilterByPanelLayout.setVerticalGroup(
+            tenantsFilterByPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tenantsFilterByPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(tenantNameFilter)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1950,12 +2079,14 @@ private CardLayout cardLayout;
                 .addComponent(emailTenantFilter)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tenantIDTenantFilter)
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tenantPropertyIDTenantFilter)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        tenantsFilterMenu.add(tenantsFilterByPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 180, 110));
+        tenantsFilterMenu.add(tenantsFilterByPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 180, 140));
 
-        tenantsPage.add(tenantsFilterMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 150, 200, 390));
+        tenantsPage.add(tenantsFilterMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 150, 200, 420));
 
         tenantContactNoFilterPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -2112,13 +2243,13 @@ private CardLayout cardLayout;
 
         tenantPropertyIDFilterPanel.add(tenantPropertyIDFilterTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 160, -1));
 
-        tenantIDtxtField.setText("ID");
-        tenantIDtxtField.addActionListener(new java.awt.event.ActionListener() {
+        tenantPropertyIDtxtField.setText("ID");
+        tenantPropertyIDtxtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tenantIDtxtFieldActionPerformed(evt);
+                tenantPropertyIDtxtFieldActionPerformed(evt);
             }
         });
-        tenantPropertyIDFilterPanel.add(tenantIDtxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 60, 40));
+        tenantPropertyIDFilterPanel.add(tenantPropertyIDtxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 60, 40));
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLabel6.setText("Property ID");
@@ -2795,6 +2926,124 @@ private CardLayout cardLayout;
 
         leasesPage.add(leaseIDFilterPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 380, 170, 160));
 
+        leasePropertyIDFilterPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        leasePropertyIDFilterTopBar.setBackground(new java.awt.Color(212, 175, 55));
+
+        leaseIDFilter_X_Btn2.setBackground(new java.awt.Color(51, 51, 51));
+        leaseIDFilter_X_Btn2.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        leaseIDFilter_X_Btn2.setBorder(null);
+        leaseIDFilter_X_Btn2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                leaseIDFilter_X_Btn2MouseClicked(evt);
+            }
+        });
+        leaseIDFilter_X_Btn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                leaseIDFilter_X_Btn2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout leasePropertyIDFilterTopBarLayout = new javax.swing.GroupLayout(leasePropertyIDFilterTopBar);
+        leasePropertyIDFilterTopBar.setLayout(leasePropertyIDFilterTopBarLayout);
+        leasePropertyIDFilterTopBarLayout.setHorizontalGroup(
+            leasePropertyIDFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, leasePropertyIDFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap(128, Short.MAX_VALUE)
+                .addComponent(leaseIDFilter_X_Btn2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        leasePropertyIDFilterTopBarLayout.setVerticalGroup(
+            leasePropertyIDFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(leasePropertyIDFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(leaseIDFilter_X_Btn2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        leasePropertyIDFilterPanel.add(leasePropertyIDFilterTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 160, -1));
+
+        leasePropertyIDField.setText("ID");
+        leasePropertyIDField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                leasePropertyIDFieldActionPerformed(evt);
+            }
+        });
+        leasePropertyIDFilterPanel.add(leasePropertyIDField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 60, 40));
+
+        jLabel29.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel29.setText("Property ID");
+        leasePropertyIDFilterPanel.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+
+        submitLeasePropertyIDBtn.setText("Enter");
+        submitLeasePropertyIDBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitLeasePropertyIDBtnActionPerformed(evt);
+            }
+        });
+        leasePropertyIDFilterPanel.add(submitLeasePropertyIDBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 90, -1));
+
+        leasesPage.add(leasePropertyIDFilterPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 380, 170, 160));
+
+        leaseTenantIDFilterPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        leaseTenantIDFilterTopBar.setBackground(new java.awt.Color(212, 175, 55));
+
+        leaseTenantIDFilter_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
+        leaseTenantIDFilter_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        leaseTenantIDFilter_X_Btn.setBorder(null);
+        leaseTenantIDFilter_X_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                leaseTenantIDFilter_X_BtnMouseClicked(evt);
+            }
+        });
+        leaseTenantIDFilter_X_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                leaseTenantIDFilter_X_BtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout leaseTenantIDFilterTopBarLayout = new javax.swing.GroupLayout(leaseTenantIDFilterTopBar);
+        leaseTenantIDFilterTopBar.setLayout(leaseTenantIDFilterTopBarLayout);
+        leaseTenantIDFilterTopBarLayout.setHorizontalGroup(
+            leaseTenantIDFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, leaseTenantIDFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap(128, Short.MAX_VALUE)
+                .addComponent(leaseTenantIDFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        leaseTenantIDFilterTopBarLayout.setVerticalGroup(
+            leaseTenantIDFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(leaseTenantIDFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(leaseTenantIDFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        leaseTenantIDFilterPanel.add(leaseTenantIDFilterTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 160, -1));
+
+        leaseTenantIDField.setText("ID");
+        leaseTenantIDField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                leaseTenantIDFieldActionPerformed(evt);
+            }
+        });
+        leaseTenantIDFilterPanel.add(leaseTenantIDField, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 60, 40));
+
+        jLabel28.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel28.setText("Tenant ID");
+        leaseTenantIDFilterPanel.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+
+        submitTenantLeaseIDBtn.setText("Enter");
+        submitTenantLeaseIDBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitTenantLeaseIDBtnActionPerformed(evt);
+            }
+        });
+        leaseTenantIDFilterPanel.add(submitTenantLeaseIDBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 120, 90, -1));
+
+        leasesPage.add(leaseTenantIDFilterPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 380, 170, 160));
+
         leasesFilterMenu.setMaximumSize(new java.awt.Dimension(200, 490));
         leasesFilterMenu.setMinimumSize(new java.awt.Dimension(200, 490));
         leasesFilterMenu.setName(""); // NOI18N
@@ -2985,6 +3234,22 @@ private CardLayout cardLayout;
             }
         });
 
+        TenantIDFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        TenantIDFilter.setText("Tenant ID");
+        TenantIDFilter.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TenantIDFilterMouseClicked(evt);
+            }
+        });
+
+        leasesPropertyIDFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        leasesPropertyIDFilter.setText("Property ID");
+        leasesPropertyIDFilter.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                leasesPropertyIDFilterMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout leasesFilterByPanelLayout = new javax.swing.GroupLayout(leasesFilterByPanel);
         leasesFilterByPanel.setLayout(leasesFilterByPanelLayout);
         leasesFilterByPanelLayout.setHorizontalGroup(
@@ -2995,7 +3260,9 @@ private CardLayout cardLayout;
                     .addComponent(ActiveLeasesFilter)
                     .addComponent(ExpiredLeasesFilter)
                     .addComponent(TerminatedLeasesFilter)
-                    .addComponent(LeaseIDFilter))
+                    .addComponent(LeaseIDFilter)
+                    .addComponent(TenantIDFilter)
+                    .addComponent(leasesPropertyIDFilter))
                 .addContainerGap(39, Short.MAX_VALUE))
         );
         leasesFilterByPanelLayout.setVerticalGroup(
@@ -3009,12 +3276,16 @@ private CardLayout cardLayout;
                 .addComponent(TerminatedLeasesFilter)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(LeaseIDFilter)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(TenantIDFilter)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(leasesPropertyIDFilter)
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
-        leasesFilterMenu.add(leasesFilterByPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 180, 110));
+        leasesFilterMenu.add(leasesFilterByPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 180, 160));
 
-        leasesPage.add(leasesFilterMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 150, 200, 390));
+        leasesPage.add(leasesFilterMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 150, 200, 440));
 
         leasesJoinPanel.setBackground(new java.awt.Color(51, 51, 51));
         leasesJoinPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -3619,307 +3890,6 @@ private CardLayout cardLayout;
         transactionsPage.setBackground(new java.awt.Color(224, 220, 220));
         transactionsPage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        transactionsJoinPanel.setBackground(new java.awt.Color(51, 51, 51));
-        transactionsJoinPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-
-        transactionsJoinTopBar.setBackground(new java.awt.Color(212, 175, 55));
-
-        transactionsJoin_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
-        transactionsJoin_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
-        transactionsJoin_X_Btn.setBorder(null);
-        transactionsJoin_X_Btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                transactionsJoin_X_BtnActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout transactionsJoinTopBarLayout = new javax.swing.GroupLayout(transactionsJoinTopBar);
-        transactionsJoinTopBar.setLayout(transactionsJoinTopBarLayout);
-        transactionsJoinTopBarLayout.setHorizontalGroup(
-            transactionsJoinTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, transactionsJoinTopBarLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(transactionsJoin_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        transactionsJoinTopBarLayout.setVerticalGroup(
-            transactionsJoinTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(transactionsJoinTopBarLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(transactionsJoin_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        instruction4.setFont(new java.awt.Font("Arial Narrow", 2, 14)); // NOI18N
-        instruction4.setForeground(new java.awt.Color(255, 102, 102));
-        instruction4.setText("*Fill in the form");
-
-        transactionPropertyIDJoinLabel.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        transactionPropertyIDJoinLabel.setForeground(new java.awt.Color(255, 255, 255));
-        transactionPropertyIDJoinLabel.setText("Property ID");
-
-        transactionPropertyIDJoinField.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        transactionPropertyIDJoinField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                transactionPropertyIDJoinFieldActionPerformed(evt);
-            }
-        });
-
-        maintenanceSearchJoinButton.setBackground(new java.awt.Color(212, 175, 55));
-        maintenanceSearchJoinButton.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        maintenanceSearchJoinButton.setText("SEARCH");
-        maintenanceSearchJoinButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                maintenanceSearchJoinButtonActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout transactionsJoinPanelLayout = new javax.swing.GroupLayout(transactionsJoinPanel);
-        transactionsJoinPanel.setLayout(transactionsJoinPanelLayout);
-        transactionsJoinPanelLayout.setHorizontalGroup(
-            transactionsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(transactionsJoinTopBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(transactionsJoinPanelLayout.createSequentialGroup()
-                .addGroup(transactionsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(transactionsJoinPanelLayout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addGroup(transactionsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(maintenanceSearchJoinButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, transactionsJoinPanelLayout.createSequentialGroup()
-                                .addComponent(transactionPropertyIDJoinLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(transactionPropertyIDJoinField, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, transactionsJoinPanelLayout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(instruction4, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(10, 45, Short.MAX_VALUE))
-        );
-        transactionsJoinPanelLayout.setVerticalGroup(
-            transactionsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(transactionsJoinPanelLayout.createSequentialGroup()
-                .addComponent(transactionsJoinTopBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16)
-                .addComponent(instruction4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(transactionsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(transactionPropertyIDJoinLabel)
-                    .addComponent(transactionPropertyIDJoinField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 384, Short.MAX_VALUE)
-                .addComponent(maintenanceSearchJoinButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38))
-        );
-
-        transactionsPage.add(transactionsJoinPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1410, 200, 490, 590));
-
-        TransactionTypeFilterPane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        transactionTypeFilterTopBar.setBackground(new java.awt.Color(212, 175, 55));
-
-        transactionTypeFilter_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
-        transactionTypeFilter_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
-        transactionTypeFilter_X_Btn.setBorder(null);
-        transactionTypeFilter_X_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                transactionTypeFilter_X_BtnMouseClicked(evt);
-            }
-        });
-        transactionTypeFilter_X_Btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                transactionTypeFilter_X_BtnActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout transactionTypeFilterTopBarLayout = new javax.swing.GroupLayout(transactionTypeFilterTopBar);
-        transactionTypeFilterTopBar.setLayout(transactionTypeFilterTopBarLayout);
-        transactionTypeFilterTopBarLayout.setHorizontalGroup(
-            transactionTypeFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, transactionTypeFilterTopBarLayout.createSequentialGroup()
-                .addContainerGap(238, Short.MAX_VALUE)
-                .addComponent(transactionTypeFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        transactionTypeFilterTopBarLayout.setVerticalGroup(
-            transactionTypeFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(transactionTypeFilterTopBarLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(transactionTypeFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        TransactionTypeFilterPane.add(transactionTypeFilterTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 270, -1));
-
-        jLabel25.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel25.setText("Transaction Type");
-        TransactionTypeFilterPane.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 130, -1));
-
-        submitPaymentTypeBtn1.setText("Enter");
-        submitPaymentTypeBtn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitPaymentTypeBtn1ActionPerformed(evt);
-            }
-        });
-        TransactionTypeFilterPane.add(submitPaymentTypeBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 90, -1));
-
-        transactionTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pending", "Complete", "Overdue" }));
-        TransactionTypeFilterPane.add(transactionTypeComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 100, -1));
-
-        transactionsPage.add(TransactionTypeFilterPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 380, 280, 140));
-
-        PaymentTypeFilterPane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        paymentTypeFilterTopBar.setBackground(new java.awt.Color(212, 175, 55));
-
-        paymentTypeFilter_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
-        paymentTypeFilter_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
-        paymentTypeFilter_X_Btn.setBorder(null);
-        paymentTypeFilter_X_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                paymentTypeFilter_X_BtnMouseClicked(evt);
-            }
-        });
-        paymentTypeFilter_X_Btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                paymentTypeFilter_X_BtnActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout paymentTypeFilterTopBarLayout = new javax.swing.GroupLayout(paymentTypeFilterTopBar);
-        paymentTypeFilterTopBar.setLayout(paymentTypeFilterTopBarLayout);
-        paymentTypeFilterTopBarLayout.setHorizontalGroup(
-            paymentTypeFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, paymentTypeFilterTopBarLayout.createSequentialGroup()
-                .addContainerGap(198, Short.MAX_VALUE)
-                .addComponent(paymentTypeFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        paymentTypeFilterTopBarLayout.setVerticalGroup(
-            paymentTypeFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(paymentTypeFilterTopBarLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(paymentTypeFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        PaymentTypeFilterPane.add(paymentTypeFilterTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 230, -1));
-
-        jLabel23.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel23.setText("Payment Type");
-        PaymentTypeFilterPane.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
-
-        submitPaymentTypeBtn.setText("Enter");
-        submitPaymentTypeBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitPaymentTypeBtnActionPerformed(evt);
-            }
-        });
-        PaymentTypeFilterPane.add(submitPaymentTypeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 90, -1));
-
-        paymentTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cash Payment", "Bank Transfer", "Online Payment" }));
-        PaymentTypeFilterPane.add(paymentTypeComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 120, -1));
-
-        transactionsPage.add(PaymentTypeFilterPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 380, 240, 140));
-
-        transactionDateFilterPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        transactionDateFilterTopBar.setBackground(new java.awt.Color(212, 175, 55));
-
-        transactionDateFilter_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
-        transactionDateFilter_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
-        transactionDateFilter_X_Btn.setBorder(null);
-        transactionDateFilter_X_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                transactionDateFilter_X_BtnMouseClicked(evt);
-            }
-        });
-        transactionDateFilter_X_Btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                transactionDateFilter_X_BtnActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout transactionDateFilterTopBarLayout = new javax.swing.GroupLayout(transactionDateFilterTopBar);
-        transactionDateFilterTopBar.setLayout(transactionDateFilterTopBarLayout);
-        transactionDateFilterTopBarLayout.setHorizontalGroup(
-            transactionDateFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, transactionDateFilterTopBarLayout.createSequentialGroup()
-                .addContainerGap(228, Short.MAX_VALUE)
-                .addComponent(transactionDateFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        transactionDateFilterTopBarLayout.setVerticalGroup(
-            transactionDateFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(transactionDateFilterTopBarLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(transactionDateFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        transactionDateFilterPanel.add(transactionDateFilterTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 260, -1));
-
-        jLabel19.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel19.setText("Transaction Date");
-        transactionDateFilterPanel.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
-
-        submitTransactionIDBtn1.setText("Enter");
-        transactionDateFilterPanel.add(submitTransactionIDBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 90, -1));
-        transactionDateFilterPanel.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 130, -1));
-
-        transactionsPage.add(transactionDateFilterPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 380, 280, 140));
-
-        transactionIDFilterPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        transactionIDFilterTopBar.setBackground(new java.awt.Color(212, 175, 55));
-
-        transactionIDFilter_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
-        transactionIDFilter_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
-        transactionIDFilter_X_Btn.setBorder(null);
-        transactionIDFilter_X_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                transactionIDFilter_X_BtnMouseClicked(evt);
-            }
-        });
-        transactionIDFilter_X_Btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                transactionIDFilter_X_BtnActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout transactionIDFilterTopBarLayout = new javax.swing.GroupLayout(transactionIDFilterTopBar);
-        transactionIDFilterTopBar.setLayout(transactionIDFilterTopBarLayout);
-        transactionIDFilterTopBarLayout.setHorizontalGroup(
-            transactionIDFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, transactionIDFilterTopBarLayout.createSequentialGroup()
-                .addContainerGap(158, Short.MAX_VALUE)
-                .addComponent(transactionIDFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        transactionIDFilterTopBarLayout.setVerticalGroup(
-            transactionIDFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(transactionIDFilterTopBarLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(transactionIDFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        transactionIDFilterPanel.add(transactionIDFilterTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 190, -1));
-
-        tenantIDtxtField2.setText("ID");
-        tenantIDtxtField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tenantIDtxtField2ActionPerformed(evt);
-            }
-        });
-        transactionIDFilterPanel.add(tenantIDtxtField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 60, 40));
-
-        jLabel18.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel18.setText("Transaction ID");
-        transactionIDFilterPanel.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
-
-        submitTransactionIDBtn.setText("Enter");
-        transactionIDFilterPanel.add(submitTransactionIDBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 90, -1));
-
-        transactionsPage.add(transactionIDFilterPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 380, 210, 160));
-
         transactionFilterMenu.setMaximumSize(new java.awt.Dimension(200, 490));
         transactionFilterMenu.setMinimumSize(new java.awt.Dimension(200, 490));
         transactionFilterMenu.setName(""); // NOI18N
@@ -4102,11 +4072,19 @@ private CardLayout cardLayout;
             }
         });
 
-        TransactionTypeFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        TransactionTypeFilter.setText("Transactions Type");
-        TransactionTypeFilter.addMouseListener(new java.awt.event.MouseAdapter() {
+        TransactionStatusFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        TransactionStatusFilter.setText("Transactions Status");
+        TransactionStatusFilter.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TransactionTypeFilterMouseClicked(evt);
+                TransactionStatusFilterMouseClicked(evt);
+            }
+        });
+
+        ReferenceNumberFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        ReferenceNumberFilter.setText("Reference Number");
+        ReferenceNumberFilter.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ReferenceNumberFilterMouseClicked(evt);
             }
         });
 
@@ -4120,8 +4098,9 @@ private CardLayout cardLayout;
                     .addComponent(TenantTransactionFilter)
                     .addComponent(TransactionDateFilter)
                     .addComponent(PaymentTypeFilter)
-                    .addComponent(TransactionTypeFilter))
-                .addContainerGap(42, Short.MAX_VALUE))
+                    .addComponent(TransactionStatusFilter)
+                    .addComponent(ReferenceNumberFilter))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         transactionFilterByPanelLayout.setVerticalGroup(
             transactionFilterByPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4133,13 +4112,478 @@ private CardLayout cardLayout;
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PaymentTypeFilter)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TransactionTypeFilter)
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addComponent(TransactionStatusFilter)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ReferenceNumberFilter)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        transactionFilterMenu.add(transactionFilterByPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 180, 110));
+        transactionFilterMenu.add(transactionFilterByPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 180, -1));
 
-        transactionsPage.add(transactionFilterMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 150, 200, 390));
+        transactionsPage.add(transactionFilterMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 150, 200, 410));
+
+        transactionReferenceNoFilterPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        transactionPropertyIDFilterTopBar1.setBackground(new java.awt.Color(212, 175, 55));
+
+        transactionReferenceNoFilter_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
+        transactionReferenceNoFilter_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        transactionReferenceNoFilter_X_Btn.setBorder(null);
+        transactionReferenceNoFilter_X_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                transactionReferenceNoFilter_X_BtnMouseClicked(evt);
+            }
+        });
+        transactionReferenceNoFilter_X_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transactionReferenceNoFilter_X_BtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout transactionPropertyIDFilterTopBar1Layout = new javax.swing.GroupLayout(transactionPropertyIDFilterTopBar1);
+        transactionPropertyIDFilterTopBar1.setLayout(transactionPropertyIDFilterTopBar1Layout);
+        transactionPropertyIDFilterTopBar1Layout.setHorizontalGroup(
+            transactionPropertyIDFilterTopBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, transactionPropertyIDFilterTopBar1Layout.createSequentialGroup()
+                .addContainerGap(198, Short.MAX_VALUE)
+                .addComponent(transactionReferenceNoFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        transactionPropertyIDFilterTopBar1Layout.setVerticalGroup(
+            transactionPropertyIDFilterTopBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(transactionPropertyIDFilterTopBar1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(transactionReferenceNoFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        transactionReferenceNoFilterPanel.add(transactionPropertyIDFilterTopBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 230, -1));
+
+        transactionReferenceNotxtField.setText("Ref no.");
+        transactionReferenceNotxtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transactionReferenceNotxtFieldActionPerformed(evt);
+            }
+        });
+        transactionReferenceNoFilterPanel.add(transactionReferenceNotxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 60, 40));
+
+        jLabel32.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel32.setText("Reference Number");
+        transactionReferenceNoFilterPanel.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
+
+        transactionReferenceNoBtn.setText("Enter");
+        transactionReferenceNoFilterPanel.add(transactionReferenceNoBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 90, -1));
+
+        transactionsPage.add(transactionReferenceNoFilterPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 380, 250, 160));
+
+        TransactionStatusFilterPane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        TransactionStatusFilterTopBar.setBackground(new java.awt.Color(212, 175, 55));
+
+        transactionTypeFilter_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
+        transactionTypeFilter_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        transactionTypeFilter_X_Btn.setBorder(null);
+        transactionTypeFilter_X_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                transactionTypeFilter_X_BtnMouseClicked(evt);
+            }
+        });
+        transactionTypeFilter_X_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transactionTypeFilter_X_BtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout TransactionStatusFilterTopBarLayout = new javax.swing.GroupLayout(TransactionStatusFilterTopBar);
+        TransactionStatusFilterTopBar.setLayout(TransactionStatusFilterTopBarLayout);
+        TransactionStatusFilterTopBarLayout.setHorizontalGroup(
+            TransactionStatusFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TransactionStatusFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap(238, Short.MAX_VALUE)
+                .addComponent(transactionTypeFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        TransactionStatusFilterTopBarLayout.setVerticalGroup(
+            TransactionStatusFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TransactionStatusFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(transactionTypeFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        TransactionStatusFilterPane.add(TransactionStatusFilterTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 270, -1));
+
+        jLabel25.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel25.setText("Transaction Status");
+        TransactionStatusFilterPane.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 130, -1));
+
+        submitTransactionStatusBtn.setText("Enter");
+        submitTransactionStatusBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitTransactionStatusBtnActionPerformed(evt);
+            }
+        });
+        TransactionStatusFilterPane.add(submitTransactionStatusBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 90, -1));
+
+        TransactionStatusComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pending", "Complete", "Overdue" }));
+        TransactionStatusFilterPane.add(TransactionStatusComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 100, -1));
+
+        transactionsPage.add(TransactionStatusFilterPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 380, 280, 140));
+
+        PaymentTypeFilterPane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        paymentTypeFilterTopBar.setBackground(new java.awt.Color(212, 175, 55));
+
+        paymentTypeFilter_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
+        paymentTypeFilter_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        paymentTypeFilter_X_Btn.setBorder(null);
+        paymentTypeFilter_X_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                paymentTypeFilter_X_BtnMouseClicked(evt);
+            }
+        });
+        paymentTypeFilter_X_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                paymentTypeFilter_X_BtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout paymentTypeFilterTopBarLayout = new javax.swing.GroupLayout(paymentTypeFilterTopBar);
+        paymentTypeFilterTopBar.setLayout(paymentTypeFilterTopBarLayout);
+        paymentTypeFilterTopBarLayout.setHorizontalGroup(
+            paymentTypeFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, paymentTypeFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap(198, Short.MAX_VALUE)
+                .addComponent(paymentTypeFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        paymentTypeFilterTopBarLayout.setVerticalGroup(
+            paymentTypeFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(paymentTypeFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(paymentTypeFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        PaymentTypeFilterPane.add(paymentTypeFilterTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 230, -1));
+
+        jLabel23.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel23.setText("Payment Type");
+        PaymentTypeFilterPane.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
+
+        submitPaymentTypeBtn.setText("Enter");
+        submitPaymentTypeBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitPaymentTypeBtnActionPerformed(evt);
+            }
+        });
+        PaymentTypeFilterPane.add(submitPaymentTypeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 90, -1));
+
+        paymentTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cash Payment", "Bank Transfer", "Online Payment" }));
+        PaymentTypeFilterPane.add(paymentTypeComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 120, -1));
+
+        transactionsPage.add(PaymentTypeFilterPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 380, 240, 140));
+
+        transactionDateFilterPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        transactionDateFilterTopBar.setBackground(new java.awt.Color(212, 175, 55));
+
+        transactionDateFilter_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
+        transactionDateFilter_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        transactionDateFilter_X_Btn.setBorder(null);
+        transactionDateFilter_X_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                transactionDateFilter_X_BtnMouseClicked(evt);
+            }
+        });
+        transactionDateFilter_X_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transactionDateFilter_X_BtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout transactionDateFilterTopBarLayout = new javax.swing.GroupLayout(transactionDateFilterTopBar);
+        transactionDateFilterTopBar.setLayout(transactionDateFilterTopBarLayout);
+        transactionDateFilterTopBarLayout.setHorizontalGroup(
+            transactionDateFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, transactionDateFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap(228, Short.MAX_VALUE)
+                .addComponent(transactionDateFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        transactionDateFilterTopBarLayout.setVerticalGroup(
+            transactionDateFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(transactionDateFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(transactionDateFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        transactionDateFilterPanel.add(transactionDateFilterTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 260, -1));
+
+        jLabel19.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel19.setText("Transaction Date");
+        transactionDateFilterPanel.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
+
+        submitTransactionIDBtn1.setText("Enter");
+        transactionDateFilterPanel.add(submitTransactionIDBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 90, -1));
+        transactionDateFilterPanel.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 130, -1));
+
+        transactionsPage.add(transactionDateFilterPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 380, 280, 140));
+
+        transactionPropertyIDFilterPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        transactionPropertyIDFilterTopBar.setBackground(new java.awt.Color(212, 175, 55));
+
+        transactionPropertyIDFilter_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
+        transactionPropertyIDFilter_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        transactionPropertyIDFilter_X_Btn.setBorder(null);
+        transactionPropertyIDFilter_X_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                transactionPropertyIDFilter_X_BtnMouseClicked(evt);
+            }
+        });
+        transactionPropertyIDFilter_X_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transactionPropertyIDFilter_X_BtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout transactionPropertyIDFilterTopBarLayout = new javax.swing.GroupLayout(transactionPropertyIDFilterTopBar);
+        transactionPropertyIDFilterTopBar.setLayout(transactionPropertyIDFilterTopBarLayout);
+        transactionPropertyIDFilterTopBarLayout.setHorizontalGroup(
+            transactionPropertyIDFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, transactionPropertyIDFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap(158, Short.MAX_VALUE)
+                .addComponent(transactionPropertyIDFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        transactionPropertyIDFilterTopBarLayout.setVerticalGroup(
+            transactionPropertyIDFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(transactionPropertyIDFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(transactionPropertyIDFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        transactionPropertyIDFilterPanel.add(transactionPropertyIDFilterTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 190, -1));
+
+        transactionPropertyIDtxtField.setText("ID");
+        transactionPropertyIDtxtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transactionPropertyIDtxtFieldActionPerformed(evt);
+            }
+        });
+        transactionPropertyIDFilterPanel.add(transactionPropertyIDtxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 60, 40));
+
+        jLabel31.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel31.setText("Property ID");
+        transactionPropertyIDFilterPanel.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
+
+        transactionPropertyIDBtn.setText("Enter");
+        transactionPropertyIDFilterPanel.add(transactionPropertyIDBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 90, -1));
+
+        transactionsPage.add(transactionPropertyIDFilterPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 380, 210, 160));
+
+        transactionTenantIDFilterPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        transactionTenantIDFilterTopBar.setBackground(new java.awt.Color(212, 175, 55));
+
+        transactionTenantIDFilter_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
+        transactionTenantIDFilter_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        transactionTenantIDFilter_X_Btn.setBorder(null);
+        transactionTenantIDFilter_X_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                transactionTenantIDFilter_X_BtnMouseClicked(evt);
+            }
+        });
+        transactionTenantIDFilter_X_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transactionTenantIDFilter_X_BtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout transactionTenantIDFilterTopBarLayout = new javax.swing.GroupLayout(transactionTenantIDFilterTopBar);
+        transactionTenantIDFilterTopBar.setLayout(transactionTenantIDFilterTopBarLayout);
+        transactionTenantIDFilterTopBarLayout.setHorizontalGroup(
+            transactionTenantIDFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, transactionTenantIDFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap(158, Short.MAX_VALUE)
+                .addComponent(transactionTenantIDFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        transactionTenantIDFilterTopBarLayout.setVerticalGroup(
+            transactionTenantIDFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(transactionTenantIDFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(transactionTenantIDFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        transactionTenantIDFilterPanel.add(transactionTenantIDFilterTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 190, -1));
+
+        transactionTenantIDtxtField.setText("ID");
+        transactionTenantIDtxtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transactionTenantIDtxtFieldActionPerformed(evt);
+            }
+        });
+        transactionTenantIDFilterPanel.add(transactionTenantIDtxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 60, 40));
+
+        jLabel30.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel30.setText("Tenant ID");
+        transactionTenantIDFilterPanel.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
+
+        transactionTenantIDBtn.setText("Enter");
+        transactionTenantIDFilterPanel.add(transactionTenantIDBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 90, -1));
+
+        transactionsPage.add(transactionTenantIDFilterPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 380, 210, 160));
+
+        transactionIDFilterPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        transactionIDFilterTopBar.setBackground(new java.awt.Color(212, 175, 55));
+
+        transactionIDFilter_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
+        transactionIDFilter_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        transactionIDFilter_X_Btn.setBorder(null);
+        transactionIDFilter_X_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                transactionIDFilter_X_BtnMouseClicked(evt);
+            }
+        });
+        transactionIDFilter_X_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transactionIDFilter_X_BtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout transactionIDFilterTopBarLayout = new javax.swing.GroupLayout(transactionIDFilterTopBar);
+        transactionIDFilterTopBar.setLayout(transactionIDFilterTopBarLayout);
+        transactionIDFilterTopBarLayout.setHorizontalGroup(
+            transactionIDFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, transactionIDFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap(158, Short.MAX_VALUE)
+                .addComponent(transactionIDFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        transactionIDFilterTopBarLayout.setVerticalGroup(
+            transactionIDFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(transactionIDFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(transactionIDFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        transactionIDFilterPanel.add(transactionIDFilterTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 190, -1));
+
+        transactionDtxtField.setText("ID");
+        transactionDtxtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transactionDtxtFieldActionPerformed(evt);
+            }
+        });
+        transactionIDFilterPanel.add(transactionDtxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 60, 40));
+
+        jLabel18.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel18.setText("Transaction ID");
+        transactionIDFilterPanel.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+
+        submitTransactionIDBtn.setText("Enter");
+        transactionIDFilterPanel.add(submitTransactionIDBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 90, -1));
+
+        transactionsPage.add(transactionIDFilterPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 380, 210, 160));
+
+        transactionsJoinPanel.setBackground(new java.awt.Color(51, 51, 51));
+        transactionsJoinPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        transactionsJoinTopBar.setBackground(new java.awt.Color(212, 175, 55));
+
+        transactionsJoin_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
+        transactionsJoin_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        transactionsJoin_X_Btn.setBorder(null);
+        transactionsJoin_X_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transactionsJoin_X_BtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout transactionsJoinTopBarLayout = new javax.swing.GroupLayout(transactionsJoinTopBar);
+        transactionsJoinTopBar.setLayout(transactionsJoinTopBarLayout);
+        transactionsJoinTopBarLayout.setHorizontalGroup(
+            transactionsJoinTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, transactionsJoinTopBarLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(transactionsJoin_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        transactionsJoinTopBarLayout.setVerticalGroup(
+            transactionsJoinTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(transactionsJoinTopBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(transactionsJoin_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        instruction4.setFont(new java.awt.Font("Arial Narrow", 2, 14)); // NOI18N
+        instruction4.setForeground(new java.awt.Color(255, 102, 102));
+        instruction4.setText("*Fill in the form");
+
+        transactionPropertyIDJoinLabel.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        transactionPropertyIDJoinLabel.setForeground(new java.awt.Color(255, 255, 255));
+        transactionPropertyIDJoinLabel.setText("Property ID");
+
+        transactionPropertyIDJoinField.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        transactionPropertyIDJoinField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transactionPropertyIDJoinFieldActionPerformed(evt);
+            }
+        });
+
+        maintenanceSearchJoinButton.setBackground(new java.awt.Color(212, 175, 55));
+        maintenanceSearchJoinButton.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        maintenanceSearchJoinButton.setText("SEARCH");
+        maintenanceSearchJoinButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                maintenanceSearchJoinButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout transactionsJoinPanelLayout = new javax.swing.GroupLayout(transactionsJoinPanel);
+        transactionsJoinPanel.setLayout(transactionsJoinPanelLayout);
+        transactionsJoinPanelLayout.setHorizontalGroup(
+            transactionsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(transactionsJoinTopBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(transactionsJoinPanelLayout.createSequentialGroup()
+                .addGroup(transactionsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(transactionsJoinPanelLayout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addGroup(transactionsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(maintenanceSearchJoinButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, transactionsJoinPanelLayout.createSequentialGroup()
+                                .addComponent(transactionPropertyIDJoinLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(transactionPropertyIDJoinField, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, transactionsJoinPanelLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(instruction4, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(10, 45, Short.MAX_VALUE))
+        );
+        transactionsJoinPanelLayout.setVerticalGroup(
+            transactionsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(transactionsJoinPanelLayout.createSequentialGroup()
+                .addComponent(transactionsJoinTopBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16)
+                .addComponent(instruction4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(transactionsJoinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(transactionPropertyIDJoinLabel)
+                    .addComponent(transactionPropertyIDJoinField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 384, Short.MAX_VALUE)
+                .addComponent(maintenanceSearchJoinButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38))
+        );
+
+        transactionsPage.add(transactionsJoinPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1410, 200, 490, 590));
 
         transactionsAddPanel.setBackground(new java.awt.Color(51, 51, 51));
         transactionsAddPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -4579,7 +5023,7 @@ private CardLayout cardLayout;
         transactionsTable.setShowGrid(true);
         jScrollPane5.setViewportView(transactionsTable);
 
-        transactionsPage.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 1281, 594));
+        transactionsPage.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 1281, 594));
 
         transacAddBtn.setBackground(new java.awt.Color(218, 165, 32));
         transacAddBtn.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
@@ -4766,6 +5210,60 @@ private CardLayout cardLayout;
 
         maintenancePage.add(maintenanceJoinPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1410, 200, 490, 590));
 
+        IssueTypeFilterPane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        issueTypeFilterTopBar.setBackground(new java.awt.Color(212, 175, 55));
+
+        issueTypeFilter_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
+        issueTypeFilter_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        issueTypeFilter_X_Btn.setBorder(null);
+        issueTypeFilter_X_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                issueTypeFilter_X_BtnMouseClicked(evt);
+            }
+        });
+        issueTypeFilter_X_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                issueTypeFilter_X_BtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout issueTypeFilterTopBarLayout = new javax.swing.GroupLayout(issueTypeFilterTopBar);
+        issueTypeFilterTopBar.setLayout(issueTypeFilterTopBarLayout);
+        issueTypeFilterTopBarLayout.setHorizontalGroup(
+            issueTypeFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, issueTypeFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap(208, Short.MAX_VALUE)
+                .addComponent(issueTypeFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        issueTypeFilterTopBarLayout.setVerticalGroup(
+            issueTypeFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(issueTypeFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(issueTypeFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        IssueTypeFilterPane.add(issueTypeFilterTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 240, -1));
+
+        jLabel26.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel26.setText("Issue Type");
+        IssueTypeFilterPane.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
+
+        submitIssueTypeBtn.setText("Enter");
+        submitIssueTypeBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitIssueTypeBtnActionPerformed(evt);
+            }
+        });
+        IssueTypeFilterPane.add(submitIssueTypeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 90, -1));
+
+        issueTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Appliance Repair", "Carpentry", "Cleaning", "Electrical", "General Repairs", "HVAC", "Pest Control", "Plumbing", "Roofing", "Security" }));
+        IssueTypeFilterPane.add(issueTypeComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 120, -1));
+
+        maintenancePage.add(IssueTypeFilterPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 380, 250, 140));
+
         PriorityTypeFilterPane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         priorityTypeFilterTopBar.setBackground(new java.awt.Color(212, 175, 55));
@@ -4873,6 +5371,65 @@ private CardLayout cardLayout;
         RequestTypeFilterPane.add(requestTypeComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 120, -1));
 
         maintenancePage.add(RequestTypeFilterPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 380, 250, 140));
+
+        maintenanceReqIDFilterPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        maintenanceReqIDFilterTopBar.setBackground(new java.awt.Color(212, 175, 55));
+
+        maintenanceReqIDFilter_X_Btn.setBackground(new java.awt.Color(51, 51, 51));
+        maintenanceReqIDFilter_X_Btn.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/x_icon.png"));
+        maintenanceReqIDFilter_X_Btn.setBorder(null);
+        maintenanceReqIDFilter_X_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                maintenanceReqIDFilter_X_BtnMouseClicked(evt);
+            }
+        });
+        maintenanceReqIDFilter_X_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                maintenanceReqIDFilter_X_BtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout maintenanceReqIDFilterTopBarLayout = new javax.swing.GroupLayout(maintenanceReqIDFilterTopBar);
+        maintenanceReqIDFilterTopBar.setLayout(maintenanceReqIDFilterTopBarLayout);
+        maintenanceReqIDFilterTopBarLayout.setHorizontalGroup(
+            maintenanceReqIDFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, maintenanceReqIDFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap(158, Short.MAX_VALUE)
+                .addComponent(maintenanceReqIDFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        maintenanceReqIDFilterTopBarLayout.setVerticalGroup(
+            maintenanceReqIDFilterTopBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(maintenanceReqIDFilterTopBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(maintenanceReqIDFilter_X_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        maintenanceReqIDFilterPanel.add(maintenanceReqIDFilterTopBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 190, -1));
+
+        mainteanceIDtxtField.setText("ID");
+        mainteanceIDtxtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mainteanceIDtxtFieldActionPerformed(evt);
+            }
+        });
+        maintenanceReqIDFilterPanel.add(mainteanceIDtxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 60, 40));
+
+        jLabel17.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel17.setText("Request ID");
+        maintenanceReqIDFilterPanel.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+
+        submitMaintenanceReqIDBtn.setText("Enter");
+        submitMaintenanceReqIDBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitMaintenanceReqIDBtnActionPerformed(evt);
+            }
+        });
+        maintenanceReqIDFilterPanel.add(submitMaintenanceReqIDBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 100, -1));
+
+        maintenancePage.add(maintenanceReqIDFilterPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 380, 170, 160));
 
         maintenancePropertyIDFilterPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -5087,7 +5644,7 @@ private CardLayout cardLayout;
         maintenanceFilterMenu.add(maintenancefilterBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 180, -1));
 
         RequestFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        RequestFilter.setText("Request Status Type");
+        RequestFilter.setText("Request Status");
         RequestFilter.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 RequestFilterMouseClicked(evt);
@@ -5110,6 +5667,22 @@ private CardLayout cardLayout;
             }
         });
 
+        RequestIDFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        RequestIDFilter.setText("Request ID");
+        RequestIDFilter.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RequestIDFilterMouseClicked(evt);
+            }
+        });
+
+        IssueTypeFilter.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        IssueTypeFilter.setText("Issue Type");
+        IssueTypeFilter.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                IssueTypeFilterMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout maintenanceFilterByPanelLayout = new javax.swing.GroupLayout(maintenanceFilterByPanel);
         maintenanceFilterByPanel.setLayout(maintenanceFilterByPanelLayout);
         maintenanceFilterByPanelLayout.setHorizontalGroup(
@@ -5119,8 +5692,10 @@ private CardLayout cardLayout;
                 .addGroup(maintenanceFilterByPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(RequestFilter)
                     .addComponent(PriorityFilter)
-                    .addComponent(PropertyIDMaintenanceFilter))
-                .addContainerGap(30, Short.MAX_VALUE))
+                    .addComponent(PropertyIDMaintenanceFilter)
+                    .addComponent(RequestIDFilter)
+                    .addComponent(IssueTypeFilter))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
         maintenanceFilterByPanelLayout.setVerticalGroup(
             maintenanceFilterByPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -5130,13 +5705,17 @@ private CardLayout cardLayout;
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PriorityFilter)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(IssueTypeFilter)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PropertyIDMaintenanceFilter)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(RequestIDFilter)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        maintenanceFilterMenu.add(maintenanceFilterByPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 180, 80));
+        maintenanceFilterMenu.add(maintenanceFilterByPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 180, 130));
 
-        maintenancePage.add(maintenanceFilterMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 150, 200, 360));
+        maintenancePage.add(maintenanceFilterMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 150, 200, 410));
 
         maintenanceAddPanel.setBackground(new java.awt.Color(51, 51, 51));
         maintenanceAddPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -6053,9 +6632,9 @@ private CardLayout cardLayout;
         tenantPropertyIDFilterPanel.setVisible(false);
     }//GEN-LAST:event_tenantPropertyIDFilter_X_BtnActionPerformed
 
-    private void tenantIDtxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tenantIDtxtFieldActionPerformed
+    private void tenantPropertyIDtxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tenantPropertyIDtxtFieldActionPerformed
         // TODO add your handling code here:       
-    }//GEN-LAST:event_tenantIDtxtFieldActionPerformed
+    }//GEN-LAST:event_tenantPropertyIDtxtFieldActionPerformed
 
     private void SortByAtoZTenantsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SortByAtoZTenantsMouseClicked
         // TODO add your handling code here:
@@ -6114,7 +6693,7 @@ private CardLayout cardLayout;
 
     private void tenantIDTenantFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tenantIDTenantFilterMouseClicked
         // TODO add your handling code here:
-        tenantPropertyIDFilterPanel.setVisible(true);
+        tenantIDFilterPanel.setVisible(true);
     }//GEN-LAST:event_tenantIDTenantFilterMouseClicked
 
     private void tenantEmailFilter_X_BtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tenantEmailFilter_X_BtnMouseClicked
@@ -6291,9 +6870,9 @@ private CardLayout cardLayout;
         transactionIDFilterPanel.setVisible(false);
     }//GEN-LAST:event_transactionIDFilter_X_BtnActionPerformed
 
-    private void tenantIDtxtField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tenantIDtxtField2ActionPerformed
+    private void transactionDtxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transactionDtxtFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tenantIDtxtField2ActionPerformed
+    }//GEN-LAST:event_transactionDtxtFieldActionPerformed
 
     private void transactionsFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_transactionsFilterMouseClicked
         // TODO add your handling code here:
@@ -6516,17 +7095,17 @@ private CardLayout cardLayout;
 
     private void transactionTypeFilter_X_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transactionTypeFilter_X_BtnActionPerformed
         // TODO add your handling code here:
-        TransactionTypeFilterPane.setVisible(false);
+        TransactionStatusFilterPane.setVisible(false);
     }//GEN-LAST:event_transactionTypeFilter_X_BtnActionPerformed
 
-    private void submitPaymentTypeBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitPaymentTypeBtn1ActionPerformed
+    private void submitTransactionStatusBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitTransactionStatusBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_submitPaymentTypeBtn1ActionPerformed
+    }//GEN-LAST:event_submitTransactionStatusBtnActionPerformed
 
-    private void TransactionTypeFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TransactionTypeFilterMouseClicked
+    private void TransactionStatusFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TransactionStatusFilterMouseClicked
         // TODO add your handling code here:
-        TransactionTypeFilterPane.setVisible(true);
-    }//GEN-LAST:event_TransactionTypeFilterMouseClicked
+        TransactionStatusFilterPane.setVisible(true);
+    }//GEN-LAST:event_TransactionStatusFilterMouseClicked
 
     private void propertiesSearchJoinButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_propertiesSearchJoinButtonActionPerformed
         // TODO add your handling code here:
@@ -6590,7 +7169,7 @@ private CardLayout cardLayout;
 
     private void submitTenantPropertyIDBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitTenantPropertyIDBtnActionPerformed
         // TODO add your handling code here:
-        String tenantID = tenantIDtxtField.getText().trim();
+        String tenantID = tenantPropertyIDtxtField.getText().trim();
 
         if (!tenantID.isEmpty()) {
             TenantFilter.filterByTenantID(tenantsTable, tenantID);
@@ -6658,6 +7237,193 @@ private CardLayout cardLayout;
         leaseIDFilterPanel.setVisible(false);        
     }//GEN-LAST:event_submitLeaseIDBtnActionPerformed
 
+    private void RequestIDFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RequestIDFilterMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RequestIDFilterMouseClicked
+
+    private void maintenanceReqIDFilter_X_BtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_maintenanceReqIDFilter_X_BtnMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_maintenanceReqIDFilter_X_BtnMouseClicked
+
+    private void maintenanceReqIDFilter_X_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maintenanceReqIDFilter_X_BtnActionPerformed
+        // TODO add your handling code here:
+        maintenanceReqIDFilterPanel.setVisible(false);
+    }//GEN-LAST:event_maintenanceReqIDFilter_X_BtnActionPerformed
+
+    private void mainteanceIDtxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainteanceIDtxtFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mainteanceIDtxtFieldActionPerformed
+
+    private void submitMaintenanceReqIDBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitMaintenanceReqIDBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_submitMaintenanceReqIDBtnActionPerformed
+
+    private void issueTypeFilter_X_BtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_issueTypeFilter_X_BtnMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_issueTypeFilter_X_BtnMouseClicked
+
+    private void issueTypeFilter_X_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_issueTypeFilter_X_BtnActionPerformed
+        // TODO add your handling code here:
+        IssueTypeFilterPane.setVisible(false);
+    }//GEN-LAST:event_issueTypeFilter_X_BtnActionPerformed
+
+    private void submitIssueTypeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitIssueTypeBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_submitIssueTypeBtnActionPerformed
+
+    private void IssueTypeFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IssueTypeFilterMouseClicked
+        // TODO add your handling code here:
+        IssueTypeFilterPane.setVisible(true);
+    }//GEN-LAST:event_IssueTypeFilterMouseClicked
+
+    private void tenantPropertyIDTenantFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tenantPropertyIDTenantFilterMouseClicked
+        // TODO add your handling code here:
+        tenantPropertyIDFilterPanel.setVisible(true);
+    }//GEN-LAST:event_tenantPropertyIDTenantFilterMouseClicked
+
+    private void tenantPropertyIDFilter_X_Btn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tenantPropertyIDFilter_X_Btn1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tenantPropertyIDFilter_X_Btn1MouseClicked
+
+    private void tenantPropertyIDFilter_X_Btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tenantPropertyIDFilter_X_Btn1ActionPerformed
+        // TODO add your handling code here:
+        tenantIDFilterPanel.setVisible(false);
+    }//GEN-LAST:event_tenantPropertyIDFilter_X_Btn1ActionPerformed
+
+    private void TenantIDtxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TenantIDtxtFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TenantIDtxtFieldActionPerformed
+
+    private void submitTenantIDBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitTenantIDBtnActionPerformed
+        // TODO add your handling code here:
+        String tenantID = TenantIDtxtField.getText().trim();
+    
+        if (!tenantID.isEmpty()) {
+            // Call the filter method in TenantFilter.java
+            TenantFilter.filterByTenantID(tenantsTable, tenantID);
+        } else {
+            JOptionPane.showMessageDialog(this,
+                "Please enter a Tenant ID.",
+                "Input Error",
+                JOptionPane.WARNING_MESSAGE);
+        }
+
+        // Optionally hide the filter panel/menu after filtering
+        tenantIDFilterPanel.setVisible(false);
+        tenantsFilterMenu.setVisible(false);
+    }//GEN-LAST:event_submitTenantIDBtnActionPerformed
+
+    private void TenantIDFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TenantIDFilterMouseClicked
+        // TODO add your handling code here:
+        leaseTenantIDFilterPanel.setVisible(true);
+    }//GEN-LAST:event_TenantIDFilterMouseClicked
+
+    private void leasesPropertyIDFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_leasesPropertyIDFilterMouseClicked
+        // TODO add your handling code here:
+        leasePropertyIDFilterPanel.setVisible(true);
+    }//GEN-LAST:event_leasesPropertyIDFilterMouseClicked
+
+    private void leaseTenantIDFilter_X_BtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_leaseTenantIDFilter_X_BtnMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_leaseTenantIDFilter_X_BtnMouseClicked
+
+    private void leaseTenantIDFilter_X_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leaseTenantIDFilter_X_BtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_leaseTenantIDFilter_X_BtnActionPerformed
+
+    private void leaseTenantIDFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leaseTenantIDFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_leaseTenantIDFieldActionPerformed
+
+    private void submitTenantLeaseIDBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitTenantLeaseIDBtnActionPerformed
+        // TODO add your handling code here:
+        String tenantID = leaseTenantIDField.getText().trim();
+    
+        if (!tenantID.isEmpty()) {
+            // Filter leases table by tenant_id
+            LeasesFilter.filterByTenantID(leasesTable, tenantID);
+        } else {
+            JOptionPane.showMessageDialog(this,
+                "Please enter a Tenant ID.",
+                "Input Error",
+                JOptionPane.WARNING_MESSAGE);
+        }
+        
+        leaseTenantIDFilterPanel.setVisible(false);
+        leasesFilterMenu.setVisible(false);
+    }//GEN-LAST:event_submitTenantLeaseIDBtnActionPerformed
+
+    private void leaseIDFilter_X_Btn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_leaseIDFilter_X_Btn2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_leaseIDFilter_X_Btn2MouseClicked
+
+    private void leaseIDFilter_X_Btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leaseIDFilter_X_Btn2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_leaseIDFilter_X_Btn2ActionPerformed
+
+    private void leasePropertyIDFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leasePropertyIDFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_leasePropertyIDFieldActionPerformed
+
+    private void submitLeasePropertyIDBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitLeasePropertyIDBtnActionPerformed
+        // TODO add your handling code here:
+        String propertyID = leasePropertyIDField.getText().trim();
+
+        if (!propertyID.isEmpty()) {
+            LeasesFilter.filterByPropertyID(leasesTable, propertyID);
+        } else {
+            JOptionPane.showMessageDialog(this,
+                "Please enter a Property ID.",
+                "Input Error",
+                JOptionPane.WARNING_MESSAGE);
+        }
+
+        leasePropertyIDFilterPanel.setVisible(false);
+        leasesFilterMenu.setVisible(false);
+    }//GEN-LAST:event_submitLeasePropertyIDBtnActionPerformed
+
+    private void transactionTenantIDFilter_X_BtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_transactionTenantIDFilter_X_BtnMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_transactionTenantIDFilter_X_BtnMouseClicked
+
+    private void transactionTenantIDFilter_X_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transactionTenantIDFilter_X_BtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_transactionTenantIDFilter_X_BtnActionPerformed
+
+    private void transactionTenantIDtxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transactionTenantIDtxtFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_transactionTenantIDtxtFieldActionPerformed
+
+    private void transactionPropertyIDFilter_X_BtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_transactionPropertyIDFilter_X_BtnMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_transactionPropertyIDFilter_X_BtnMouseClicked
+
+    private void transactionPropertyIDFilter_X_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transactionPropertyIDFilter_X_BtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_transactionPropertyIDFilter_X_BtnActionPerformed
+
+    private void transactionPropertyIDtxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transactionPropertyIDtxtFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_transactionPropertyIDtxtFieldActionPerformed
+
+    private void transactionReferenceNoFilter_X_BtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_transactionReferenceNoFilter_X_BtnMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_transactionReferenceNoFilter_X_BtnMouseClicked
+
+    private void transactionReferenceNoFilter_X_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transactionReferenceNoFilter_X_BtnActionPerformed
+        // TODO add your handling code here:
+        transactionReferenceNoFilterPanel.setVisible(false);
+    }//GEN-LAST:event_transactionReferenceNoFilter_X_BtnActionPerformed
+
+    private void transactionReferenceNotxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transactionReferenceNotxtFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_transactionReferenceNotxtFieldActionPerformed
+
+    private void ReferenceNumberFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReferenceNumberFilterMouseClicked
+        // TODO add your handling code here:
+        transactionReferenceNoFilterPanel.setVisible(true);
+    }//GEN-LAST:event_ReferenceNumberFilterMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -6668,6 +7434,8 @@ private CardLayout cardLayout;
     private javax.swing.JPanel CardPanel;
     private javax.swing.JButton DeleteRowBtn2;
     private javax.swing.JLabel ExpiredLeasesFilter;
+    private javax.swing.JLabel IssueTypeFilter;
+    private javax.swing.JPanel IssueTypeFilterPane;
     private javax.swing.JLabel LeaseIDFilter;
     private javax.swing.JButton LeasesFilter_X_Btn;
     private javax.swing.JLabel OccupiedPropertiesFilter;
@@ -6681,7 +7449,9 @@ private CardLayout cardLayout;
     private javax.swing.JLabel PropertyIDMaintenanceFilter;
     private javax.swing.JLabel PropertyTypeFilter;
     private javax.swing.JPanel PropertyTypeFilterPane;
+    private javax.swing.JLabel ReferenceNumberFilter;
     private javax.swing.JLabel RequestFilter;
+    private javax.swing.JLabel RequestIDFilter;
     private javax.swing.JPanel RequestTypeFilterPane;
     private javax.swing.JLabel SortByAtoZLeases;
     private javax.swing.JLabel SortByAtoZProperties;
@@ -6713,11 +7483,15 @@ private CardLayout cardLayout;
     private javax.swing.JLabel SortLowesttoHighestTenants;
     private javax.swing.JLabel SortNewsttoOldestTenants;
     private javax.swing.JLabel SortOldesttoNewestTenants;
+    private javax.swing.JLabel TenantIDFilter;
+    private javax.swing.JTextField TenantIDtxtField;
     private javax.swing.JLabel TenantTransactionFilter;
     private javax.swing.JLabel TerminatedLeasesFilter;
     private javax.swing.JLabel TransactionDateFilter;
-    private javax.swing.JLabel TransactionTypeFilter;
-    private javax.swing.JPanel TransactionTypeFilterPane;
+    private javax.swing.JComboBox<String> TransactionStatusComboBox;
+    private javax.swing.JLabel TransactionStatusFilter;
+    private javax.swing.JPanel TransactionStatusFilterPane;
+    private javax.swing.JPanel TransactionStatusFilterTopBar;
     private javax.swing.JLabel UpdateLeaseIdLabel;
     private javax.swing.JLabel UpdateTenantIdLabel;
     private javax.swing.JLabel VacantPropertiesFilter;
@@ -6755,7 +7529,10 @@ private CardLayout cardLayout;
     private javax.swing.JLabel instruction3;
     private javax.swing.JLabel instruction4;
     private javax.swing.JLabel instruction5;
+    private javax.swing.JComboBox<String> issueTypeComboBox;
     private javax.swing.JComboBox<String> issueTypeDropdown;
+    private javax.swing.JPanel issueTypeFilterTopBar;
+    private javax.swing.JButton issueTypeFilter_X_Btn;
     private javax.swing.JLabel issueTypeLabel;
     private javax.swing.JComboBox<String> jComboBox1;
     private com.toedter.calendar.JDateChooser jDateChooser1;
@@ -6767,6 +7544,7 @@ private CardLayout cardLayout;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
@@ -6776,7 +7554,14 @@ private CardLayout cardLayout;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -6805,13 +7590,21 @@ private CardLayout cardLayout;
     private javax.swing.JPanel leaseIDFilterPanel;
     private javax.swing.JPanel leaseIDFilterTopBar;
     private javax.swing.JButton leaseIDFilter_X_Btn;
+    private javax.swing.JButton leaseIDFilter_X_Btn2;
     private javax.swing.JPanel leaseJoinTopBar;
+    private javax.swing.JTextField leasePropertyIDField;
+    private javax.swing.JPanel leasePropertyIDFilterPanel;
+    private javax.swing.JPanel leasePropertyIDFilterTopBar;
     private javax.swing.JTextField leasePropertyIDJoinField;
     private javax.swing.JLabel leasePropertyIDJoinLabel;
     private com.toedter.calendar.JDateChooser leaseStartDate;
     private javax.swing.JLabel leaseStartLabel;
     private javax.swing.JLabel leaseStatus;
     private javax.swing.JComboBox<String> leaseStatusDropDown;
+    private javax.swing.JTextField leaseTenantIDField;
+    private javax.swing.JPanel leaseTenantIDFilterPanel;
+    private javax.swing.JPanel leaseTenantIDFilterTopBar;
+    private javax.swing.JButton leaseTenantIDFilter_X_Btn;
     private javax.swing.JComboBox<String> leaseUpdate_ColumnDropdown;
     private javax.swing.JLabel leaseUpdate_ColumnNameLabel;
     private javax.swing.JTextField leaseUpdate_NewValueField;
@@ -6834,6 +7627,7 @@ private CardLayout cardLayout;
     private javax.swing.JPanel leasesJoinPanel;
     private javax.swing.JPanel leasesMenuPanel;
     private javax.swing.JPanel leasesPage;
+    private javax.swing.JLabel leasesPropertyIDFilter;
     private javax.swing.JPanel leasesSortByPanel;
     private javax.swing.JTable leasesTable;
     private javax.swing.JButton leasesUpdateBtn;
@@ -6850,6 +7644,7 @@ private CardLayout cardLayout;
     private javax.swing.JPanel leasesfilterBar;
     private javax.swing.JPanel leasessortTopBar;
     private javax.swing.JPanel leasesupdateTopBar;
+    private javax.swing.JTextField mainteanceIDtxtField;
     private javax.swing.JButton maintenaceAddBtn;
     private javax.swing.JButton maintenaceDeleteBtn;
     private javax.swing.JButton maintenaceJoinBtn;
@@ -6875,6 +7670,9 @@ private CardLayout cardLayout;
     private javax.swing.JPanel maintenancePropertyIDFilterTopBar;
     private javax.swing.JButton maintenancePropertyIDFilter_X_Btn;
     private javax.swing.JTextField maintenancePropertyIDJoinField;
+    private javax.swing.JPanel maintenanceReqIDFilterPanel;
+    private javax.swing.JPanel maintenanceReqIDFilterTopBar;
+    private javax.swing.JButton maintenanceReqIDFilter_X_Btn;
     private javax.swing.JButton maintenanceSearchJoinButton;
     private javax.swing.JButton maintenanceSearchJoinButton1;
     private javax.swing.JPanel maintenanceSortByPanel;
@@ -6982,19 +7780,24 @@ private CardLayout cardLayout;
     private javax.swing.JLabel statusLabel;
     private javax.swing.JTextField streetField;
     private javax.swing.JLabel streetLabel;
+    private javax.swing.JButton submitIssueTypeBtn;
     private javax.swing.JButton submitLeaseIDBtn;
+    private javax.swing.JButton submitLeasePropertyIDBtn;
     private javax.swing.JButton submitMaintenancePropertyIDBtn;
+    private javax.swing.JButton submitMaintenanceReqIDBtn;
     private javax.swing.JButton submitPaymentTypeBtn;
-    private javax.swing.JButton submitPaymentTypeBtn1;
     private javax.swing.JButton submitPriorityTypeBtn;
     private javax.swing.JButton submitPropertyTypeBtn;
     private javax.swing.JButton submitRequestTypeBtn;
     private javax.swing.JButton submitTenantContactNoBtn;
     private javax.swing.JButton submitTenantEmailBtn;
+    private javax.swing.JButton submitTenantIDBtn;
+    private javax.swing.JButton submitTenantLeaseIDBtn;
     private javax.swing.JButton submitTenantNameBtn;
     private javax.swing.JButton submitTenantPropertyIDBtn;
     private javax.swing.JButton submitTransactionIDBtn;
     private javax.swing.JButton submitTransactionIDBtn1;
+    private javax.swing.JButton submitTransactionStatusBtn;
     private javax.swing.JPanel tenantContactNoFilterPanel;
     private javax.swing.JPanel tenantContactNoFilterTopBar;
     private javax.swing.JButton tenantContactNoFilter_X_Btn;
@@ -7003,9 +7806,9 @@ private CardLayout cardLayout;
     private javax.swing.JPanel tenantEmailFilterTopBar;
     private javax.swing.JButton tenantEmailFilter_X_Btn;
     private javax.swing.JTextField tenantEmailTxtfield;
+    private javax.swing.JPanel tenantIDFilterPanel;
+    private javax.swing.JPanel tenantIDFilterTopBar1;
     private javax.swing.JLabel tenantIDTenantFilter;
-    private javax.swing.JTextField tenantIDtxtField;
-    private javax.swing.JTextField tenantIDtxtField2;
     private javax.swing.JTextField tenantIDtxtField3;
     private javax.swing.JTextField tenantNameField;
     private javax.swing.JLabel tenantNameFilter;
@@ -7017,8 +7820,11 @@ private CardLayout cardLayout;
     private javax.swing.JPanel tenantPropertyIDFilterPanel;
     private javax.swing.JPanel tenantPropertyIDFilterTopBar;
     private javax.swing.JButton tenantPropertyIDFilter_X_Btn;
+    private javax.swing.JButton tenantPropertyIDFilter_X_Btn1;
     private javax.swing.JTextField tenantPropertyIDJoinField;
     private javax.swing.JLabel tenantPropertyIDJoinLabel;
+    private javax.swing.JLabel tenantPropertyIDTenantFilter;
+    private javax.swing.JTextField tenantPropertyIDtxtField;
     private javax.swing.JButton tenantSearchJoinButton;
     private javax.swing.JButton tenantSearchJoinButton1;
     private javax.swing.JTextField tenant_propertyIDField;
@@ -7035,7 +7841,7 @@ private CardLayout cardLayout;
     private javax.swing.JPanel tenantsDeletePanel;
     private javax.swing.JButton tenantsDelete_X_Btn;
     private javax.swing.JLabel tenantsFilter;
-    private javax.swing.JPanel tenantsFilterByPanel1;
+    private javax.swing.JPanel tenantsFilterByPanel;
     private javax.swing.JPanel tenantsFilterMenu;
     private javax.swing.JButton tenantsFilter_X_Btn;
     private javax.swing.JButton tenantsJoinBtn;
@@ -7045,7 +7851,7 @@ private CardLayout cardLayout;
     private javax.swing.JButton tenantsJoin_X_Btn1;
     private javax.swing.JPanel tenantsMenuPanel;
     private javax.swing.JPanel tenantsPage;
-    private javax.swing.JPanel tenantsSortByPanel1;
+    private javax.swing.JPanel tenantsSortByPanel;
     private javax.swing.JTable tenantsTable;
     private javax.swing.JLabel tenantsTitleText;
     private javax.swing.JButton tenantsUpdateBtn;
@@ -7056,7 +7862,7 @@ private CardLayout cardLayout;
     private javax.swing.JComboBox<String> tenantsUpdate_columnDropdown;
     private javax.swing.JPanel tenantsdeleteTopBar;
     private javax.swing.JPanel tenantsfilterBar;
-    private javax.swing.JPanel tenantssortTopBar1;
+    private javax.swing.JPanel tenantssortTopBar;
     private javax.swing.JPanel tenantsupdateTopBar;
     private javax.swing.JButton transacAddBtn;
     private javax.swing.JButton transacAddPanel_AddBtn;
@@ -7083,17 +7889,31 @@ private CardLayout cardLayout;
     private javax.swing.JLabel transactionDateLabel;
     private javax.swing.JLabel transactionDateLabel1;
     private javax.swing.JPanel transactionDeletePanel;
+    private javax.swing.JTextField transactionDtxtField;
     private javax.swing.JPanel transactionFilterByPanel;
     private javax.swing.JPanel transactionFilterMenu;
     private javax.swing.JButton transactionFilter_X_Btn;
     private javax.swing.JPanel transactionIDFilterPanel;
     private javax.swing.JPanel transactionIDFilterTopBar;
     private javax.swing.JButton transactionIDFilter_X_Btn;
+    private javax.swing.JButton transactionPropertyIDBtn;
+    private javax.swing.JPanel transactionPropertyIDFilterPanel;
+    private javax.swing.JPanel transactionPropertyIDFilterTopBar;
+    private javax.swing.JPanel transactionPropertyIDFilterTopBar1;
+    private javax.swing.JButton transactionPropertyIDFilter_X_Btn;
     private javax.swing.JTextField transactionPropertyIDJoinField;
     private javax.swing.JLabel transactionPropertyIDJoinLabel;
+    private javax.swing.JTextField transactionPropertyIDtxtField;
+    private javax.swing.JButton transactionReferenceNoBtn;
+    private javax.swing.JPanel transactionReferenceNoFilterPanel;
+    private javax.swing.JButton transactionReferenceNoFilter_X_Btn;
+    private javax.swing.JTextField transactionReferenceNotxtField;
     private javax.swing.JPanel transactionSortByPanel;
-    private javax.swing.JComboBox<String> transactionTypeComboBox;
-    private javax.swing.JPanel transactionTypeFilterTopBar;
+    private javax.swing.JButton transactionTenantIDBtn;
+    private javax.swing.JPanel transactionTenantIDFilterPanel;
+    private javax.swing.JPanel transactionTenantIDFilterTopBar;
+    private javax.swing.JButton transactionTenantIDFilter_X_Btn;
+    private javax.swing.JTextField transactionTenantIDtxtField;
     private javax.swing.JButton transactionTypeFilter_X_Btn;
     private javax.swing.JPanel transactionfilterBar;
     private javax.swing.JPanel transactionsAddPanel;
