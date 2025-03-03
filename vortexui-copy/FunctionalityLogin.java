@@ -20,8 +20,8 @@ public class FunctionalityLogin {
     public static boolean validateLogin(String username, String password) {
         // Example: hardcoded credentials for demonstration purposes.
         // Replace these with your actual authentication logic.
-        String validUsername = "RavenLim";
-        String validPassword = "PusoKoSiya";
+        String validUsername = "Admin";
+        String validPassword = "Admin123";
         
         return validUsername.equals(username) && validPassword.equals(password);
     }
