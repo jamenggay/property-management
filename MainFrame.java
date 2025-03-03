@@ -150,13 +150,6 @@ private CardLayout cardLayout;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        navPanel = new GradientPanel();
-        jlblLogo = new javax.swing.JLabel();
-        lblMaintenance = new javax.swing.JLabel();
-        lblTransactions = new javax.swing.JLabel();
-        lblLeases = new javax.swing.JLabel();
-        lblTenants = new javax.swing.JLabel();
-        lblProperties = new javax.swing.JLabel();
         CardPanel = new javax.swing.JPanel();
         propertiesPage = new javax.swing.JPanel();
         PropertyTypeFilterPane = new javax.swing.JPanel();
@@ -434,8 +427,8 @@ private CardLayout cardLayout;
         rentAmounLabel = new javax.swing.JLabel();
         leases_propertyIDField = new javax.swing.JTextField();
         leases_tenantIDField = new javax.swing.JTextField();
-        leaseStartDate = new com.toedter.calendar.JDateChooser();
-        leaseEndDate = new com.toedter.calendar.JDateChooser();
+        leaseStartDate = new org.netbeans.modules.form.InvalidComponent();
+        leaseEndDate = new org.netbeans.modules.form.InvalidComponent();
         securityDepositField = new javax.swing.JTextField();
         rentAmounField = new javax.swing.JTextField();
         leaseStatusDropDown = new javax.swing.JComboBox<>();
@@ -526,7 +519,7 @@ private CardLayout cardLayout;
         transactionDateFilter_X_Btn = new javax.swing.JButton();
         jLabel19 = new javax.swing.JLabel();
         submitTransactionIDBtn1 = new javax.swing.JButton();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        jDateChooser1 = new org.netbeans.modules.form.InvalidComponent();
         transactionPropertyIDFilterPanel = new javax.swing.JPanel();
         transactionPropertyIDFilterTopBar = new javax.swing.JPanel();
         transactionPropertyIDFilter_X_Btn = new javax.swing.JButton();
@@ -577,7 +570,7 @@ private CardLayout cardLayout;
         transac_mainreqIDField = new javax.swing.JTextField();
         transac_popertyIDField = new javax.swing.JTextField();
         transac_porpertyIDLabel = new javax.swing.JLabel();
-        transactionDate = new com.toedter.calendar.JDateChooser();
+        transactionDate = new org.netbeans.modules.form.InvalidComponent();
         paymentStatDropdown = new javax.swing.JComboBox<>();
         transacAddPanel_AddBtn = new javax.swing.JButton();
         transactionDeletePanel = new javax.swing.JPanel();
@@ -737,125 +730,17 @@ private CardLayout cardLayout;
         maintenanceFilter = new javax.swing.JLabel();
         maintenanceTitleText = new javax.swing.JLabel();
         maintenanceBG = new javax.swing.JLabel();
+        navPanel = new GradientPanel();
+        jlblLogo = new javax.swing.JLabel();
+        lblMaintenance = new javax.swing.JLabel();
+        lblTransactions = new javax.swing.JLabel();
+        lblLeases = new javax.swing.JLabel();
+        lblTenants = new javax.swing.JLabel();
+        lblProperties = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(160, 160, 160));
         setSize(new java.awt.Dimension(1920, 1080));
-
-        navPanel.setBackground(new java.awt.Color(0, 0, 0));
-        navPanel.setPreferredSize(new java.awt.Dimension(1920, 70));
-
-        jlblLogo.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
-        jlblLogo.setForeground(new java.awt.Color(212, 175, 55));
-        jlblLogo.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/logo.png"));
-        jlblLogo.setText("VERTEX PROPERTIES");
-
-        lblMaintenance.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
-        lblMaintenance.setForeground(new java.awt.Color(255, 255, 255));
-        lblMaintenance.setText("MAINTENANCE REQ");
-        lblMaintenance.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblMaintenanceMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblMaintenanceMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                lblMaintenanceMouseExited(evt);
-            }
-        });
-
-        lblTransactions.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
-        lblTransactions.setForeground(new java.awt.Color(255, 255, 255));
-        lblTransactions.setText("TRANSACTIONS");
-        lblTransactions.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblTransactionsMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblTransactionsMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                lblTransactionsMouseExited(evt);
-            }
-        });
-
-        lblLeases.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
-        lblLeases.setForeground(new java.awt.Color(255, 255, 255));
-        lblLeases.setText("LEASES");
-        lblLeases.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblLeasesMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblLeasesMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                lblLeasesMouseExited(evt);
-            }
-        });
-
-        lblTenants.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
-        lblTenants.setForeground(new java.awt.Color(255, 255, 255));
-        lblTenants.setText("TENANTS");
-        lblTenants.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblTenantsMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblTenantsMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                lblTenantsMouseExited(evt);
-            }
-        });
-
-        lblProperties.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
-        lblProperties.setForeground(new java.awt.Color(255, 255, 255));
-        lblProperties.setText("PROPERTIES");
-        lblProperties.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblPropertiesMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblPropertiesMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                lblPropertiesMouseExited(evt);
-            }
-        });
-
-        javax.swing.GroupLayout navPanelLayout = new javax.swing.GroupLayout(navPanel);
-        navPanel.setLayout(navPanelLayout);
-        navPanelLayout.setHorizontalGroup(
-            navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(navPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jlblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblProperties)
-                .addGap(50, 50, 50)
-                .addComponent(lblTenants)
-                .addGap(50, 50, 50)
-                .addComponent(lblLeases)
-                .addGap(50, 50, 50)
-                .addComponent(lblTransactions)
-                .addGap(50, 50, 50)
-                .addComponent(lblMaintenance)
-                .addGap(33, 33, 33))
-        );
-        navPanelLayout.setVerticalGroup(
-            navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navPanelLayout.createSequentialGroup()
-                .addGap(0, 7, Short.MAX_VALUE)
-                .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblMaintenance)
-                    .addComponent(lblTransactions, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblLeases)
-                    .addComponent(lblTenants)
-                    .addComponent(lblProperties)))
-        );
 
         CardPanel.setBackground(new java.awt.Color(160, 160, 160));
         CardPanel.setLayout(new java.awt.CardLayout());
@@ -3456,10 +3341,6 @@ private CardLayout cardLayout;
 
         leases_tenantIDField.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        leaseStartDate.setDateFormatString("YYYY-MM-DD");
-
-        leaseEndDate.setDateFormatString("YYYY-MM-DD");
-
         securityDepositField.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
         rentAmounField.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -3567,7 +3448,7 @@ private CardLayout cardLayout;
                 .addGroup(leasesAddPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rentAmounField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(rentAmounLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addComponent(leasesAddPanel_AddBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17))
         );
@@ -5481,6 +5362,11 @@ private CardLayout cardLayout;
         maintenancePropertyIDFilterPanel.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
 
         submitMaintenancePropertyIDBtn.setText("Enter");
+        submitMaintenancePropertyIDBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitMaintenancePropertyIDBtnActionPerformed(evt);
+            }
+        });
         maintenancePropertyIDFilterPanel.add(submitMaintenancePropertyIDBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 120, 90, -1));
 
         maintenancePage.add(maintenancePropertyIDFilterPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 380, 170, 160));
@@ -6187,6 +6073,121 @@ private CardLayout cardLayout;
         maintenancePage.add(maintenanceBG, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 1920, 1010));
 
         CardPanel.add(maintenancePage, "card6");
+
+        navPanel.setBackground(new java.awt.Color(0, 0, 0));
+        navPanel.setPreferredSize(new java.awt.Dimension(1920, 70));
+
+        jlblLogo.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
+        jlblLogo.setForeground(new java.awt.Color(212, 175, 55));
+        jlblLogo.setIcon(new javax.swing.ImageIcon("src/main/java/com/mycompany/vertexproperties/logo.png"));
+        jlblLogo.setText("VERTEX PROPERTIES");
+
+        lblMaintenance.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        lblMaintenance.setForeground(new java.awt.Color(255, 255, 255));
+        lblMaintenance.setText("MAINTENANCE REQ");
+        lblMaintenance.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblMaintenanceMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblMaintenanceMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblMaintenanceMouseExited(evt);
+            }
+        });
+
+        lblTransactions.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        lblTransactions.setForeground(new java.awt.Color(255, 255, 255));
+        lblTransactions.setText("TRANSACTIONS");
+        lblTransactions.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblTransactionsMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblTransactionsMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblTransactionsMouseExited(evt);
+            }
+        });
+
+        lblLeases.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        lblLeases.setForeground(new java.awt.Color(255, 255, 255));
+        lblLeases.setText("LEASES");
+        lblLeases.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblLeasesMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblLeasesMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblLeasesMouseExited(evt);
+            }
+        });
+
+        lblTenants.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        lblTenants.setForeground(new java.awt.Color(255, 255, 255));
+        lblTenants.setText("TENANTS");
+        lblTenants.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblTenantsMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblTenantsMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblTenantsMouseExited(evt);
+            }
+        });
+
+        lblProperties.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        lblProperties.setForeground(new java.awt.Color(255, 255, 255));
+        lblProperties.setText("PROPERTIES");
+        lblProperties.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblPropertiesMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblPropertiesMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblPropertiesMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout navPanelLayout = new javax.swing.GroupLayout(navPanel);
+        navPanel.setLayout(navPanelLayout);
+        navPanelLayout.setHorizontalGroup(
+            navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(navPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblProperties)
+                .addGap(50, 50, 50)
+                .addComponent(lblTenants)
+                .addGap(50, 50, 50)
+                .addComponent(lblLeases)
+                .addGap(50, 50, 50)
+                .addComponent(lblTransactions)
+                .addGap(50, 50, 50)
+                .addComponent(lblMaintenance)
+                .addGap(33, 33, 33))
+        );
+        navPanelLayout.setVerticalGroup(
+            navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navPanelLayout.createSequentialGroup()
+                .addGap(0, 7, Short.MAX_VALUE)
+                .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMaintenance)
+                    .addComponent(lblTransactions, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblLeases)
+                    .addComponent(lblTenants)
+                    .addComponent(lblProperties)))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -6999,7 +7000,16 @@ private CardLayout cardLayout;
     }//GEN-LAST:event_requestTypeFilter_X_BtnActionPerformed
 
     private void submitRequestTypeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitRequestTypeBtnActionPerformed
-        // TODO add your handling code here:
+        String selectedStatus = (String) requestTypeComboBox.getSelectedItem(); // Get selected status from dropdown
+    
+    if (selectedStatus != null) {
+        MaintenanceFilter.filterByRequestStatus(maintenanceTable, selectedStatus);
+    } else {
+        JOptionPane.showMessageDialog(this, "Please select a request status.", "Warning", JOptionPane.WARNING_MESSAGE);
+    }
+
+    maintenanceFilterMenu.setVisible(false);
+    RequestTypeFilterPane.setVisible(false);
     }//GEN-LAST:event_submitRequestTypeBtnActionPerformed
 
     private void proirityTypeFilter_X_BtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_proirityTypeFilter_X_BtnMouseClicked
@@ -7012,7 +7022,16 @@ private CardLayout cardLayout;
     }//GEN-LAST:event_proirityTypeFilter_X_BtnActionPerformed
 
     private void submitPriorityTypeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitPriorityTypeBtnActionPerformed
-        // TODO add your handling code here:
+        String selectedPriority = (String) priorityTypeComboBox.getSelectedItem(); // Get selected priority type
+    
+    if (selectedPriority != null) {
+        MaintenanceFilter.filterByPriorityType(maintenanceTable, selectedPriority);
+    } else {
+        JOptionPane.showMessageDialog(this, "Please select a priority type.", "Warning", JOptionPane.WARNING_MESSAGE);
+    }
+
+    maintenanceFilterMenu.setVisible(false);
+    PriorityTypeFilterPane.setVisible(false);
     }//GEN-LAST:event_submitPriorityTypeBtnActionPerformed
 
     private void paymentTypeFilter_X_BtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_paymentTypeFilter_X_BtnMouseClicked
@@ -7267,7 +7286,16 @@ private CardLayout cardLayout;
     }//GEN-LAST:event_mainteanceIDtxtFieldActionPerformed
 
     private void submitMaintenanceReqIDBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitMaintenanceReqIDBtnActionPerformed
-        // TODO add your handling code here:
+        String requestID = mainteanceIDtxtField.getText().trim(); // Get inputted Request ID
+    
+        if (!requestID.isEmpty()) {
+            MaintenanceFilter.filterByRequestID(maintenanceTable, requestID);
+        } else {
+            JOptionPane.showMessageDialog(this, "Please enter a Request ID.", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+
+        maintenanceFilterMenu.setVisible(false);
+        maintenanceReqIDFilterPanel.setVisible(false);
     }//GEN-LAST:event_submitMaintenanceReqIDBtnActionPerformed
 
     private void issueTypeFilter_X_BtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_issueTypeFilter_X_BtnMouseClicked
@@ -7280,7 +7308,16 @@ private CardLayout cardLayout;
     }//GEN-LAST:event_issueTypeFilter_X_BtnActionPerformed
 
     private void submitIssueTypeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitIssueTypeBtnActionPerformed
-        // TODO add your handling code here:
+        String selectedIssueType = (String) issueTypeDropdown.getSelectedItem(); // Get selected issue type
+    
+        if (selectedIssueType != null) {
+            MaintenanceFilter.filterByIssueType(maintenanceTable, selectedIssueType);
+        } else {
+            JOptionPane.showMessageDialog(this, "Please select an issue type.", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+
+        maintenanceFilterMenu.setVisible(false);
+        IssueTypeFilterPane.setVisible(false);
     }//GEN-LAST:event_submitIssueTypeBtnActionPerformed
 
     private void IssueTypeFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IssueTypeFilterMouseClicked
@@ -7436,6 +7473,20 @@ private CardLayout cardLayout;
         transactionReferenceNoFilterPanel.setVisible(true);
     }//GEN-LAST:event_ReferenceNumberFilterMouseClicked
 
+    private void submitMaintenancePropertyIDBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitMaintenancePropertyIDBtnActionPerformed
+        String propertyID = tenantIDtxtField3.getText().trim(); // Get inputted Property ID
+    
+        if (!propertyID.isEmpty()) {
+            MaintenanceFilter.filterByPropertyID(maintenanceTable, propertyID);
+        } else {
+            JOptionPane.showMessageDialog(this, "Please enter a Property ID.", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+
+        maintenanceFilterMenu.setVisible(false);
+        PropertyIDFilterPane.setVisible(false);
+
+    }//GEN-LAST:event_submitMaintenancePropertyIDBtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -7547,7 +7598,7 @@ private CardLayout cardLayout;
     private javax.swing.JButton issueTypeFilter_X_Btn;
     private javax.swing.JLabel issueTypeLabel;
     private javax.swing.JComboBox<String> jComboBox1;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
+    private org.netbeans.modules.form.InvalidComponent jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -7596,7 +7647,7 @@ private CardLayout cardLayout;
     private javax.swing.JLabel lblProperties;
     private javax.swing.JLabel lblTenants;
     private javax.swing.JLabel lblTransactions;
-    private com.toedter.calendar.JDateChooser leaseEndDate;
+    private org.netbeans.modules.form.InvalidComponent leaseEndDate;
     private javax.swing.JLabel leaseEndLabel;
     private javax.swing.JTextField leaseIDField;
     private javax.swing.JPanel leaseIDFilterPanel;
@@ -7609,7 +7660,7 @@ private CardLayout cardLayout;
     private javax.swing.JPanel leasePropertyIDFilterTopBar;
     private javax.swing.JTextField leasePropertyIDJoinField;
     private javax.swing.JLabel leasePropertyIDJoinLabel;
-    private com.toedter.calendar.JDateChooser leaseStartDate;
+    private org.netbeans.modules.form.InvalidComponent leaseStartDate;
     private javax.swing.JLabel leaseStartLabel;
     private javax.swing.JLabel leaseStatus;
     private javax.swing.JComboBox<String> leaseStatusDropDown;
@@ -7894,7 +7945,7 @@ private CardLayout cardLayout;
     private javax.swing.JLabel transac_porpertyIDLabel;
     private javax.swing.JLabel transac_tenantIDLabel;
     private javax.swing.JTextField transactenantIDField;
-    private com.toedter.calendar.JDateChooser transactionDate;
+    private org.netbeans.modules.form.InvalidComponent transactionDate;
     private javax.swing.JPanel transactionDateFilterPanel;
     private javax.swing.JPanel transactionDateFilterTopBar;
     private javax.swing.JButton transactionDateFilter_X_Btn;
