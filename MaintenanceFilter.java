@@ -73,13 +73,13 @@ public class MaintenanceFilter {
 
             while (rs.next()) {
                 Object[] row = {
-                    rs.getInt("maintenance_id"), 
+                    rs.getInt("request_id"), 
+                    rs.getInt("tenant_id"),
                     rs.getInt("property_id"),
+                    rs.getString("issue_type"),
                     rs.getString("description"),
-                    rs.getString("status"),
                     rs.getString("priority"),
-                    rs.getString("request_date"),
-                    rs.getString("completion_date")
+                    rs.getString("status")
                 };
                 model.addRow(row);
             }
